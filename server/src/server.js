@@ -1,7 +1,9 @@
 const express = require("express");
 const { LevelTest  } = require("./models");
+const cors = require('cors');
 
-const server=express()
+const server = express()
+server.use(cors())
 
 const bodyParser = require("body-parser");
 
@@ -16,7 +18,6 @@ server.get('/', async (req, res) => {
   )
   console.log(levelTest)
   console.log(levelTest.choix)
-
  
   res.send(levelTest);
 })
