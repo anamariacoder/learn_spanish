@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import LevelTest from "./components/LevelTest";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/home";
 import "./App.css";
 import Header from "./components/Header";
 
