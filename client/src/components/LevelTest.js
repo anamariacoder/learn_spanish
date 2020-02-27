@@ -20,7 +20,7 @@ const LevelTest = () => {
   };
   return (
     <div>
-      <h1>Test et progrès et casse cou_ille</h1>
+      <h1>Test et progrès</h1>
       <div>
         {test &&
           test.questions.levelTests.map((q, i) => {
