@@ -40,6 +40,7 @@ const LevelTest = () => {
       </div>
       <button onClick={handleSubmit} >Valider</button>
     </div>
+
   );
 };
 
