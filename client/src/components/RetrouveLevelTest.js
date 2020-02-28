@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TestLevel from './Learn-spanish';
+import TestLevel from './learn-spanish';
 export default class extends Component {
     render() {
         const {allLevelTest, onLevelTestClick,dleLevelTestClick} = this.props;

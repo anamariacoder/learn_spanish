@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import LevelTest from "./components/LevelTest";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Resources from "./components/Resources";
+//import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Home from "./components/home";
 import "./App.css";
 import Header from "./components/Header";
@@ -16,8 +20,9 @@ const App = props => {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" exact component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/test" component={LevelTest} />
+          <Route path="/resources" component={Resources} />
         </Switch>
       </Router>
     </div>

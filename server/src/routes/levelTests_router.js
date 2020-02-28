@@ -2,17 +2,17 @@ const express = require("express");
 require("express-async-errors");
 
 const {
-  retrieveTheLevelTests
-} = require("../controllers/levelTests_controller");
+  retrieveLevelTest
+} = require("../controllers/leveltests_controller");
 
-const { OK } = require("../helpers/status_code");
+//const { OK } = require("../helpers/status_code");
 
 const levelTestsRouter = express.Router();
 
 levelTestsRouter.get("/", async (request, response) => {
-  const levelTests = await retrieveTheLevelTests();
+  const levelTests = await retrieveLevelTest();
 
-  response.status(OK);
+  response.status(200);
   response.json(levelTests);
 });
 

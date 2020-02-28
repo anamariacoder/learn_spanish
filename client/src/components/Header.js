@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="navContainer">
-
       <div className="accueil">
-        
-       <Link to="/home">Accueil</Link>
+        <Link to="/home">Accueil</Link>
       </div>
 
-      <div className="ressources">
-        <h2>Ressources</h2>
+      <div className="resources">
+        <Link to="/resources">Ressources</Link>
       </div>
 
       <div className="testEtProgresglobal">
