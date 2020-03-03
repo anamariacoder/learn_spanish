@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const NavBar = () => {
   return (
     <div className="navContainer">
-      <div className="accueil">
-        <Link to="/home">Accueil</Link>
+      <div className="accueil-nav">
+        <Link to="/">Accueil</Link>
       </div>
 
       <div className="resources">
@@ -17,18 +17,16 @@ const Header = () => {
       </div>
 
       <div className="methodologieDApprentisage">
-        <h2>Méthodologie d'apprentisage</h2>
+        Méthodologie d'apprentisage
       </div>
 
       <div className="astucespourapprendre">
-        <h2>Astuces pour apprendre l'espagnol</h2>
+        Astuces pour apprendre l'espagnol
       </div>
 
-      <div className="connexion">
-        <h2>Connexion</h2>
-      </div>
+      <div className="connexion">Connexion</div>
     </div>
   );
 };
 
-export default Header;
+export default NavBar;

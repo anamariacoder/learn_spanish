@@ -1,9 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic&display=swap");
+
+/* font-family: "Lato";
+
+font-family: "Nanum Gothic"; */
+* {
+  font-family: "Lato";
+}
+
 .App {
   text-align: center;
+
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .navContainer {
-display: flex;
-justify-content: space-around;
+  height: 60px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
+.accueil {
+  height: 85vh;
+  background-image: url("./components/public/img/spanish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

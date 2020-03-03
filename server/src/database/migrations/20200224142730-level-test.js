@@ -12,18 +12,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.JSONB
       }
-
-      // created_at: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE,
-      //   defaultValue: Sequelize.NOW
-      // },
-
-      // updated_at: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE,
-      //   defaultValue: Sequelize.NOW
-      // }
     });
   },
   down: (queryInterface, Sequelize) => {

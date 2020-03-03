@@ -26,17 +26,34 @@ const LevelTest = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("response valide");
+
     let keys = Object.keys(reponses);
 
     keys.map((v, i) => {
-      console.log(v);
       v = v.replace("question", "");
-      console.log(v);
-      console.log(reponses[keys[i]]);
+      let numBonneReponse = test[0].questions.levelTests[v].answer
+      let reponseCorrect = test[0].questions.levelTests[v].choix[numBonneReponse]
       console.log(i);
+      let reponseUtilisateur = reponses[keys[i]];
+      // console.log(reponseUtilisateur);
+      // console.log(reponseCorrect);
 
-    })
+      if (reponseUtilisateur === reponseCorrect ){
+        console.log('Super tu as réussi, muy bien ! ')
+      }
+      else {
+        console.log(' tes nul ! ')
+      }
+      
+      console.log(test[0].questions.levelTests[v].answer);
+
+      // console.log(v);
+      //  console.log(reponses[keys[i]]);
+
+      //  console.log(reponses[keys[i]]);
+
+      //console.log(i);
+    });
     console.log(test[0].questions.levelTests);
   };
   return (
@@ -53,7 +70,6 @@ const LevelTest = () => {
                 <select name={`question${i}`} onChange={handleChange}>
                   {q.choix.map((c, i) => {
                     return <option key={i}>{c}</option>;
-                    
                   })}
                 </select>
               </div>

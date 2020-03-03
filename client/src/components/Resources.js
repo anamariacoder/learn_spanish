@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 
 const Resources = () => {
   const [test, setTest] = useState(null);
-  console.log("resources", Resources);
+  //console.log("resources", Resources);
   useEffect(() => {
-    fetch("/api")
+    fetch("/api/leveltest")
       .then(response => {
         return response.json();
       })
       .then(res => {
+        //console.log(res);
         setTest(res);
-        console.log(res);
       });
   }, []);
 
@@ -22,15 +22,23 @@ const Resources = () => {
     <div>
       <h1>Ressources</h1>
       <div>
+        {console.log(test)}
         {test &&
-          test.questions.levelTests.map((q, i) => {
-            return (
-              <div key={i}>
-                <img src={q.image} alt="question" />
-                {q.question}
-                <select></select>
-              </div>
-            );
+          test.map((test, i) => {
+            console.log(test);
+
+
+            // test.questions.levelTests.map(levelTest => {
+            //   console.log(levelTest)
+            // } )
+
+            // return (
+            //   <div key={i}>
+            //     <img src={q.image} alt="question" />
+            //     {q.question}
+            //     <select></select>
+            //   </div>
+            // );
           })}
       </div>
       <button onClick={handleSubmit}>Valider</button>

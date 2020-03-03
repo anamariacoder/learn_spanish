@@ -6,9 +6,9 @@ import Resources from "./components/Resources";
 //import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "./components/home";
+import Home from "./components/home/Home";
 import "./App.css";
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 
 const App = props => {
   console.log(props);
@@ -18,7 +18,7 @@ const App = props => {
   return (
     <div>
       <Router>
-        <Header />
+        <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/test" component={LevelTest} />
