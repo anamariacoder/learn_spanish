@@ -33,3 +33,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.iconTest {
+  width: 50px;
+}

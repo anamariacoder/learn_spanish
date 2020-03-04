@@ -5,26 +5,26 @@ const NavBar = () => {
   return (
     <div className="navContainer">
       <div className="accueil-nav">
-        <Link to="/">Accueil</Link>
+        <Link to="/">Accueil   </Link>
       </div>
 
       <div className="resources">
-        <Link to="/resources">Ressources</Link>
+        <Link to="/resources">Ressources  </Link>
       </div>
 
-      <div className="testEtProgresglobal">
-        <Link to="/test">Test et progrès</Link>
+      <div className="global-progress-test">
+        <Link to="/test">Test et progrès  </Link>
       </div>
 
-      <div className="methodologieDApprentisage">
+      <div className="learning-methodology">
         Méthodologie d'apprentisage
       </div>
 
-      <div className="astucespourapprendre">
+      <div className="learning-tips">
         Astuces pour apprendre l'espagnol
       </div>
 
-      <div className="connexion">Connexion</div>
+      <div className="connection">Connexion</div>
     </div>
   );
 };

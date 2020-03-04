@@ -1,30 +1,29 @@
 import React, { useEffect } from "react";
 //import PropTypes from "prop-types";
-import LevelTest from "./components/LevelTest";
-
-import Resources from "./components/Resources";
-//import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Provider } from "react-redux";
+import LevelTest from "./components/level-test/LevelTest";
+import Resources from "./components/resources/Resources";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-import Home from "./components/home/Home";
+import NavBar from "./components/layouts/NavBar";
+import Accueil from "./components/accueil/Accueil";
 import "./App.css";
-import NavBar from "./components/NavBar";
+import { store } from "./store";
 
 const App = props => {
   console.log(props);
-  useEffect(() => {
-    //props.getUserAction()
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div>
-      <Router>
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/test" component={LevelTest} />
-          <Route path="/resources" component={Resources} />
-        </Switch>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Accueil} />
+            <Route path="/resources" component={Resources} />
+            <Route path="/test" component={LevelTest} />
+          </Switch>
+        </Router>
+      </Provider>
     </div>
   );
 };
