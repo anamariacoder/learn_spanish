@@ -9,7 +9,7 @@ module.exports = {
         defaultValue: Sequelize.UUIDV4
       },
 
-      account: {
+      account:{
         allowNull: false,
         type: Sequelize.STRING(50)
       },
