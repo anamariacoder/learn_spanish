@@ -28,9 +28,9 @@ server.get("/api/auth",verifyToken, async (req, res) => {
   }
 });
 
-server.listen(8080, () => {   
-  console.log("Server Running on port");
-});
+// server.listen(8080, () => {   
+//   console.log("Server Running on port");
+// });
 
 //const PORT = process.env.PORT || 8000; iciiiiiiiiiiii
 

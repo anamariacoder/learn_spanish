@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/layouts/NavBar";
 import Accueil from "./components/accueil/Accueil";
 import "./App.css";
-import { store } from "./store";
+import store from "./store";
 import SignFirebase from "./components/user/SignFirebase";
 
 const App = props => {

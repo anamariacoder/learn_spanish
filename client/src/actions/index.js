@@ -1,14 +1,6 @@
 import * as types from "./../constants";
 
-export const getUserAction = () => {
-  return dispatch => {
-    return fetch("/api/check/token")
-      .then(response => response.json())
-      .then(json => {
-        dispatch({ type: types.LOGIN_REQUEST, payload: json });
-      });
-  };
-};
+
 
 export const logginAction = values => {
   return dispatch => {

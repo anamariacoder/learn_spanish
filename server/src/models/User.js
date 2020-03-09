@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 30]
+          len: [2, 50]
         }
       },
 

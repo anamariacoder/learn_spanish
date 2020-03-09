@@ -8,11 +8,13 @@ const initialState =  {
 
 export default function auth(state = initialState, action) {
   switch (action.type) {
-    case types.GET_USER_REQUEST:
+    case types.CHECK_TOKEN:
       return {
         ...state,
+user: action.payload
+
       };
     default:
-      return state
+      return state;
   }
 }

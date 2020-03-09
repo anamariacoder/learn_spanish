@@ -1,4 +1,4 @@
-export const GET_USER_REQUEST = 'GET_USER_REQUEST';
+export const CHECK_TOKEN = 'CHECK_TOKEN';
 
 export const CHECK_LEVEL_TEST ='CHECK_LEVEL_TEST';
 export const GET_LEVEL_TESTS = 'GET_LEVEL_TESTS';
