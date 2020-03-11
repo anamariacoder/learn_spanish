@@ -1,6 +1,6 @@
 import axios from "axios";
 import { firebase, fireAuth } from "../../firebase/Firebase";
-import React from "react";
+import React, { useEffect } from "react";
 import withFirebaseAuth from "react-with-firebase-auth";
 import { connect } from "react-redux";
 import { checkToken } from "../../actions/userActions";
@@ -11,27 +11,27 @@ const providers = {
   googleProvider: new firebase.auth.GoogleAuthProvider()
 };
 
-const SignFirebase = ({ user, signOut, signInWithGoogle }) => {
-  console.log("user", user && user.photoURL);
+const SignFirebase = props => {
+  console.log("props", props);
+  const { user, signInWithGoogle, signOut } = props;
 
   async function callApi() {
     await axios.get("http://localhost:8000/api/auth");
   }
 
-  React.useEffect(() => {
-    checkToken();
-  }, []);
-
-  //    if (user) {
-  //     user
-  //       .getIdToken()
-  //       .then(idToken => {
-  //         console.log("idToken", idToken);
-  //         axios.defaults.headers.common["Authorization"] = idToken;
-  //       })
-  //       .catch(err => console.log(err));
-  //   }
-  //}, [user]);
+  useEffect(() => {
+    if (user) {
+      user
+        .getIdToken()
+        .then(idToken => {
+          console.log("idToken", idToken);
+          axios.defaults.headers.common["Authorization"] = idToken;
+        })
+        .catch(err => console.log(err));
+    }
+    console.log("fire checktoken signin");
+    props.checkToken();
+  }, [user]);
 
   return (
     <div>

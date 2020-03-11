@@ -9,6 +9,7 @@ import Accueil from "./components/accueil/Accueil";
 import "./App.css";
 import store from "./store";
 import SignFirebase from "./components/user/SignFirebase";
+import signFirebaseContainer from "./containers/signFirebaseContainer";
 
 const App = props => {
   console.log(props);
@@ -22,7 +23,7 @@ const App = props => {
             <Route exact path="/" component={Accueil} />
             <Route path="/resources" component={Resources} />
             <Route path="/test" component={LevelTest} />
-            <Route path="/sign" component={SignFirebase} />
+            <Route path="/sign" component={signFirebaseContainer} />
           </Switch>
         </Router>
       </Provider>

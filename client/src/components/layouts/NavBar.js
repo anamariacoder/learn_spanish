@@ -20,8 +20,8 @@ const NavBar = () => {
 
       <div className="learning-tips">Astuces pour apprendre l'espagnol</div>
 
-      <div className="connection">    
-        <Link to="/Sign">Connexion </Link>
+      <div className="connection">
+        <Link to="/sign">Connexion </Link>
       </div>
     </div>
   );

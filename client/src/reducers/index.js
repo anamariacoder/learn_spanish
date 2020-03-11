@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
 
-import auth from "./auth";
+import authReducer from "./auth";
 import levelTest from "./levelTest";
 
-const reducers = combineReducers({ auth, levelTest });
+const reducers = combineReducers({ 
+  userState:authReducer, 
+  levelTest 
+});
 
 export default reducers;
 
