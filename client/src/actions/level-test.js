@@ -12,7 +12,7 @@ export const fetchTests = () => async dispatch => {
 
 export const checkLevelTest = () => async (dispatch, getState) => {
   let nbCorrect = 0;
-  let answered = 0;
+  let nbAnswered = 0;
   let nbWrong = 0;
   const responses = getState().levelTest.responses;
   const tests = getState().levelTest.tests;
@@ -25,18 +25,24 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     let reponseUtilisateur = responses[keys[i]];
     if (reponseUtilisateur === reponseCorrect) {
       nbCorrect += 1;
-      answered += 1;
+      nbAnswered += 1;
     } else {
       nbWrong += 1;
-      answered += 1;
+      nbAnswered += 1;
     }
 
-    console.log(" Number correct answers ", nbCorrect);
-    console.log("Number false answers ", nbWrong); // Quantité de mauvaises réponses
-    console.log("nombre de questions répondues :", answered);
+    // console.log("1 Number correct answers ", nbCorrect);
+    // console.log("2 Number false answers ", nbWrong); // Quantité de mauvaises réponses
+    // console.log("3 Nombre de questions répondues :", nbAnswered);
   // fetch POST => nbCorrect, => nouvelle route server qui insert les data
 
   });
+
+  console.log("1 Number correct answers ", nbCorrect);
+  console.log("2 Number false answers ", nbWrong); // Quantité de mauvaises réponses
+  console.log("3 Nombre de questions répondues :", nbAnswered);
+
+
 };
 
 

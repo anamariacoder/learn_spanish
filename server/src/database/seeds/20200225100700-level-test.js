@@ -9,7 +9,7 @@ module.exports = [
     questions: JSON.stringify({
       levelTests: [
         {
-          image: "/api/images/images.jpeg",
+          image: "/api/images/saluermatin.jpg",
           question: "Si usted saluda a alguien en la mañana, le dice :",
           choix: [
             "Buenas noches", 
@@ -18,7 +18,7 @@ module.exports = [
           answer: 2
         },
         {
-          image: "/api/images/images.jpeg",
+          image: "/api/images/saluerbye.jpg",
           question: "Si usted se despide de una persona, le dice :",
           choix: [  
             "Hola", 

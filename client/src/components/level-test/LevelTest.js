@@ -5,13 +5,13 @@ import Correct from "../test/Correct";
 import NotCorrect from "../test/NotCorrect";
 import { connect } from "react-redux";
 import { checkLevelTest, fetchTests, handleResponses } from "../../actions/level-test"
-// const isCorrect = (props) => {
+ const isCorrect = (props) => {
 //   if (reponseUtilisateur === reponseCorrect) {
 //     return <Correct />;
 //   } else {
 //     return <NotCorrect />;
 //   }
-// };
+ };
 
 const LevelTest = (props) => {
   useEffect(() => {
@@ -50,7 +50,9 @@ const LevelTest = (props) => {
             );
           })}
       </div>
-      <button onClick={handleSubmit}>Valider</button>
+      <button onClick={handleSubmit}>Valider
+      
+      </button>
     </div>
   );
 };

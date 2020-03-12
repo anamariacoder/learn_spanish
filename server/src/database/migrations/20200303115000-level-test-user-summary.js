@@ -23,7 +23,6 @@ module.exports = {
         }
       },
 
-
       id_type_test: {
         allowNull: false,
         primaryKey: true,
@@ -34,7 +33,6 @@ module.exports = {
           key: "id"
         }
       },
-
 
       note_user: {
         allowNull: true,
@@ -67,6 +65,7 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       }
+      
     });
   },
 

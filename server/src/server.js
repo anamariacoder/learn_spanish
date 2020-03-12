@@ -6,10 +6,10 @@ const { LevelTest } = require("./models");
 const routes = require("./routes"); /*avec la 's' */
 const server = express();
 
-server.use(bodyParser.json()); /* ajuté */
+server.use(bodyParser.json()); 
 server.use('/api',cors());
-server.use('/api',routes); /* ajuté */
-server.use("api/auth", verifyToken); /* ajuté */
+server.use('/api',routes); 
+server.use("api/auth", verifyToken);
 server.use("/api/images", express.static("src/public"));
 server.use("/api", routes);
 
