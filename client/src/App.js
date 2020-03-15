@@ -5,6 +5,9 @@ import LevelTest from "./components/level-test/LevelTest";
 import Resources from "./components/resources/Resources";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/layouts/NavBar";
+
+import Footer from "./components/layouts/Footer";
+
 import Accueil from "./components/accueil/Accueil";
 import "./App.css";
 import store from "./store";
@@ -21,10 +24,11 @@ const App = props => {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Accueil} />
-            <Route path="/resources" component={Resources} />
             <Route path="/test" component={LevelTest} />
+            <Route path="/resources" component={Resources} />
             <Route path="/sign" component={signFirebaseContainer} />
           </Switch>
+          <Footer></Footer>
         </Router>
       </Provider>
     </div>

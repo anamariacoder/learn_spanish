@@ -1,6 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic&display=swap");
 
+/****************************
+/* autoprefix + normalize */
+
+/* valable pour tous les écrans */
+body {
+  margin: 10px;
+}
+/* valable pour tous les écrans supérieures à 960px */
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 10px auto;
+    max-width: 1168px; /* 1200 - 16*2 */
+  }
+}
+
+/* valable pour tous les écrans */
+p {
+  line-height: 1.5;
+  font-family: "Roboto";
+  color: white;
+  margin-left: 30px;
+  margin-top:50px;
+
+}
+/* valable pour tous les écrans supérieures à 640px */
+@media screen and (min-width: 640px) {
+  p {
+    column-count: 2; /* ! column à utiliser pour des exemples simples */
+  }
+}
+
+/* valable pour tous les écrans supérieures à 960px */
+@media screen and (min-width: 960px) {
+  p {
+    column-count: 3;
+  }
+}
+
+/***************************
 /* font-family: "Lato";
+
 
 font-family: "Nanum Gothic"; */
 * {
@@ -10,7 +50,7 @@ font-family: "Nanum Gothic"; */
 .App {
   text-align: center;
 
-  font-size: 20px;
+  font-size: 30px;
 }
 a {
   text-decoration: none;
@@ -18,22 +58,46 @@ a {
 }
 
 .navContainer {
-  height: 60px;
+  height: 80px;
+  width: 100%;
   font-size: 1.5em;
   letter-spacing: 1px;
-  padding: 40px 0 20px 0;
+  padding: 30px 40px 10px 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .accueil {
-  height: 85vh;
-  background-image: url("./components/public/img/spanish.jpg");
+  height: 100vh;
+  background-image: url("./components/public/img/teclado-espagnol.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  padding: 100px 0 100px 0;
+  background-size: contain;
 }
 
 .iconTest {
-  width: 50px;
+  width: 30px;
+}
+
+.footer {
+   
+   background-color:grey;
+  font-family: "Roboto";
+  font-size: 30px;
+  text-align: justify;
+  
+ 
+ /* text-align: center;
+*/
+}
+.icon {
+  color: white;
+  
+  margin-left: 20px;
+}
+
+.column
+{
+  color: white; 
 }

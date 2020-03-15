@@ -10,7 +10,7 @@ module.exports = [
       levelTests: [
         {
           image: "/api/images/saluermatin.jpg",
-          question: "Si usted saluda a alguien en la mañana, le dice :",
+          question: "1. Si usted saluda a alguien en la mañana, le dice :",
           choix: [
             "Buenas noches", 
             "Adiós", 
@@ -19,7 +19,7 @@ module.exports = [
         },
         {
           image: "/api/images/saluerbye.jpg",
-          question: "Si usted se despide de una persona, le dice :",
+          question: "2. Si usted se despide de una persona, le dice :",
           choix: [  
             "Hola", 
             "Adiós", 
@@ -27,14 +27,35 @@ module.exports = [
           answer: 1
         },
         {
-          image: "/api/images/images.jpeg",
-          question: "Buenos días, cómo está usted ?",
+          image: "/api/images/salutations2.jpg",
+          question: "3. Buenos días, cómo está usted ?",
           choix: [
             "Chao. Nos vemos luego.",
-            "Muy bien, gracias. Y usted ?",
-            "Hasta la vista"
+            "Muy bien, gracias. ¿ Y usted ?",
+            "Hasta la vista."
           ],
           answer: 1
+        },
+        {
+          image: "/api/images/salutation3.jpg",
+          question: "4. Si le presentan a alguien, usted dice :",
+          choix: [
+            "Hasta pronto.",
+            "Nos vemos.",
+            "Tanto gusto. Un placer conocerle."
+          ],
+          answer: 2
+        },
+
+        {
+          image: "/api/images/saluer-ami1.jpg",
+          question: "5. Para saludar a un amigo, usted le dice :",
+          choix: [
+            "Hola. ¿ Cómo estás ?",
+            "¿ Cómo está usted ?",
+            "Encantado de verle."
+          ],
+          answer: 0
         }
       ]
     })
