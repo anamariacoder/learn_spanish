@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navContainer">
-      
       <div className="accueil-nav">
         <Link to="/">Accueil </Link>
       </div>
@@ -17,7 +16,9 @@ const NavBar = () => {
         <Link to="/resources"> Ressources </Link>
       </div>
 
-      <div className="learning-methodology"> Méthodologie d'apprentisage</div>
+      <div className="learning-methodology">
+        <Link to="/learningMethodology"> Méthodologie d'apprentisage </Link>
+      </div>
 
       <div className="learning-tips"> Astuces pour apprendre l'espagnol</div>
 

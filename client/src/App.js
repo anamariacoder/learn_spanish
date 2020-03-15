@@ -3,11 +3,12 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import LevelTest from "./components/level-test/LevelTest";
 import Resources from "./components/resources/Resources";
+import LearningMethodology from "./components/learningMethodology/LearningMethodology";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import NavBar from "./components/layouts/NavBar";
-
 import Footer from "./components/layouts/Footer";
-
 import Accueil from "./components/accueil/Accueil";
 import "./App.css";
 import store from "./store";
@@ -26,7 +27,11 @@ const App = props => {
             <Route exact path="/" component={Accueil} />
             <Route path="/test" component={LevelTest} />
             <Route path="/resources" component={Resources} />
+            <Route path="/learningMethodology" component={LearningMethodology} />
             <Route path="/sign" component={signFirebaseContainer} />
+
+
+            <Route component={PageNotFound}/>
           </Switch>
           <Footer></Footer>
         </Router>
