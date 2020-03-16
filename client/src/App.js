@@ -22,16 +22,43 @@ const App = props => {
     <div>
       <Provider store={store}>
         <Router>
+          
+          
+          
+          {/* /* <div>
+            <link
+              rel="stylesheet"
+              media="screen and (max-width: 640px)"
+              href="smallscreen.css"
+              type="text/css"
+            />
+            <link
+              rel="stylesheet"
+              media="(orientation:portrait)"
+              href="portrait.css"
+            />
+            <link
+              rel="stylesheet"
+              media="(orientation:landscape)"
+              href="paysage.css"
+            />
+          </div> */} 
+
+
+
+          
           <NavBar />
           <Switch>
             <Route exact path="/" component={Accueil} />
             <Route path="/test" component={LevelTest} />
             <Route path="/resources" component={Resources} />
-            <Route path="/learningMethodology" component={LearningMethodology} />
+            <Route
+              path="/learningMethodology"
+              component={LearningMethodology}
+            />
             <Route path="/sign" component={signFirebaseContainer} />
 
-
-            <Route component={PageNotFound}/>
+            <Route component={PageNotFound} />
           </Switch>
           <Footer></Footer>
         </Router>

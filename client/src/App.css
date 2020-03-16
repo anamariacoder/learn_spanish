@@ -7,13 +7,6 @@
 body {
   margin: 30px;
 }
-/* valable pour tous les écrans supérieures à 960px */
-@media screen and (min-width: 1200px) {
-  body {
-    margin: 10px auto;
-    max-width: 1168px; /* 1200 - 16*2 */
-  }
-}
 
 /* valable pour tous les écrans */
 p {
@@ -23,21 +16,41 @@ p {
   margin-left: 30px;
   margin-top: 80px;
 }
+
+/* valable pour tous les écrans supérieures à 1200px */
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 10px auto;
+    max-width: 1168px; /* 1200 - 16*2 */
+    display: block;
+    width: 100%;
+  }
+}
+
 /* valable pour tous les écrans supérieures à 640px */
 @media screen and (min-width: 640px) {
-  p {
+  p, .App, .navContainer, .accueil {
     column-count: 2; /* ! column à utiliser pour des exemples simples */
+    width: 100%;
   }
 }
 
 /* valable pour tous les écrans supérieures à 960px */
 @media screen and (min-width: 960px) {
-  p {
+  p, .App, .navContainer, .accueil  {
     column-count: 3;
+    width: 100%;
   }
 }
+/***************************/
+/* @media screen and (max-width: 800px) {
+  p, body, .App, .navContainer, .accueil, .learningMethodology {
+    display: block;
+    width: 100%;
+  }
+} */
 
-/***************************
+/***************************/
 /* font-family: "Lato";
 
 
@@ -77,13 +90,12 @@ a {
 }
 
 .learningMethodology {
-   height: 100vh;
+  height: 100vh;
   background-image: url("./components/public/img/PIZARRA1.jpg");
   background-repeat: no-repeat;
-  
-  padding: 100px 0 100px 0; 
-  background-size: 100% 90%;
 
+  padding: 100px 0 100px 0;
+  background-size: 100% 90%;
 }
 
 .iconTest {
@@ -109,3 +121,4 @@ a {
 .column {
   color: white;
 }
+
