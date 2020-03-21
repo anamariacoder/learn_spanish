@@ -12,7 +12,7 @@ body {
 p {
   line-height: 1.5;
   font-family: "Roboto";
-  color: white;
+  color: black;
   margin-left: 30px;
   margin-top: 80px;
 }
@@ -29,7 +29,10 @@ p {
 
 /* valable pour tous les écrans supérieures à 640px */
 @media screen and (min-width: 640px) {
-  p, .App, .navContainer, .accueil {
+  p,
+  .App,
+  .navContainer,
+  .accueil {
     column-count: 2; /* ! column à utiliser pour des exemples simples */
     width: 100%;
   }
@@ -37,7 +40,10 @@ p {
 
 /* valable pour tous les écrans supérieures à 960px */
 @media screen and (min-width: 960px) {
-  p, .App, .navContainer, .accueil  {
+  p,
+  .App,
+  .navContainer,
+  .accueil {
     column-count: 3;
     width: 100%;
   }
@@ -61,7 +67,6 @@ font-family: "Nanum Gothic"; */
 
 .App {
   text-align: center;
-
   font-size: 30px;
 }
 a {
@@ -70,30 +75,127 @@ a {
 }
 
 .navContainer {
-  height: 80px;
+  height: 70px;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.4em;
   letter-spacing: 1px;
-  padding: 30px 40px 10px 40px;
-  display: flex;
+  padding: 20px 20px ; 
+  /* padding: 30px 40px 10px 40px; */
+  display:flex;
   justify-content: left;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.accueil {
-  height: 100vh;
+/* .accueil { */
+  /* height: 100vh;
   background-image: url("./components/public/img/teclado-espagnol.jpg");
   background-repeat: no-repeat;
-  opacity: 0.8;
-  padding: 100px 0 100px 0;
+  opacity: 0.8; */
+  /* padding: 100px 0 100px 0;
+  background-size: 100% 90%; */
+/* } */
+
+.container-accueil {
+  height: 90%;/*130vh;*/
+  background-image: url("./components/public/img/teclado-espagnol.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px; 
+  opacity: 0.77;
+  width: auto;
+  padding: 100px 10px 100px 0;
   background-size: 100% 90%;
 }
 
+.info-accueil h1{
+
+  margin: auto;
+  font-family: "Anton";
+  letter-spacing: -0.5pt; 
+
+  text-align: center;
+  font-size: 350%;
+  color: rgb(200, 26, 3);
+
+  /* padding: 10px 10px; */
+}
+
+.info-accueil p {
+  width: 1000px;
+  padding: 20px; 
+  line-height: 3em;
+  max-width: 40%;
+  color: orange;
+  margin: 0 auto;
+  text-align: left;
+  word-spacing:1px;
+  font-size: 2em;
+} 
+
+ .info-accueil p1{
+  padding: 300px; 
+  font-size: 2em;
+  color:rgb(200, 26, 3) ;
+  text-indent : 25px;
+  
+} 
+
 .learningMethodology {
   height: 100vh;
-  background-image: url("./components/public/img/PIZARRA1.jpg");
-  background-repeat: no-repeat;
+  /* background-image: url("./components/public/img/PIZARRA1.jpg");
+  background-repeat: no-repeat; */
 
+  /* padding: 100px 0 100px 0;
+  background-size: 100% 90%; */
+}
+
+.container-learning-methodology {
+  width: 100%;
+  height: 900px;
+
+  background-image: url(/static/media/livre-espagnol1.50e4257c.png);
+  background-repeat: no-repeat;
+  background-image: center;
+  opacity: 0.8;
+  /* max-width: 100px; */
+  margin-left: 100px;
+  text-align: center;
+}
+
+.info-learning-methodology {
+  width: 60%;
+  max-width: 100%;
+  margin: auto;
+
+  /* padding: 10px 10px; */
+}
+
+.info-learning-methodology h3 {
+  color: rgb(22, 22, 22);
+  font-size: 40px;
+  text-align: left;
+}
+
+.info-learning-methodology p {
+  color: rgb(22, 22, 22);
+  padding: 20% 20% 20% 20%;
+  font-size: 25px;
+  /* text-align: left; */
+  font-size: 18px;
+
+  font-weight: 20px;
+  text-align: center;
+  background: whitesmoke;
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 20px;
+  line-height: 20pt;
+}
+
+.learningTips {
+  height: 100vh;
+  background-image: url("./components/public/img/images14.jpg");
+  background-repeat: no-repeat;
+  background-color: royalblue;
   padding: 100px 0 100px 0;
   background-size: 100% 90%;
 }
@@ -106,9 +208,7 @@ a {
   background-color: grey;
   font-family: "Roboto";
   font-size: 30px;
-
   margin-left: 20px;
-
   text-align: center;
 }
 
@@ -121,4 +221,3 @@ a {
 .column {
   color: white;
 }
-

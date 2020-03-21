@@ -101,7 +101,7 @@ body {
             height: 20px;
             border-radius: 50%;
             @include border;
-            float: left;
+            // float: left;
             margin-top: 13px;
         }
         em.selected {
@@ -139,7 +139,7 @@ body {
             margin: 0;
         }
         span {
-            float: left;
+            // float: left;
             display: inline-block;
             width: 10%;
             @include verticalCenter(50px);
@@ -153,18 +153,18 @@ body {
     }
 }
 
-.footer {
-    span {
-        display: inline-block;
-        @include border(1px, #3c9, solid);
-        padding: 8px 10px;
-        margin: 0 5px;
-        border-radius: 3px;
-        color: $color;
-    }
-    a {
-        color: $grayColor;
-        text-decoration: none;
-        margin: 0 5px;
-    }
-}
+// .footer {
+//     span {
+//         display: inline-block;
+//         @include border(1px, #3c9, solid);
+//         padding: 8px 10px;
+//         margin: 0 5px;
+//         border-radius: 3px;
+//         color: $color;
+//     }
+//     a {
+//         color: $grayColor;
+//         text-decoration: none;
+//         margin: 0 5px;
+//     }
+// }

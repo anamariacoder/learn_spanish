@@ -20,7 +20,12 @@ const NavBar = () => {
         <Link to="/learningMethodology"> Méthodologie d'apprentisage </Link>
       </div>
 
-      <div className="learning-tips"> Astuces pour apprendre l'espagnol</div>
+      <div className="learning-tips">
+        <Link to="/learningTips"> Astuces pour apprendre l'espagnol  </Link>
+      </div>
+
+
+      {/* <div className="learning-tips"> Astuces pour apprendre l'espagnol</div> */}
 
       <div className="connection">
         <Link to="/sign"> Connexion </Link>
