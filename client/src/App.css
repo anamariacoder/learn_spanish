@@ -5,7 +5,7 @@
 
 /* valable pour tous les écrans */
 body {
-  margin: 30px;
+  margin-right: 0px;
 }
 
 /* valable pour tous les écrans */
@@ -13,8 +13,8 @@ p {
   line-height: 1.5;
   font-family: "Roboto";
   color: black;
-  margin-left: 30px;
-  margin-top: 80px;
+  margin-left: 3px;
+  margin-top: 0px;
 }
 
 /* valable pour tous les écrans supérieures à 1200px */
@@ -22,7 +22,10 @@ p {
   body {
     margin: 10px auto;
     max-width: 1168px; /* 1200 - 16*2 */
-    display: block;
+    /* display: block; */
+    display: flex;
+    justify-content: space-between;
+
     width: 100%;
   }
 }
@@ -73,71 +76,62 @@ a {
   text-decoration: none;
   color: black;
 }
-
+/* 1 */
 .navContainer {
-  height: 70px;
+  height: 100%;
   width: 100%;
+  margin-right: auto;
+  font-family: "Quicksand";
+  display: flex;
+  justify-content: space-between;
   font-size: 1.4em;
   letter-spacing: 1px;
-  padding: 20px 20px ; 
-  /* padding: 30px 40px 10px 40px; */
-  display:flex;
-  justify-content: left;
+  padding: 10px 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
-
-/* .accueil { */
-  /* height: 100vh;
-  background-image: url("./components/public/img/teclado-espagnol.jpg");
-  background-repeat: no-repeat;
-  opacity: 0.8; */
-  /* padding: 100px 0 100px 0;
-  background-size: 100% 90%; */
-/* } */
-
+/* 2 */
 .container-accueil {
-  height: 90%;/*130vh;*/
+  height: 50vh;
   background-image: url("./components/public/img/teclado-espagnol.jpg");
   background-repeat: no-repeat;
-  background-position: 0px 0px; 
-  opacity: 0.77;
-  width: auto;
-  padding: 100px 10px 100px 0;
-  background-size: 100% 90%;
+  background-position: 5px 0px;
+  opacity: 0.8;
+  width: 115%;
+  padding: 110px 0px 100px 0;
+  background-size: 90% 120%;
 }
-
-.info-accueil h1{
-
+/*3*/
+.info-accueil h1 {
   margin: auto;
   font-family: "Anton";
-  letter-spacing: -0.5pt; 
-
+  letter-spacing: -0.5pt;
+  line-height: 1.5em;
   text-align: center;
   font-size: 350%;
-  color: rgb(200, 26, 3);
-
-  /* padding: 10px 10px; */
+  color: red;
+  padding: 0px 0px;
 }
 
 .info-accueil p {
   width: 1000px;
-  padding: 20px; 
-  line-height: 3em;
+  padding: 30px;
+  line-height: 3.5em;
   max-width: 40%;
-  color: orange;
+  color: black;
   margin: 0 auto;
   text-align: left;
-  word-spacing:1px;
+  word-spacing: 1px;
   font-size: 2em;
-} 
+  text-indent: 25px;
+}
 
- .info-accueil p1{
-  padding: 300px; 
+.info-accueil p1 {
+  padding: 30%;
+  color: black;
+  word-spacing: 1px;
   font-size: 2em;
-  color:rgb(200, 26, 3) ;
-  text-indent : 25px;
-  
-} 
+  text-indent: 25px;
+}
 
 .learningMethodology {
   height: 100vh;
@@ -204,15 +198,15 @@ a {
   width: 30px;
 }
 
-.footer {
+/* .footer {
   background-color: grey;
   font-family: "Roboto";
   font-size: 30px;
   margin-left: 20px;
   text-align: center;
-}
+} */
 
-.icon {
+/* .icon {
   color: white;
 
   margin-left: 20px;
@@ -220,4 +214,38 @@ a {
 
 .column {
   color: white;
+} */
+
+/* Hoy 23-03 */
+.define {
+  width: 100%;
+
+  margin: 0 auto;
+  margin-left: 20px;
+  position: relative;
+  /* Altura total del footer en px  */
+  margin-top: 150px;
+  /* Altura del footer en px  */
+
+  padding: 5px 0px;
+  clear: both;
+  background: rgb(240, 240, 243);
+  text-align: match-parent;
+
+  display: flex;
+  padding: 18px 8px;
+}
+
+footer p {
+  flex: 1;
+  margin: 0;
+}
+
+footer ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
 }

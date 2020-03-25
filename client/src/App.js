@@ -38,6 +38,27 @@ const App = props => {
           </Switch>
         </Router>
       </Provider>
+
+      <footer>
+        
+        <div class="define">
+          <p>&copy; 2020 Codé</p>
+
+          <ul>
+            <li>
+              <a href="/acerca-de">Qui sommes nous :</a>
+            </li>
+            <li>
+            <p>Contact :</p>
+              <a href="/conectar"> anamadealmeida@gmail.com</a>
+            </li>
+            <li>
+              <a href="/rrss">Nos réseaux :</a>
+              
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };
