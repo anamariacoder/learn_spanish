@@ -5,7 +5,6 @@ const Accueil = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-   
   };
   return (
     <body className="container-accueil">
@@ -14,18 +13,8 @@ const Accueil = () => {
         <p>Apprenez l'espagnol facilement</p>
         <p1>et validez votre progression !</p1>
       </div>
-
-      
     </body>
   );
 };
 
 export default Accueil;
-
-// import React from "react";
-
-// function Accueil() {
-//   return <div className="accueil"></div>;
-// }
-
-// export default Accueil;

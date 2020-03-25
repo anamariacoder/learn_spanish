@@ -13,7 +13,7 @@ $width: 200;
     &:after {
         clear: both;
         content: '.';
-        display: block;
+        // display: block;
         height: 0;
         line-height: 0;
         overflow: hidden;
@@ -108,7 +108,7 @@ body {
             position: relative;
             border: 1px solid $color;
             &:before {
-                display: block;
+                // display: block;
                 content: '';
                 width: 6px;
                 height: 1px;
@@ -119,7 +119,7 @@ body {
                 @include rotate(45)
             }
             &:after {
-                display: block;
+                // display: block;
                 content: '';
                 width: 10px;
                 height: 1px;

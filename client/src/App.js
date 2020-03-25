@@ -12,6 +12,7 @@ import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
 import Accueil from "./components/accueil/Accueil";
 import "./App.css";
+import AboutUs from "./components/about-us/AboutUs";
 import store from "./store";
 import SignFirebase from "./components/user/SignFirebase";
 import signFirebaseContainer from "./containers/signFirebaseContainer";
@@ -40,21 +41,22 @@ const App = props => {
       </Provider>
 
       <footer>
-        
         <div class="define">
           <p>&copy; 2020 Codé</p>
 
           <ul>
             <li>
-              <a href="/acerca-de">Qui sommes nous :</a>
+              {
+                <a href="/a">Qui sommes-nous ?</a>
+           
+              }
             </li>
             <li>
-            <p>Contact :</p>
+              <p>Contact :</p>
               <a href="/conectar"> anamadealmeida@gmail.com</a>
             </li>
             <li>
               <a href="/rrss">Nos réseaux :</a>
-              
             </li>
           </ul>
         </div>
