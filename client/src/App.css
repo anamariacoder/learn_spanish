@@ -85,6 +85,9 @@ a {
   margin-right: auto;
   font-family: "Quicksand";
   display: flex;
+
+  flex-direction: row;
+
   justify-content: space-between;
   font-size: 1.4em;
   letter-spacing: 1px;
@@ -137,61 +140,63 @@ a {
   text-indent: 10px;
 }
 
-.learningMethodology {
-  /* margin: 10px 0px px 0px; */
-  /* height: 100vh;  */
-  /* background-image: url("./components/public/img/PIZARRA1.jpg");
-  background-repeat: no-repeat; */
-
-  /* padding: 100px 0 100px 0;
-  background-size: 100% 90%; */
-}
-
 .container-learning-methodology {
-  /* width: 100%;
-  height: 900px; */
-  margin: 10px 10px 10px 0px;
   /* background-image: url(/static/media/livre-espagnol1.50e4257c.png); */
-  background-image: url("./components/public/img/PIZARRA1.jpg");
-
+  background-image: url("./components/public/img/livre-espagnol2.png");
   background-repeat: no-repeat;
   background-image: center;
-  width: 80%;
 
-  opacity: 0.9;
-  /* max-width: 100px; */
-  /* margin-left: 100px; */
-  /* text-align: center; */
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /*   
+  padding: 10px auto;
+  padding: 30px 0px 100px 300px;
+  background-size: 90% 120%; */
 }
-
-.info-learning-methodology {
-  /* width: 60%; */
-  width: 50%; /* controle le width de la column*/
-  max-width: 100%;
-  margin-top: 10px;
-
-  margin-left: 0px;
-
-  /* padding: 120px  120px ; */
-}
-
-.info-learning-methodology h1 {
-  color: rgb(22, 22, 22);
-  font-size: 35x;
-  padding: 0px 0px 0px 400px;
-  text-align: center;
+.container-learning-methodology:before {
+  content: "";
+  width: 100%;
+  height: 90vh;
+  background-color: aqua;
+  position: absolute;
+  opacity: 0.2;
 }
 
 .info-learning-methodology p {
-  color: rgb(22, 22, 22);
-  margin: 20px 100px 0 50px;
+  background-color: wheat;
+  opacity: 0.7;
+  width: 50%; /* contrôle le width de la column*/
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 40px;
   text-indent: 1cm;
-padding-top: 20px;
+  padding-top: 20px;
   columns: 1;
-  /* column-width: 100px; */
   text-indent: 50px;
+  align-self: stretch;
+  position: relative;
   text-align: justify;
-  font-size: 18px;
+  border: 12px solid wheat;
+}
+
+.info-learning-methodology p::first-letter {
+  font-size: 2rem;
+}
+
+h1 {
+  color: orangered;
+  font-size: 35x;
+  padding: 10px 0px 0px 10px;
+  text-align: center;
+  position: relative;
 }
 
 .learningTips {
