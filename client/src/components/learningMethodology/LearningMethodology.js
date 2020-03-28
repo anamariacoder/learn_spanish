@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
+import divLogin from "./divLogin";
+
 
 const LearningMethodology = () => {
   useEffect(() => {}, []);
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("por aqui voy");
-  };
+     };
+
   return (
     <body className="container-learning-methodology">
       <div className="info-learning-methodology">
@@ -14,22 +16,25 @@ const LearningMethodology = () => {
           src="https://kit.fontawesome.com/8340b5561f.js"
           crossorigin="anonymous"
         ></script>
+
         <h1>Méthodologie d'apprentisage</h1>
         <p>
           Notre méthodologie est basée sur la pratique quotidienne de la langue
           et sur l'élargissement du vocabulaire de base. <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour cette
-          raison, nos piliers sont : la section de vérification des progrès et
-          les tests de validation des progrès réalisés; ainsi que les sections
-          d'extension du vocabulaire. <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tout le matériel offert est
-          le produit de la compilation et de l'analyse de documents qui
-          améliorent la pratique quotidienne de la langue. D'où le caractère
-          fonctionnel et interactif. <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans un premier temps, notre site est dédié aux adultes francophones,
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pour
+          cette raison, nos piliers sont : la section de vérification des
+          progrès et les tests de validation des progrès réalisés; ainsi que les
+          sections d'extension du vocabulaire. <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tout le
+          matériel offert est le produit de la compilation et de l'analyse de
+          documents qui améliorent la pratique quotidienne de la langue. D'où le
+          caractère fonctionnel et interactif. <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dans un
+          premier temps, notre site est dédié aux adultes francophones,
           débutants et avec peu de temps disponible. C'est pourquoi le matériel
           utilisé est de nature pratique, non extensif, facile à apprendre et
-          associé à la vie réelle et quotidienne. <br /><br />
+          associé à la vie réelle et quotidienne. <br />
+          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merci d'avoir
           rejoint cette expérience didactique, direct et fonctionnelle pour
           apprendre l'espagnol !!!
@@ -51,9 +56,21 @@ const LearningMethodology = () => {
           unirse a esta experiencia didática funcional para el aprendizaje del
           español ! */}
         </p>
+{
+
+/* 
+        <div id="boton" onclick="divLogin()">
+          Mostrar/Ocultar
+        </div>
+        <div id="caja">
+          <p1>ver esto</p1>
+        </div> */}
+        
       </div>
+
       <div className="photo-learning-methodology"></div>
     </body>
+    
   );
 };
 

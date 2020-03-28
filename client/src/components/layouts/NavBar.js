@@ -18,6 +18,7 @@ const NavBar = () => {
 
       <div className="learning-methodology">
         <Link to="/learningMethodology"> Méthodologie d'apprentisage </Link>
+        
       </div>
 
       <div className="learning-tips">
