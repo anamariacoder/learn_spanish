@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import divLogin from "./divLogin";
-
 
 const LearningMethodology = () => {
   useEffect(() => {}, []);
 
   const handleSubmit = event => {
     event.preventDefault();
-     };
+  };
 
   return (
     <body className="container-learning-methodology">
@@ -56,21 +54,13 @@ const LearningMethodology = () => {
           unirse a esta experiencia didática funcional para el aprendizaje del
           español ! */}
         </p>
-{
-
-/* 
-        <div id="boton" onclick="divLogin()">
-          Mostrar/Ocultar
-        </div>
-        <div id="caja">
-          <p1>ver esto</p1>
-        </div> */}
-        
       </div>
 
-      <div className="photo-learning-methodology"></div>
+     
+      
+
+      <div class="photo-learning-methodology"></div>
     </body>
-    
   );
 };
 

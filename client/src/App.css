@@ -62,10 +62,7 @@ p {
 } */
 
 /***************************/
-/* font-family: "Lato";
 
-
-font-family: "Nanum Gothic"; */
 * {
   font-family: "Lato";
 }
@@ -78,16 +75,14 @@ a {
   text-decoration: none;
   color: black;
 }
-/* 1 */
+
 .navContainer {
   height: 100%;
   width: 100%;
   margin-right: auto;
   font-family: "Quicksand";
   display: flex;
-
   flex-direction: row;
-
   justify-content: space-between;
   font-size: 1.4em;
   letter-spacing: 1px;
@@ -119,10 +114,8 @@ a {
 }
 
 .info-accueil p {
-  /* margin: 0 auto; */
   width: 1000px;
   padding: 40px 0px 0px 345px;
-
   max-width: 40%;
   color: black;
   text-align: left;
@@ -133,7 +126,6 @@ a {
 
 .info-accueil p1 {
   padding: 0px 0px 0px 375px;
-
   color: black;
   word-spacing: 15px;
   font-size: 2em;
@@ -141,25 +133,17 @@ a {
 }
 
 .container-learning-methodology {
-  /* background-image: url(/static/media/livre-espagnol1.50e4257c.png); */
   background-image: url("./components/public/img/livre-espagnol2.png");
   background-repeat: no-repeat;
   background-image: center;
-
   height: 90vh;
   width: 100%;
   background-size: cover;
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /*   
-  padding: 10px auto;
-  padding: 30px 0px 100px 300px;
-  background-size: 90% 120%; */
 }
 .container-learning-methodology:before {
   content: "";
@@ -199,6 +183,57 @@ h1 {
   position: relative;
 }
 
+.container-learning-tips {
+  background-image: url("./components/public/img/talkspanish.jpg");
+  background-repeat: no-repeat;
+  background-image: center;
+  height: 130vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-learning-tips:before {
+  content: "";
+  width: 100%;
+  height: 130vh;
+  background-color:cornflowerblue;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.info-learning-tips p {
+  background-color: wheat;
+  opacity: 0.7;
+  width: 80%; /* contrôle le width de la column*/
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 90px;
+  text-indent: 1cm;
+  padding-top: 20px;
+  columns: 1;
+  text-indent: 50px;
+  align-self: stretch;
+  position: relative;
+  text-align: justify;
+  border: 12px solid wheat;
+}
+
+.info-learning-tips p::first-letter {
+  font-size: 2rem;
+}
+
+h1 {
+  color: orangered;
+  font-size: 35x;
+  padding: 20px 0px 0px 10px;
+  text-align: center;
+  position: relative;
+}
 
 
 /* #boton{
@@ -226,20 +261,9 @@ h1 {
 } */
 
 
-
-
-.learningTips {
-  height: 100vh;
-  background-image: url("./components/public/img/images14.jpg");
-  background-repeat: no-repeat;
-  background-color: royalblue;
-  padding: 100px 0 100px 0;
-  background-size: 100% 90%;
-}
-
-.iconTest {
+/* .iconTest {
   width: 30px;
-}
+} */
 
 /* .footer {
   background-color: grey;
@@ -262,19 +286,16 @@ h1 {
 /* Hoy 23-03 */
 .define {
   width: 100%;
-
   margin: 0 auto;
   margin-left: 20px;
   position: relative;
-  /* Altura total del footer en px  */
+  /* High total of the footer  px  */
   margin-top: 150px;
-  /* Altura del footer en px  */
-
+  /* High of the footer in px  */
   padding: 5px 0px;
   clear: both;
   background: rgb(240, 240, 243);
   text-align: match-parent;
-
   display: flex;
   padding: 18px 8px;
 }
