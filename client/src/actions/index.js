@@ -2,7 +2,7 @@ import * as types from "./../constants";
 
 export const getUserAction = () => {
   return dispatch => {
-    return fetch("/api/check/token")
+    return fetch(`${process.env.REACT_APP_API_URL}/api/check/token`)
       .then(response => response.json())
       .then(json => {
         dispatch({ type: types.LOGIN_REQUEST, payload: json });
@@ -12,7 +12,7 @@ export const getUserAction = () => {
 
 export const logginAction = values => {
   return dispatch => {
-    return fetch("/api/auth/login", {
+    return fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
       method: "POST",
       body: JSON.stringify(values),
       headers: {
@@ -31,7 +31,7 @@ export const logginAction = values => {
 
 export const logoutAction = () => {
   return dispatch => {
-    return fetch("/api/auth/logout").then(response => {
+    return fetch(`${process.env.REACT_APP_API_URL}/api/auth/logout`).then(response => {
       dispatch({ type: types.LOGOUT });
     });
   };
