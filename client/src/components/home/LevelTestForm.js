@@ -24,7 +24,7 @@ const Compte = () => {
 
   const onSubmit = data => {
     console.log(data);
-    fetch("http://localhost:8080/api/leveltest", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/leveltest}`, {
       method: "post",
 
     })

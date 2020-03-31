@@ -4,7 +4,7 @@ const LevelTest = () => {
   const [test, setTest] = useState(null);
   console.log("test", test);
   useEffect(() => {
-    fetch("/api")
+    fetch(`${process.env.REACT_APP_API_URL}/api`)
       .then(response => {
         return response.json();
       })
