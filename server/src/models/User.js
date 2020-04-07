@@ -82,8 +82,11 @@ module.exports = (sequelize, DataTypes) => {
       tableName: "user"
     }
   );
-
-  User.associate = () => {};
-
+  User.associate = models => {
+    User.hasMany(models.LevelTestUserSummary);
+  };
   return User;
+
+  // User.associate = () => {};
+  // return User;
 };

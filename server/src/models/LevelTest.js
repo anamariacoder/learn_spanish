@@ -14,16 +14,18 @@ module.exports = (sequelize, DataTypes) => {
       },
       questions: {
         allowNull: false,
-        type: DataTypes.JSONB,
+        type: DataTypes.JSONB
       }
-     
     },
     {
       tableName: "level-test"
     }
   );
 
-  LevelTest.associate = () => {};
+  LevelTest.associate = models => {
+    LevelTest.hasMany(models.LevelTestUserSummary);
+  };
+  // LevelTest.associate = () => {};
 
   return LevelTest;
 };

@@ -9,9 +9,9 @@ const Accueil = () => {
   return (
     <body className="container-accueil">
       <div className="info-accueil">
-        <h1> J'apprends l'espagnol</h1>
-        <p>Apprenez l'espagnol facilement</p>
-        <p1>et validez votre progression !</p1>
+        <h> J'apprends l'espagnol</h>
+        <p>&nbsp;Apprenez&nbsp;&nbsp;&nbsp; l'espagnol&nbsp;&nbsp;&nbsp;&nbsp;facilement    <br />&nbsp;&nbsp;et&nbsp;&nbsp;&nbsp;&nbsp;validez &nbsp;&nbsp;&nbsp;votre&nbsp;&nbsp;&nbsp; progression !!</p>
+        {/* <h2>et validez votre progression !</h2> */}
       </div>
     </body>
   );

@@ -22,10 +22,10 @@ const App = props => {
   useEffect(() => {}, []);
   return (
     <div>
-      {/* 26-03-2020 */}
+      
       <script
         src="https://kit.fontawesome.com/8340b5561f.js"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       ></script>
 
       <Provider store={store}>
@@ -47,7 +47,7 @@ const App = props => {
       </Provider>
 
       <footer>
-        <div class="define">
+        <div className="define">
           <p>&copy; 2020 Codé</p>
 
           <ul>
@@ -62,7 +62,7 @@ const App = props => {
                 /*  */
                 <div className="column has-text-right">
                   <a className="icon" href="#">
-                    <i class="fab fa-instagram-square"></i>
+                    <i className="fab fa-instagram-square"></i>
                   </a>
                   <a className="icon" href="#">
                     <i className="fa-twitter"></i>

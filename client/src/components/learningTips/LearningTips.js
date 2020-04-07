@@ -12,10 +12,10 @@ const LearningTips = () => {
       <div className="info-learning-tips">
         <script
           src="https://kit.fontawesome.com/8340b5561f.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
 
-        <h1>Astuces pour apprendre l'espagnol</h1>
+        <h2>Astuces pour apprendre l'espagnol</h2>
         <p>
           En tant que débutant dans la langue, vous devez être conscient que
           c'est un processus qui va du simple au complexe et qui nécessitera
@@ -23,13 +23,13 @@ const LearningTips = () => {
           que vous en profitiez efficacement. Voici donc quelques conseils pour
           vous guider dans cette aventure d'apprentissage de l'espagnol.
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Soyez
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Soyez
           patient. Il est important d'aller étape par étape et de considérer les
           défis que vous pouvez relever sans trop de difficultés.
           Récompensez-vous pour vos réalisations et évitez de vous fixer des
           objectifs inaccessibles.
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
           Lire en espagnol Le niveau d'espagnol peut être considérablement
           amélioré en lisant régulièrement de petits articles ou des nouvelles.
           C'est également une excellente méthode pour apprendre rapidement des
@@ -37,7 +37,7 @@ const LearningTips = () => {
           des phrases que vous pouvez utiliser dans votre vie quotidienne, vous
           gagnerez en confiance dans vos compétences en lecture et en écriture.{" "}
           <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
           Organisez votre travail Actuellement, il existe un grand nombre de
           ressources disponibles pour apprendre l'espagnol, ce qui facilite le
           dépassement par des notes, des notes, des livres et des pages

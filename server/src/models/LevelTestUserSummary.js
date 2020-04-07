@@ -1,28 +1,32 @@
-
 module.exports = (sequelize, DataTypes) => {
   const LevelTestUserSummary = sequelize.define(
     "LevelTestUserSummary",
     {
-      id_user: {
+      id: {
         allowNull: false,
         primaryKey: true,
-        type: DataTypes.UUID
-       // defaultValue: DataTypes.UUIDV4,
-        //validate: {
-        //  isUUID: 4,
-        //  notNull: true
-        },
-      
-
-      id_level_test: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        validate: {
+          isUUID: 4,
+          notNull: true
+        }
+      },
+      idUser: {
+        field: "id_user",
         allowNull: false,
-        primaryKey: true,
         type: DataTypes.UUID
       },
-     
-      id_type_test: {
+
+      idLevelTest: {
+        field: "id_level_test",
         allowNull: false,
-        primaryKey: true,
+        type: DataTypes.UUID
+      },
+
+      idTypeTest: {
+        field: "id_type_test",
+        allowNull: false,
         type: DataTypes.UUID
       },
 
@@ -30,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
         type: DataTypes.INTEGER
       },
-    
+
       total_questions_answered: {
         allowNull: true,
         type: DataTypes.INTEGER
@@ -63,23 +67,39 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  LevelTestUserSummary.associate = () => {};
+  LevelTestUserSummary.associate = models => {
+    LevelTestUserSummary.belongsTo(models.User, {
+      onDelete: "CASCADE",
+      foreingKey: {
+        name: "id_user",
+        allowNull: false
+      }
+    });
 
+    LevelTestUserSummary.belongsTo(models.LevelTest, {
+      onDelete: "CASCADE",
+      foreingKey: {
+        name: "id_level_test",
+        allowNull: false
+      }
+    });
+    LevelTestUserSummary.belongsTo(models.TypeTest, {
+      onDelete: "CASCADE",
+      foreingKey: {
+        name: "id_type_test",
+        allowNull: false
+      }
+    });
+  };
   return LevelTestUserSummary;
+
+  
+  // LevelTestUserSummary.associate = () => {};
+
+  // return LevelTestUserSummary;
 };
 
-
-
-
-
-
-
-
-
-
-
 // AVANT ********************
-
 
 // module.exports = (sequelize, DataTypes) => {
 //   const LevelTestUserSummary = sequelize.define(
@@ -99,7 +119,7 @@ module.exports = (sequelize, DataTypes) => {
 //         allowNull: false,
 //         type: DataTypes.JSONB,
 //       }
-     
+
 //     },
 //     {
 //       tableName: "level-test-user-summary"

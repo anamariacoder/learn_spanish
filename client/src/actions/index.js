@@ -16,7 +16,7 @@ export const logginAction = values => {
       })
       .catch(err => {
         console.error(err);
-        alert("Error logging in please try again");
+        alert("Error logging in, please try again");
       });
   };
 };

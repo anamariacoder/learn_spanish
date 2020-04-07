@@ -34,18 +34,13 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     // console.log("1 Number correct answers ", nbCorrect);
     // console.log("2 Number false answers ", nbWrong); // Quantité de mauvaises réponses
     // console.log("3 Nombre de questions répondues :", nbAnswered);
-  // fetch POST => nbCorrect, => nouvelle route server qui insert les data
-
+    // fetch POST => nbCorrect, => nouvelle route server qui insert les data
   });
 
   console.log("1 Number correct answers ", nbCorrect);
   console.log("2 Number false answers ", nbWrong); // Quantité de mauvaises réponses
   console.log("3 Nombre de questions répondues :", nbAnswered);
-
-
 };
-
-
 
 export const handleResponses = target => async (dispatch, getState) => {
   const responses = getState().levelTest.responses;
@@ -55,4 +50,3 @@ export const handleResponses = target => async (dispatch, getState) => {
     payload: responses
   });
 };
-

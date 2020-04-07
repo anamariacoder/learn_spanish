@@ -1,38 +1,70 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable("level-test-user-summary", {
-      id_user: {
+      id: {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        onDelete: "CASCADE",
+        defaultValue: Sequelize.UUIDV4
+      },
+      id_user: {
+        allowNull: false,
+        type: Sequelize.UUID,
         references: {
           model: "user",
           key: "id"
         }
       },
 
+      //  id_user: {
+      //     allowNull: false,
+      //     primaryKey: true,
+      //     type: Sequelize.UUID,
+      //     onDelete: "CASCADE",
+      //     references: {
+      //       model: "user",
+      //       key: "id"
+      //     }
+      //   },
+
       id_level_test: {
         allowNull: false,
-        primaryKey: true,
         type: Sequelize.UUID,
-        onDelete: "CASCADE",
         references: {
           model: "level-test",
           key: "id"
         }
       },
 
+      // id_level_test: {
+      //   allowNull: false,
+      //   primaryKey: true,
+      //   type: Sequelize.UUID,
+      //   onDelete: "CASCADE",
+      //   references: {
+      //     model: "level-test",
+      //     key: "id"
+      //   }
+      // },
       id_type_test: {
         allowNull: false,
-        primaryKey: true,
         type: Sequelize.UUID,
-        onDelete: "CASCADE",
         references: {
           model: "type-test",
           key: "id"
         }
       },
+
+      // id_type_test: {
+      //   allowNull: false,
+      //   primaryKey: true,
+      //   type: Sequelize.UUID,
+      //   onDelete: "CASCADE",
+      //   references: {
+      //     model: "type-test",
+      //     key: "id"
+      //   }
+      // },
 
       note_user: {
         allowNull: true,
@@ -65,7 +97,6 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW
       }
-      
     });
   },
 

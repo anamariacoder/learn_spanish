@@ -6,9 +6,9 @@ const { LevelTest } = require("./models");
 const routes = require("./routes"); /*avec la 's' */
 const server = express();
 
-server.use(bodyParser.json()); 
-server.use('/api',cors());
-server.use('/api',routes); 
+server.use(bodyParser.json());
+server.use("/api", cors());
+server.use("/api", routes);
 server.use("api/auth", verifyToken);
 server.use("/api/images", express.static("src/public"));
 server.use("/api", routes);
@@ -19,7 +19,7 @@ server.get("/api/ping", (req, res) => {
 });
 
 // Route privée
-server.get("/api/auth",verifyToken, async (req, res) => {
+server.get("/api/auth", verifyToken, async (req, res) => {
   const { uid } = req.body;
   if (uid) {
     res.json({ message: "OK", uid });
@@ -28,7 +28,7 @@ server.get("/api/auth",verifyToken, async (req, res) => {
   }
 });
 
-// server.listen(8080, () => {   
+// server.listen(8080, () => {
 //   console.log("Server Running on port");
 // });
 
@@ -38,7 +38,6 @@ server.get("/api/auth",verifyToken, async (req, res) => {
 //  console.log(`Server Running on port: ${PORT}`);
 //});
 
-
 // dans routers, il faut un index   ICIIIII
 
 // index va use("/prefix", levelTests_router)
@@ -46,7 +45,7 @@ server.get("/api/auth",verifyToken, async (req, res) => {
 // server.get("/api", async (req, res) => {
 //   let levelTest = await LevelTest.findOne({
 //     //attributes: ["id", "question", "choix", "answer"],
-//     attributes: ["id", "questions"],
+//     attributes: ["id", ""],
 
 //     raw: true
 //   });
@@ -59,6 +58,5 @@ server.get("/api/auth",verifyToken, async (req, res) => {
 // server.get("/api/quizz", (req, res) => {
 //   res.send("testing");
 // });
-
 
 module.exports = server;

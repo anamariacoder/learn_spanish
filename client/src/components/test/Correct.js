@@ -4,7 +4,7 @@ import good from "../public/img/like.png";
 export default function Correct() {
   return (
     <div>
-      <img className="iconTest" src={good} alt="" />
+      <img className="iconTest" src={good} alt="thumbs up" />
     </div>
   );
 }
