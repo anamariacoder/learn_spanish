@@ -74,7 +74,7 @@ const LearningMethodology = () => {
       } */}
 
       {/* hasta aqui */}
-      <div class="photo-learning-methodology"></div>
+      <div className="photo-learning-methodology"></div>
     </body>
   );
 };

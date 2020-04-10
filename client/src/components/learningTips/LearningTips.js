@@ -66,7 +66,7 @@ const LearningTips = () => {
           d'essayer de regarder des films que vous avez déjà vus, car de cette
           façon, vous n'aurez pas à vous concentrer autant sur l'intrigue et
           vous pourrez vous concentrer davantage sur la langue elle-même.
-          <br />
+          <br /><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En
           fin de compte, n'oubliez pas que l'apprentissage d'une langue
           étrangère peut parfois être difficile et frustrant. Les progrès

@@ -31,7 +31,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   .navContainer,
-  .accueil {
+  .home {
     /* > 1200px (1168px;/*1200 - 16*2) */
     width: 100%;
     /* display: block; */
@@ -46,7 +46,7 @@ p {
   p,
   .App,
   .navContainer,
-  .accueil {
+  .home {
     column-count: 2; /* ! column à utiliser pour des exemples simples */
     width: 100%;
   }
@@ -58,14 +58,14 @@ p {
   p,
   .App,
   .navContainer,
-  .accueil {
+  .home {
     column-count: 3;
     width: 100%;
   }
 }
 /***************************/
 /* @media screen and (max-width: 800px) {
-  p, body, .App, .navContainer, .accueil, .learningMethodology {
+  p, body, .App, .navContainer, .home, .learningMethodology {
     display: block;
     width: 100%;
   }
@@ -100,7 +100,7 @@ a {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.container-accueil {
+.container-home {
   background-image: url("./components/public/img/teclado-espagnol.jpg");
   background-repeat: no-repeat;
   background-position: 5px 0px;
@@ -112,12 +112,12 @@ a {
   background-size: 90% 120%;
 }
 
-.info-accueil h {
-  margin: 8px 0px 0px 400px;
+.info-home h {
+  margin: 20px 0px 0px 415px;
   padding: 0%x 0%;
   font-family: "Anton";
   font-size: 70px;
-  letter-spacing: -0.5pt;
+  letter-spacing: -2pt;
   line-height: 1em;
   text-align: center;
   /* font-size: 350%; */
@@ -125,7 +125,7 @@ a {
   color: red;
 }
 
-.info-accueil p {
+.info-home p {
   padding: 40px 0px 0px 480px;
   columns: 1;
   line-height: 58px;
@@ -137,7 +137,12 @@ a {
 
 .info-level-test {
   font-size: 25px;
+  padding-left: 10px;
 }
+
+.iconTest {
+  background-image: url("./components/public/img/livre-espagnol2.png");
+} 
 
 .container-learning-methodology {
   background-image: url("./components/public/img/livre-espagnol2.png");
@@ -246,7 +251,12 @@ h1 {
   font-size: 2rem;
 }
 
-/* Hoy 23-03 */
+.info-progress-global {
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+
 .define {
   width: 100%;
   margin: 0 auto;

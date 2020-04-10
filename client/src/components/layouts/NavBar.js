@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navContainer">
-      <div className="accueil-nav">
+      <div className="home-nav">
         <Link to="/">Accueil </Link>
       </div>
 
-      <div className="global-progress-test">
-        <Link to="/test"> Test et progrès </Link>
+      <div className="global-test">
+        <Link to="/test"> Test global </Link>
+      </div>
+
+      {/* <div className="global-progress-test"> */}
+      <div className="global-progress">
+        <Link to="/progressGlobal"> Progrès </Link>
       </div>
 
       <div className="resources">

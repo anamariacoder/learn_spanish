@@ -8,18 +8,20 @@ import {
   checkLevelTest,
   fetchTests,
   handleResponses,
+  reponseCorrect,
+  reponseUtilisateur
 } from "../../actions/level-test";
-const isCorrect = (props) => {
-  //   if (reponseUtilisateur === reponseCorrect) {
-  //     return <Correct />;
+// const isCorrect = (props) => {
+//   if (reponseUtilisateur === reponseCorrect) return <Correct />;
   //   } else {
   //     return <NotCorrect />;
   //   }
-};
+// };
 
 const LevelTest = (props) => {
   useEffect(() => {
     props.fetchTests();
+   
   }, []);
 
   function handleChange(evt) {
@@ -30,10 +32,11 @@ const LevelTest = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.checkLevelTest();
+    
   };
   return (
     <div>
-      <h1>Test et progrès</h1>
+      <h1>Test global</h1>
       <div>
         <div className="info-level-test">
           {props.levelTest.tests &&
@@ -46,6 +49,7 @@ const LevelTest = (props) => {
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
+                      console.log("recupero el testgggggggggggggggggggggggggggg");
                       return <option key={i}>{c}</option>;
                     })}
                   </select>
@@ -55,12 +59,14 @@ const LevelTest = (props) => {
             })}
         </div>
       </div>
-      <button onClick={handleSubmit}>Valider</button>
+      {/* <div> <button onClick={handleSubmit}>Valider</button>"valido el test aquiiiiiiiiiiiii";
+     Total reponses corrects</div> */}
     </div>
   );
 };
 
 const mapStateToProps = (state, props) => {
+  console.log("ESTADOOOOOOOOOOOO",state);
   return state;
 };
 

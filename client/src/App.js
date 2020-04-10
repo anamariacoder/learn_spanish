@@ -10,12 +10,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
-import Accueil from "./components/accueil/Accueil";
+import Home from "./components/home/Home";
 import "./App.css";
 import AboutUs from "./components/about-us/AboutUs";
 import store from "./store";
 import SignFirebase from "./components/user/SignFirebase";
 import signFirebaseContainer from "./containers/signFirebaseContainer";
+import ProgressGlobal from "./components/progressGlobal/Progress1";
+import Progress1 from "./components/progressGlobal/Progress1";
 
 const App = props => {
   console.log(props);
@@ -32,8 +34,9 @@ const App = props => {
         <Router>
           <NavBar />
           <Switch>
-            <Route exact path="/" component={Accueil} />
+            <Route exact path="/" component={Home} />
             <Route path="/test" component={LevelTest} />
+            <Route path="/progressGlobal" component={Progress1} />
             <Route path="/resources" component={Resources} />
             <Route
               path="/learningMethodology"
