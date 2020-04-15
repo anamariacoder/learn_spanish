@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 
+import axios from "axios";
+
 const Progress1 = () => {
   useEffect(() => {}, []);
-
+ 
   const handleSubmit = event => {
     event.preventDefault();
   };
+  
+  // const UrlLevelTestUserSummaries = `${apiBaseUrl}/api/`; 
+  // const fetchAllLevelTestUserSummaries = () => 
+  // async => { const res = await axios.get(UrlLevelTestUserSummaries); 
+
+  //   console.log(res); 
+  // };
 
   return (
     <body className="container-progress-global">

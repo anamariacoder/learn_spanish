@@ -135,9 +135,14 @@ a {
   text-indent: 0px;
 }
 
-.info-level-test {
+.info-level-test { 
+
   font-size: 25px;
   padding-left: 10px;
+}
+
+.fit-image {
+  width: 250px;
 }
 
 .iconTest {
@@ -257,7 +262,7 @@ h1 {
 }
 
 
-.define {
+.defineFooter {
   width: 100%;
   margin: 0 auto;
   margin-left: 20px;
@@ -286,4 +291,20 @@ footer ul {
   padding-left: 0;
   font-size: 19px;
   list-style: none;
+}
+
+.info-about-us h3
+{
+  width: 80%; /* contrôle le width de la column*/
+  max-width: 100%;
+  /* margin-top: 1px; */
+  margin-left: 125px;
+  
+  /* padding-top: 2px; */
+  font-size: 20px;
+  color: pink;
+  columns: 1;
+  text-indent: 65px;
+  align-self: stretch;
+
 }

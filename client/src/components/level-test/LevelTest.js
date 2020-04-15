@@ -9,19 +9,19 @@ import {
   fetchTests,
   handleResponses,
   reponseCorrect,
-  reponseUtilisateur
+  reponseUtilisateur,
 } from "../../actions/level-test";
+
 // const isCorrect = (props) => {
 //   if (reponseUtilisateur === reponseCorrect) return <Correct />;
-  //   } else {
-  //     return <NotCorrect />;
-  //   }
+//   } else {
+//     return <NotCorrect />;
+//   }
 // };
 
 const LevelTest = (props) => {
   useEffect(() => {
     props.fetchTests();
-   
   }, []);
 
   function handleChange(evt) {
@@ -32,7 +32,6 @@ const LevelTest = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.checkLevelTest();
-    
   };
   return (
     <div>
@@ -44,12 +43,20 @@ const LevelTest = (props) => {
             props.levelTest.tests[0].questions.levelTests.map((q, i) => {
               return (
                 <div key={i}>
-                  <img src={q.image} alt="question" />
+                  {/* <img src={q.image} alt="question" /> */}
+
+                  <img className="fit-image" src={q.image} alt="question" />
+                  {/* ***** */}
+                  {/* <img class="fit-picture"
+     src="/media/examples/grapefruit-slice-332-332.jpg"
+     alt="Grapefruit slice atop a pile of other slices"> */}
+
+                  {/* ******* */}
                   {q.question}
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
-                      console.log("recupero el testgggggggggggggggggggggggggggg");
+                      console.log();
                       return <option key={i}>{c}</option>;
                     })}
                   </select>
@@ -59,14 +66,14 @@ const LevelTest = (props) => {
             })}
         </div>
       </div>
-      {/* <div> <button onClick={handleSubmit}>Valider</button>"valido el test aquiiiiiiiiiiiii";
+      {/* <div> <button onClick={handleSubmit}>Valider</button>"valider el test ici";
      Total reponses corrects</div> */}
+      <button onClick={handleSubmit}>Valider</button>
     </div>
   );
 };
 
 const mapStateToProps = (state, props) => {
-  console.log("ESTADOOOOOOOOOOOO",state);
   return state;
 };
 

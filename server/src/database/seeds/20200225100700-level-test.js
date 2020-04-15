@@ -46,7 +46,6 @@ module.exports = [
           ],
           answer: 2
         },
-
         {
           image: "/api/images/saluer-ami1.jpg",
           question: "5. Para saludar a un amigo, usted le dice :",
