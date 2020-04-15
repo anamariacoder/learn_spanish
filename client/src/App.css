@@ -136,13 +136,13 @@ a {
 }
 
 .info-level-test { 
-
   font-size: 25px;
   padding-left: 10px;
 }
 
-.fit-image {
+.fit-image-level-test {
   width: 250px;
+  height: auto;
 }
 
 .iconTest {

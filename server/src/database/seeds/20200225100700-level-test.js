@@ -9,26 +9,26 @@ module.exports = [
     questions: JSON.stringify({
       levelTests: [
         {
-          image: "/api/images/saluermatin.jpg",
-          question: "1. Si usted saluda a alguien en la mañana, le dice :",
+          image: "/api/images/saluermatin2.jpg",
+          question: "1. Si usted saluda a alguien en la mañana, le dice :    ",
           choix: [
-            "Buenas noches", 
-            "Adiós", 
-            "Buenos días"],
+            "Buenas noches.", 
+            "Hasta pronto.", 
+            "Buenos días."],
           answer: 2
         },
         {
           image: "/api/images/saluerbye.jpg",
-          question: "2. Si usted se despide de una persona, le dice :",
+          question: "2. Si usted se despide de una persona, le dice :    ",
           choix: [  
-            "Hola", 
-            "Adiós", 
-            "Buenos días"],
+            "Hola.", 
+            "Adiós.", 
+            "Buenos días."],
           answer: 1
         },
         {
           image: "/api/images/salutations2.jpg",
-          question: "3. Buenos días, cómo está usted ?",
+          question: "3. Buenos días, cómo está usted ?    ",
           choix: [
             "Chao. Nos vemos luego.",
             "Muy bien, gracias. ¿ Y usted ?",
@@ -38,19 +38,19 @@ module.exports = [
         },
         {
           image: "/api/images/salutation3.jpg",
-          question: "4. Si le presentan a alguien, usted dice :",
+          question: "4. Si le presentan a alguien, usted dice :    ",
           choix: [
             "Hasta pronto.",
             "Nos vemos.",
-            "Tanto gusto. Un placer conocerle."
+            "Tanto gusto en conocerle."
           ],
           answer: 2
         },
         {
-          image: "/api/images/saluer-ami1.jpg",
-          question: "5. Para saludar a un amigo, usted le dice :",
+          image: "/api/images/saluerplusieurs.jpg",
+          question: "5. Para saludar a varios amigos, usted les dice :    ",
           choix: [
-            "Hola. ¿ Cómo estás ?",
+            "Hola. ¿ Cómo están ?",
             "¿ Cómo está usted ?",
             "Encantado de verle."
           ],

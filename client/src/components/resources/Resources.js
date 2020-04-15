@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
+// import LevelTest from components/level-test;
+import testGlobal from "../test/testGlobal";
 
-const Resources = () => {
+
+const Resources = (propos) => {
+  console.log('mensaje');
   useEffect(() => {
   }, []);
 
   const handleSubmit = event => {
     event.preventDefault();
+    console.log('mensaje');
   };
   return (
     <div>
@@ -13,7 +18,7 @@ const Resources = () => {
       <div>
 
       </div>
-      <button onClick={handleSubmit}>Valider</button>
+      <button onClick={() =>testGlobal}>Valider</button>
     </div>
   );
 };

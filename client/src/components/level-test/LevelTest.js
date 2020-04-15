@@ -45,7 +45,7 @@ const LevelTest = (props) => {
                 <div key={i}>
                   {/* <img src={q.image} alt="question" /> */}
 
-                  <img className="fit-image" src={q.image} alt="question" />
+                  <img className="fit-image-level-test" src={q.image} alt="question" />
                   {/* ***** */}
                   {/* <img class="fit-picture"
      src="/media/examples/grapefruit-slice-332-332.jpg"
