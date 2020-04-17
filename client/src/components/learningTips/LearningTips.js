@@ -12,7 +12,7 @@ const LearningTips = () => {
       <div className="info-learning-tips">
         <script
           src="https://kit.fontawesome.com/8340b5561f.js"
-          crossOrigin="anonymous"
+          crossOrigin="anTesonymous"
         ></script>
 
         <h2>Astuces pour apprendre l'espagnol</h2>

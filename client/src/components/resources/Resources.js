@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from "react";
 // import LevelTest from components/level-test;
-import testGlobal from "../test/testGlobal";
+// import TestGlobal from "../testGlobal/TestGlobal";
 
 
 const Resources = (propos) => {
@@ -18,7 +18,7 @@ const Resources = (propos) => {
       <div>
 
       </div>
-      <button onClick={() =>testGlobal}>Valider</button>
+      {/* <button onClick={() =>testGlobal}>Valider</button> */}
     </div>
   );
 };

@@ -8,10 +8,16 @@ const NavBar = () => {
         <Link to="/">Accueil </Link>
       </div>
 
-      <div className="global-test">
-        <Link to="/test"> Test global </Link>
+      {/* <div className="global-test">
+        <Link to="/test"> "Test global"  </Link>
+      </div> */}
+
+    {/* /* */ }
+      <div className="test-global">
+        <Link to="/testGlobal"> Test global</Link>
       </div>
 
+      {/* /* */ }
       {/* <div className="global-progress-test"> */}
       <div className="global-progress">
         <Link to="/progressGlobal"> Progrès </Link>

@@ -19,6 +19,7 @@ import SignFirebase from "./components/user/SignFirebase";
 import signFirebaseContainer from "./containers/signFirebaseContainer";
 // import ProgressGlobal from "./components/progressGlobal/Progress1";
 import Progress1 from "./components/progressGlobal/Progress1";
+import TestGlobal from "./components/testGlobal/TestGlobal";
 
 const App = (props) => {
   console.log(props);
@@ -36,6 +37,7 @@ const App = (props) => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/test" component={LevelTest} />
+            <Route path="/testGlobal" component={TestGlobal} />
             <Route path="/progressGlobal" component={Progress1} />
             <Route path="/resources" component={Resources} />
             <Route
