@@ -1,19 +1,38 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const AboutUs = () => {
-  useEffect(() => {}, []);
+const AboutUs = (props) => {
+  function handleChange(evt) {
+    const value = evt.target.value;
+    props.handleResponses(evt.target);
+  }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-   
+    // props.checkLevelTest();
   };
   return (
     <body className="container-about-us">
       <div className="info-about-us">
-        <h3>Qui sommes-nous ?</h3>
-        <p>Nous sommes des professeurs d'espagnol natifs.
-Une équipe de professeurs de langues et d'ingénieurs en informatique.
-Nous avons commencé ce projet afin de motiver l'apprentissage de la langue espagnole chez les francophones. Bientôt, nous ajouterons plus de fonctionnalités à notre site. Et dans notre prochaine version étendue, nous inclurons le vocabulaire informatique demandé par nos affiliés. </p>
+        <h4>Qui sommes-nous ?</h4>
+        <p>
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nous sommes des professeurs d'espagnol natifs. Avec une expérience de
+          plus de cinq ans dans ce domaine. <br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notre équipe est composée de
+          professionnels des langues et de l'informatique, dédiés à
+          l'enseignement de la "lengua de Cervantes". 
+          <br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nous avons
+          commencé ce projet afin de motiver l'apprentissage de la langue
+          espagnole chez les francophones, à partir de zéro. C'est pourquoi notre première version est gratuite. <br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nous vous encourageons à tirer le meilleur parti de notre version dédiée aux débutants.  <br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <strong>Merci d'avoir rejoint notre projet et d'avoir décidé de
+          grandir avec nous !!! </strong>
+          <br />
+          <br />{" "}
+        </p>
       </div>
     </body>
   );

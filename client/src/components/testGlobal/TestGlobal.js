@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import Bootstrap from "bootstrap";
 // import LevelTest from "../LevelTest";
 import LevelTest from "../../components/level-test/LevelTest";
-// import { Link } from "react-router-dom";
+
 
 const TestGlobal = (props) => {
   function handleChangeTestGlobal(evt) {

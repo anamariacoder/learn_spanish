@@ -26,14 +26,10 @@ const App = (props) => {
   useEffect(() => {}, []);
   return (
     <div>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/font-awesome.min.css"
-      ></link>
-      <script
+      {/* <script
         src="https://kit.fontawesome.com/8340b5561f.js"
         crossOrigin="anonymous"
-      ></script>
+      ></script> */}
 
       <Provider store={store}>
         <Router>
@@ -50,28 +46,55 @@ const App = (props) => {
             />
             <Route path="/learningTips" component={LearningTips} />
             <Route path="/sign" component={signFirebaseContainer} />
-            <Route path="/aboutUs" component={AboutUs} />
             <Route component={PageNotFound} />
           </Switch>
-          <Footer />
         </Router>
       </Provider>
-      {/* <Router> */}
-      {/* <Footer /> */}
+      <Router>
+        <Footer />
+        <Switch>
+          {/* <Route path="/aboutUs" component={AboutUs} /> */}
 
-      {/* <Route path="/aboutUs" component={AboutUs} /> */}
+          <div className="defineFooter">
+            <p>&copy; 2020 Codé</p>
 
-      {/* <div className="defineFooter">
-            <p>&copy; 2020 Codé</p> */}
-      {/* <Route exact path="./components/aboutUs/AboutUs" component={AboutUs} /> */}
-
-      {/* <li>
-                <a href="https://cnnespanol.cnn.com"> Nouvelles en espagnol</a>
-              </li> */}
-      {/* </ul> */}
-      {/* </div> */}
-
-      {/* </Router> */}
+            {/* <ul> */}
+            {/* <li>{<a href="/a">Qui sommes-nous ?</a>}</li> */}
+            <a>
+              <Link to="/aboutUs/AboutUs">Qui sommes-nous ?</Link>
+            </a>
+            {/* <li><a href="/testGlobal">Qui sommes-nous ?</a></li>  */}
+            {/* <a href="#!">Link 1</a> */}
+            {/* <li>
+              <p>Contact :</p>
+              <a href=""> anamadealmeida@gmail.com</a>
+            </li> */}
+            {/* <li>
+              <a href="/components/socialMedia/SocialMedia">Nos réseaux :</a> */}
+            {/* {
+              
+                <div className="column has-text-right">
+                  <a className="icon" href="#">
+                    <i className="fab fa-instagram-square"></i>
+                  </a>
+                  <a className="icon" href="#">
+                    <i className="fa-twitter"></i>
+                  </a>
+                </div>
+               <span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-circle-thin<br>
+              } */}
+            {/* </li> */}
+            <li>
+              <a href="https://cnnespanol.cnn.com"> Nouvelles en espagnol</a>
+            </li>
+            {/* </ul> */}
+          </div>
+        </Switch>
+      </Router>
     </div>
   );
 };

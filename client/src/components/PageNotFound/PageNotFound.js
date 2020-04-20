@@ -4,7 +4,7 @@ const PageNotFound = () => (
 //Fragment
   <>
 		{/* Message of page not found */}
-    <p1>Page not found !!</p1>
+    <p>Page not found !!</p>
   </>
 )
 export default PageNotFound;
