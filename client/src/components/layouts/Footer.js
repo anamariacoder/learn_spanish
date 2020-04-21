@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faGithubAlt,
+  faLinkedin,
+  faFacebook,
+  faTwitter,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
+
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 import AboutUs from "../aboutUs/AboutUs";
 const Footer = () => {
   return (
-    // <div className="footer-container">
     <div className="defineFooter">
       <p>&copy; 2020 Codé</p>
 
@@ -20,6 +30,10 @@ const Footer = () => {
             target="_blank"
             rel="noopener"
           >
+            <a>
+              <FontAwesomeIcon icon={faEnvelope} />
+              &nbsp;&nbsp;
+            </a>
             anamadealmeida@gmail.com
           </a>
         </li>
@@ -27,60 +41,67 @@ const Footer = () => {
 
       <div className="social-media">
         <li>
-          <a href="/components/socialMedia/SocialMedia">Nos réseaux :</a>
+          <a>Nos réseaux :</a>
         </li>
 
-        <a href="http://instagram.com/_u/@anamadealmeida/">
-          Our instagram &nbsp;&nbsp;&nbsp;
-          <i className="fab fa-instagram-square"></i>
-
-          
+        <a href="http://linkedIn.com">
+          {" "}
+          <a className="linkedin">
+            <a>
+              <FontAwesomeIcon icon={faLinkedin} />
+              <a href="http://linkedin.com"></a>
+            </a>
+          </a>
         </a>
-        {/* <a href="http://instagram.com/_u/{anamadealmeida}/">Link to Instagram Page</a> */}
-        <a
-          href="https://twitter.com/messages/compose?recipient_id=Ana&ref_src=twsrc%5Etfw"
-          className="twitter-dm-button"
-          data-screen-name="@anamadealmeida"
-          data-show-count="false"
-        >
-        Our twitter @anamadealmeida
+
+        <a href="http://github.com">
+          {" "}
+          <a className="github">
+            <a>
+              &nbsp;&nbsp;
+              <FontAwesomeIcon icon={faGithubAlt} />
+              <a href="http://github.com"></a>
+            </a>
+          </a>
         </a>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
 
+        <a href="http://twitter.com">
+          {" "}
+          <a className="twitter">
+            <a>
+              {" "}
+              &nbsp;&nbsp;
+              <FontAwesomeIcon icon={faTwitter} />
+              <a href="http://twitter.com/"></a>
+            </a>
+          </a>
+        </a>
+        <a href="http://instagram.com">
+          {" "}
+          <a className="instagram">
+            <a>
+              &nbsp;&nbsp;
+              <FontAwesomeIcon icon={faInstagram} />
+              <a href="http://twitter.com/"></a>
+            </a>
+          </a>
+        </a>
 
-
-        <span className="fa-stack fa-lg">
-          <i className="fa fa-circle-thin fa-stack-2x"></i>
-          <i className="fa fa-twitter fa-stack-1x"></i>
-        </span>
-        
+        <a href="http://facebook.com">
+          {" "}
+          <a className="facebook">
+            <a>
+              &nbsp;&nbsp;
+              <FontAwesomeIcon icon={faFacebook} />
+              <a href="http://facebook.com/"></a>
+            </a>
+          </a>
+        </a>
       </div>
 
       <li>
         <a href="https://cnnespanol.cnn.com"> Nouvelles en espagnol</a>
       </li>
-
-      {/* <footer className="footer is-primary">
-        <div className="container">
-          <div className="columns">
-            <div className="column">
-              <p>Nous contacter</p>
-            </div>
-            <div className="column has-text-right">
-              <a className="icon" href="#">
-                <i class="fab fa-instagram-square"></i>
-              </a>
-              <a className="icon" href="#">
-                <i className="fa-twitter"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer> */}
     </div>
   );
 };

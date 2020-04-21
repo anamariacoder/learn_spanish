@@ -21,19 +21,17 @@ import signFirebaseContainer from "./containers/signFirebaseContainer";
 import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
 
+
+// get our fontawesome imports
+
+
 const App = (props) => {
   console.log(props);
   useEffect(() => {}, []);
   return (
     <div>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/font-awesome.min.css"
-      ></link>
-      <script
-        src="https://kit.fontawesome.com/8340b5561f.js"
-        crossOrigin="anonymous"
-      ></script>
+     
+
 
       <Provider store={store}>
         <Router>

@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const NavBar = () => {
   return (
     <div className="navContainer">
       <div className="home-nav">
-        <Link to="/">Accueil </Link>
+        <a>
+          <FontAwesomeIcon icon={faHome} />
+          <Link to="/">Accueil </Link>
+        </a>
       </div>
 
       <div className="test-global">
@@ -22,7 +28,6 @@ const NavBar = () => {
 
       <div className="learning-methodology">
         <Link to="/learningMethodology"> Méthodologie d'apprentisage </Link>
-        
       </div>
 
       <div className="learning-tips">
