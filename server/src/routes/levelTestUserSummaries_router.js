@@ -1,15 +1,18 @@
 const express = require("express");
 require("express-async-errors");
 
+const { retrieveLevelTestUserSummary } = require("../controllers/leveltestusersummaries_controller");
 
-levelTestUserSummariesRouter.get("/", async (request, response) => {
-  const levelTestUserSummaries = await levelTestUserSummariesController.getAllLevelTestUserSummaries();
-  response.status(OK).json(levelTestUserSummaries);
-  // response.status(200);
-  // response.json(levelTestUserSummaries);
+const levelTestUserSummariesRouter = express.Router();
+
+levelTestUserSummariesRouter.get("../", async (request, response) => {
+  const levelTestUserSummariesByUser = await retrieveLevelTestUserSummaryByUser();
+  // response.status(OK).json(levelTestUserSummaries);
+  response.status(200);
+  response.json(levelTestUserSummariesByUser);
 });
 
-module.exports = levelTestsUserSummariesRouter;
+module.exports = levelTestUserSummariesRouter;
 
 
 

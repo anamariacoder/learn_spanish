@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LevelTest from "./components/level-test/LevelTest";
+
 import Resources from "./components/resources/Resources";
 import LearningMethodology from "./components/learningMethodology/LearningMethodology";
 import LearningTips from "./components/learningTips/LearningTips";
@@ -20,27 +21,26 @@ import signFirebaseContainer from "./containers/signFirebaseContainer";
 // import ProgressGlobal from "./components/progressGlobal/Progress1";
 import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
-
-
+import LevelTestUserSummary from "./components/levelTestUserSummary/LevelTestUserSummary";
 // get our fontawesome imports
-
 
 const App = (props) => {
   console.log(props);
   useEffect(() => {}, []);
   return (
     <div>
-     
-
-
       <Provider store={store}>
         <Router>
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/test" component={LevelTest} />
             <Route path="/testGlobal" component={TestGlobal} />
+            <Route path="/test" component={LevelTest} />
             <Route path="/progressGlobal" component={Progress1} />
+            <Route
+              path="/levelTestUserSummary"
+              component={LevelTestUserSummary}
+            />
             <Route path="/resources" component={Resources} />
             <Route
               path="/learningMethodology"
@@ -54,22 +54,6 @@ const App = (props) => {
           <Footer />
         </Router>
       </Provider>
-      {/* <Router> */}
-      {/* <Footer /> */}
-
-      {/* <Route path="/aboutUs" component={AboutUs} /> */}
-
-      {/* <div className="defineFooter">
-            <p>&copy; 2020 Codé</p> */}
-      {/* <Route exact path="./components/aboutUs/AboutUs" component={AboutUs} /> */}
-
-      {/* <li>
-                <a href="https://cnnespanol.cnn.com"> Nouvelles en espagnol</a>
-              </li> */}
-      {/* </ul> */}
-      {/* </div> */}
-
-      {/* </Router> */}
     </div>
   );
 };

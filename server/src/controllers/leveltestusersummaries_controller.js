@@ -1,8 +1,24 @@
 const { LevelTestUserSummary } = require("../models");
 
-const levelTestUserSummariesController = {
-  getAllLevelTestUserSummaries: async () => {
-    const levelTestUserSumaries = await LevelTestUserSummary.findAll({
+const levelTestUserSummaryController = {
+  // retrieveAllLevelTestUserSummaries: async () => {
+  //   const levelTestUserSumaries = await LevelTestUserSummary.findAll({
+  //     attributes: [
+  //       "id_user",
+  //       "id_level_test",
+  //       "id_type_test",
+  //       "note_user",
+  //       "total_questions_answered",
+  //       "total_correct_answers",
+  //       "total_wrong_answers",
+  //       "created_at",
+  //     ],
+  //     raw: true
+  //   });
+  //   return levelTestUserSumaries;
+  // },
+  retrieveLevelTestUserSummariesByUser: async id => {
+    const levelTestUserSumaries = await UserSummary.findByPk(id, {
       attributes: [
         "id_user",
         "id_level_test",
@@ -13,20 +29,28 @@ const levelTestUserSummariesController = {
         "total_wrong_answers",
         "created_at",
       ],
-
-      raw: true,
+      raw: true
     });
     return levelTestUserSumaries;
+  },
+
+  createLevelTestUserSummaries: async (data) => {
+    const { levelTestUserId } = data;
+    const levelTest = await getLevelTest(levelTestId);
+
+    const newLevelTestuserSummaries = {
+      leveltest,
+      ...PublicKeyCredential(id),
+    };
+
+    const levelTestUserSummaryCreated = await LevelTestUserSummary.create(
+      newLevelTestuserSummaries
+    );
+    return levelTestUserSummaryCreated;
   },
 };
 
 module.exports = levelTestUserSummaryController;
-
-
-
-
-
-
 
 //******************************************************** */
 //   return LevelTestUserSummary;
@@ -56,8 +80,6 @@ module.exports = levelTestUserSummaryController;
 //   return LevelTestUserSummary;
 // },
 // };
-
-
 
 // ******************
 // const { LevelTestUserSummary } = require("../models");

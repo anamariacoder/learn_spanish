@@ -276,13 +276,20 @@ a:active {
 }
 
 .fit-image-level-test {
-  width: 250px;
+  width: 240px;
   height: auto;
 }
 
 .iconTest {
-  background-image: url("./components/public/img/livre-espagnol2.png");
+  /* background-image: url(good); */
+  /* display: block; */
+  /* background-image: url("./components/public/img/like.png"); */
+  /* background-repeat: no-repeat;
+  background-image: center; */
+  font-size: 20px;
+  color:green;
 }
+
 
 .container-learning-methodology {
   background-image: url("./components/public/img/livre-espagnol2.png");
@@ -407,20 +414,28 @@ h1 {
   /* High of the footer in px  */
   clear: both;
   background: rgb(240, 240, 243);
-  text-align: match-parent;
+  /* text-align: match-parent; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 18px 30px 8px 30px;
+  font-size: 19px;
+  /* color: gray; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+  list-style: none;
 }
-
-footer p {
+/* 
+.footer p { 
   flex: 1;
   margin: 0;
   font-size: 19px;
-}
 
-footer ul {
+  
+}  */
+
+/* footer ul {
   flex: 2;
   display: flex;
   justify-content: space-around;
@@ -428,7 +443,7 @@ footer ul {
   padding-left: 0;
   font-size: 19px;
   list-style: none;
-}
+} */
 
 .container-about-us {
   background-image: url("./components/public/img/notebooketlunettes.jpg");
@@ -477,6 +492,9 @@ footer ul {
   text-align: justify;
   border: 12px solid wheat;
 }
-.fab {
+
+/* .fab {
   width: 100%;
-}
+} */
+
+

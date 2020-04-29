@@ -4,7 +4,7 @@ import bad from "./../public/img/dislike.png";
 import Correct from "../test/Correct";
 import NotCorrect from "../test/NotCorrect";
 import { connect } from "react-redux";
-import {
+import { 
   checkLevelTest,
   fetchTests,
   handleResponses,
@@ -13,10 +13,10 @@ import {
 } from "../../actions/level-test";
 
 // const isCorrect = (props) => {
-//   if (reponseUtilisateur === reponseCorrect) return <Correct />;
-//   } else {
-//     return <NotCorrect />;
-//   }
+//   if (reponseUtilisateur === reponseCorrect) return <Correct />
+//   // } else {
+//   //   return <NotCorrect />;
+//   // }
 // };
 
 const LevelTest = (props) => {
@@ -33,7 +33,7 @@ const LevelTest = (props) => {
     event.preventDefault();
     props.checkLevelTest();
   };
-  
+
   return (
     <div>
       <h1>Test global</h1>
@@ -61,7 +61,10 @@ const LevelTest = (props) => {
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
-                      console.log();
+                      /* console.log(); /* AUJOURD'HUI 22 AVRIL*/
+                      console.log(
+                        "JE SUIS DANS COMPONENTS/level-test/ LevelTest"
+                      );
                       return <option key={i}>{c}</option>;
                     })}
                   </select>
@@ -71,9 +74,12 @@ const LevelTest = (props) => {
             })}
         </div>
       </div>
-      {/* <div> <button onClick={handleSubmit}>Valider</button>"valider el test ici";
+      {/* <div> <button onClick={handleSubmit}>Valider</button>"valider le test ici";
      Total reponses corrects</div> */}
       <button onClick={handleSubmit}>Valider</button>
+      {console.log(
+        "JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
+      )}
     </div>
   );
 };

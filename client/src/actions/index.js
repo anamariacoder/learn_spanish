@@ -21,6 +21,8 @@ export const logginAction = values => {
   };
 };
 
+
+
 export const logoutAction = () => {
   return dispatch => {
     return fetch("/api/auth/logout").then(response => {

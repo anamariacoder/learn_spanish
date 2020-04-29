@@ -1,21 +1,23 @@
-const express = require("express");
+const express = require("express"); //Starts the server
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const verifyToken = require("./middleware/verify_token");
 const { LevelTest } = require("./models");
-const routes = require("./routes"); /*avec la 's' */
+const routes = require("./routes"); 
 const server = express();
+
 
 server.use(bodyParser.json());
 server.use("/api", cors());
+
 server.use("/api", routes);
 server.use("api/auth", verifyToken);
 server.use("/api/images", express.static("src/public"));
-server.use("/api", routes);
+//server.use("/api", routes);
 
 // Route publique
 server.get("/api/ping", (req, res) => {
-  res.json({ message: "pong" });
+  res.json({ message: "Route publique" });
 });
 
 // Route privée
@@ -32,9 +34,9 @@ server.get("/api/auth", verifyToken, async (req, res) => {
 //   console.log("Server Running on port");
 // });
 
-//const PORT = process.env.PORT || 8000; iciiiiiiiiiiii
+//const PORT = process.env.PORT || 8000;
 
-//server.listen(PORT, () => {   //ICIIIII j'ai changé
+//server.listen(PORT, () => {
 //  console.log(`Server Running on port: ${PORT}`);
 //});
 

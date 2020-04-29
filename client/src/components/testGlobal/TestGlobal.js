@@ -30,12 +30,6 @@ const TestGlobal = (props) => {
           options disponibles. <br /><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bonne chance !!! Commençons ...
         </p>
-        {/* <p>
-        <a href="#" class="btn btn-primary btn-lg" role="button">
-          Botón Grande
-        </a>
-      </p> */}
-
         {/* <Link to="/test">role="button"démarrer le test</Link> botton-start-global-test */}
         {/* <div className="button-start-global-test">
           <a><Link to="/test">démarrer le test</Link></a>

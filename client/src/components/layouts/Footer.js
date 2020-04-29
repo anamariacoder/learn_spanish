@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -19,41 +19,41 @@ const Footer = () => {
       <p>&copy; 2020 Codé</p>
 
       <div className="about-us">
-        <Link to="/AboutUs">Qui sommes-nous ?</Link>
+      <p><Link to="/AboutUs">Qui sommes-nous ?</Link></p>
       </div>
 
       <div className="contact-us">
-        <li>
-          <a>Contact :&nbsp;&nbsp;&nbsp;</a>
-          <a
-            href="mailto:anamadealmeida@gmail.com?Subject=Je%20suis%20intéressé%20par%20plus%20d'informations"
-            target="_blank"
-            rel="noopener"
-          >
-            <a>
-              <FontAwesomeIcon icon={faEnvelope} />
-              &nbsp;&nbsp;
-            </a>
-            anamadealmeida@gmail.com
+        {/* <a>Contact :&nbsp;&nbsp;&nbsp;</a> */}
+        Contact :&nbsp;&nbsp;&nbsp;
+        {/* <li> */}
+        <a
+          href="mailto:anamadealmeida@gmail.com?Subject=Je%20suis%20intéressé%20par%20plus%20d'informations"
+          target="_blank"
+          rel="noopener"
+        >
+          <a>
+            <FontAwesomeIcon icon={faEnvelope} />
+            &nbsp;&nbsp;
           </a>
-        </li>
+          anamadealmeida@gmail.com
+        </a>
+        {/* </li> */}
       </div>
 
       <div className="social-media">
-        <li>
-          <a>Nos réseaux :</a>
-        </li>
-
+        {/* <li> */}
+        {/* <a>Nos réseaux :</a> */}
+        Nos réseaux :{/* </li> */}
         <a href="http://linkedIn.com">
           {" "}
           <a className="linkedin">
+            &nbsp;&nbsp;
             <a>
               <FontAwesomeIcon icon={faLinkedin} />
               <a href="http://linkedin.com"></a>
             </a>
           </a>
         </a>
-
         <a href="http://github.com">
           {" "}
           <a className="github">
@@ -64,7 +64,6 @@ const Footer = () => {
             </a>
           </a>
         </a>
-
         <a href="http://twitter.com">
           {" "}
           <a className="twitter">
@@ -86,7 +85,6 @@ const Footer = () => {
             </a>
           </a>
         </a>
-
         <a href="http://facebook.com">
           {" "}
           <a className="facebook">
@@ -100,9 +98,10 @@ const Footer = () => {
       </div>
 
       <li>
-        <a href="https://cnnespanol.cnn.com"> Nouvelles en espagnol</a>
+        <a href="https://cnnespanol.cnn.com">CNN Nouvelles en espagnol</a>
       </li>
     </div>
   );
 };
+
 export default Footer;
