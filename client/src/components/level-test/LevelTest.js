@@ -51,19 +51,13 @@ const LevelTest = (props) => {
                     src={q.image}
                     alt="question"
                   />
-                  {/* ***** */}
-                  {/* <img class="fit-picture"
-     src="/media/examples/grapefruit-slice-332-332.jpg"
-     alt="Grapefruit slice atop a pile of other slices"> */}
-
-                  {/* ******* */}
                   {q.question}
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
                       /* console.log(); /* AUJOURD'HUI 22 AVRIL*/
                       console.log(
-                        "JE SUIS DANS COMPONENTS/level-test/ LevelTest"
+                        "JE SUIS DANS COMPONENTS/level-test/LevelTest"
                       );
                       return <option key={i}>{c}</option>;
                     })}

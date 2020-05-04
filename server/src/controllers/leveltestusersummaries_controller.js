@@ -17,37 +17,41 @@ const levelTestUserSummaryController = {
   //   });
   //   return levelTestUserSumaries;
   // },
-  retrieveLevelTestUserSummariesByUser: async id => {
-    const levelTestUserSumaries = await UserSummary.findByPk(id, {
+  // retrieveLevelTestUserSummariesByUser: async id => {
+  //   const levelTestUserSumariesByUser = await testsUserSummary.findByPk(id, {
+  retrieveLevelTestUserSummariesByUser: async () => {
+    // const levelTestUserSumariesByUser = await testsUserSummary.findAll(  {
+    const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
+      order: [["created_at", "ASC"]],
       attributes: [
-        "id_user",
-        "id_level_test",
-        "id_type_test",
-        "note_user",
+        "idUser",
+        "idLevelTest",
+        "idTypeTest",
+        "note_User",
         "total_questions_answered",
         "total_correct_answers",
         "total_wrong_answers",
         "created_at",
       ],
-      raw: true
+      raw: true,
     });
-    return levelTestUserSumaries;
+    return levelTestUserSumariesByUser;
   },
 
-  createLevelTestUserSummaries: async (data) => {
-    const { levelTestUserId } = data;
-    const levelTest = await getLevelTest(levelTestId);
+  // createLevelTestUserSummaries: async (data) => {
+  //   const { levelTestUserId } = data;
+  //   const levelTest = await getLevelTest(levelTestId);
 
-    const newLevelTestuserSummaries = {
-      leveltest,
-      ...PublicKeyCredential(id),
-    };
+  //   const newLevelTestuserSummaries = {
+  //     leveltest,
+  //     ...PublicKeyCredential(id),
+  //   };
 
-    const levelTestUserSummaryCreated = await LevelTestUserSummary.create(
-      newLevelTestuserSummaries
-    );
-    return levelTestUserSummaryCreated;
-  },
+  //   const levelTestUserSummaryCreated = await LevelTestUserSummary.create(
+  //     newLevelTestuserSummaries
+  //   );
+  //   return levelTestUserSummaryCreated;
+  // },
 };
 
 module.exports = levelTestUserSummaryController;

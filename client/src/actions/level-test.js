@@ -10,10 +10,10 @@ let reponseUtilisateur = 0;
 export const fetchTests = () => async (dispatch) => {
   fetch("/api/leveltest")
     .then((response) => {
-      // return response.json();
-      return response.json(
-        console.log("ESTOY EN actions/level-test")
-      ); /*AUJOURD'HUI 22 AVRIL */
+      return response.json();
+      // return response.json(
+      //   console.log("ESTOY EN actions/level-test")
+      // ); /*AUJOURD'HUI 22 AVRIL */
     })
     .then((tests) => {
       dispatch({ type: types.GET_LEVEL_TESTS, payload: tests });

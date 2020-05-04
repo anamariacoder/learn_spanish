@@ -290,6 +290,11 @@ a:active {
   color:green;
 }
 
+.info-level-test-user-summary {
+  font-size: 50px;
+  padding-left: 100px;
+  color: green;
+}
 
 .container-learning-methodology {
   background-image: url("./components/public/img/livre-espagnol2.png");

@@ -30,33 +30,33 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID
       },
 
-      note_user: {
+      noteUser: {
         allowNull: true,
         type: DataTypes.INTEGER
       },
 
-      total_questions_answered: {
+      totalQuestionsAnswered: {
         allowNull: true,
         type: DataTypes.INTEGER
       },
 
-      total_correct_answers: {
+      totalCorrectAnswers: {
         allowNull: true,
         type: DataTypes.INTEGER
       },
 
-      total_wrong_answers: {
+      totalWrongAnswers: {
         allowNull: true,
         type: DataTypes.INTEGER
       },
 
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW
       },
 
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW

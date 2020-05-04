@@ -5,7 +5,7 @@ const { retrieveLevelTestUserSummary } = require("../controllers/leveltestusersu
 
 const levelTestUserSummariesRouter = express.Router();
 
-levelTestUserSummariesRouter.get("../", async (request, response) => {
+levelTestUserSummariesRouter.get("/", async (request, response) => {
   const levelTestUserSummariesByUser = await retrieveLevelTestUserSummaryByUser();
   // response.status(OK).json(levelTestUserSummaries);
   response.status(200);
