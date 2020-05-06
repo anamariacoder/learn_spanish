@@ -8,7 +8,7 @@ import {
   handleResponses,
   levelTestUserSummary,
   reponseCorrect,
-  reponseUtilisateur
+  reponseUtilisateur,
 } from "../../actions/level-test-user-summary";
 
 const LevelTestUserSummary = (props) => {
@@ -26,10 +26,10 @@ const LevelTestUserSummary = (props) => {
     props.checkLevelTestUserSummary();
   };
 
-  return ( 
+  return (
     <div>
       <h1>Récapitulatif de votre progression</h1>
-      
+
       <div>
         {/* <div className="info-level-test-user-summary"> */}
         <h2> Table récapitulatif de votre progression </h2>
@@ -37,20 +37,29 @@ const LevelTestUserSummary = (props) => {
           {/* {props.levelTestUserSummary.testUserSummary &&
           props.levelTestUserSummary.testUserSummary.length &&
           props.levelTestUserSummary.testUserSummary[0].note_user.levelTestUserSummaryByUser.map( */}
-          {props.levelTestUserSummary.testUserSummary ||
-            props.levelTestUserSummary.map((valor, ind) => {
-              return (
-                <div> 
-                  {console.log("valor es  : ", valor)};
-                  <p>
-                    {valor.idUser.map((c, ind) => {
-                      console.log("je suis là");
-                    })}
-                  </p>
-                  {/* return ({valor.idUser}); */}
-                </div>
-              );
-            })}
+          {props.levelTestUserSummary.testsUserSummary &&
+            props.levelTestUserSummary.testsUserSummary.length &&
+            props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(
+              (valor, ind) => {
+                return (
+                  <div>
+                    {console.log(
+                      "je suis DANS LEVEL TEST USER SUMMARY COMPONENT et valor est  : ",
+                      valor
+                    )}
+                    ;
+                    <p>
+                      {valor.idUser.map((c, ind) => {
+                        console.log(
+                          "je suis DANS LEVEL TEST USER SUMMARY COMPONENT"
+                        );
+                      })}
+                    </p>
+                    {/* return ({valor.idUser}); */}
+                  </div>
+                );
+              }
+            )}
         </div>
       </div>
     </div>

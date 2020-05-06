@@ -22,19 +22,23 @@ const levelTestUserSummaryController = {
   retrieveLevelTestUserSummariesByUser: async () => {
     // const levelTestUserSumariesByUser = await testsUserSummary.findAll(  {
     const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
-      order: [["created_at", "ASC"]],
+      order: ["created_at", "ASC"],
       attributes: [
         "idUser",
         "idLevelTest",
         "idTypeTest",
-        "note_User",
+        "note_user",
         "total_questions_answered",
         "total_correct_answers",
         "total_wrong_answers",
-        "created_at",
+        "created_at"
       ],
       raw: true,
     });
+    
+    console.log("dans retrieveLevelTestUserSummariesByUser");
+    console.log(levelTestUserSumariesByUser);
+
     return levelTestUserSumariesByUser;
   },
 

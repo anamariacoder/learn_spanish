@@ -3,23 +3,25 @@ import * as types from "./../constants";
 import Correct from "../components/test/Correct";
 import good from "../components/public/img/like.png"; /*AUJOURD'HUI 22 AVRIL */
 
-
 let reponseCorrect = 0;
 let reponseUtilisateur = 0;
 
 export const fetchTests = () => async (dispatch) => {
   fetch("/api/leveltest")
     .then((response) => {
+      console.log("dans fetchLevelTest RETURNING response.json");
+
       return response.json();
       // return response.json(
       //   console.log("ESTOY EN actions/level-test")
       // ); /*AUJOURD'HUI 22 AVRIL */
     })
     .then((tests) => {
+      console.log("dans fetchLevelTest RETURNING tests");
+
       dispatch({ type: types.GET_LEVEL_TESTS, payload: tests });
     });
 };
-
 
 export const isCorrect = (props) => {
   if (reponseUtilisateur === reponseCorrect) return <Correct />
@@ -34,7 +36,6 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   let nbAnswered = 0;
   let nbWrong = 0;
   let showResult = 0;
-
 
   const responses = getState().levelTest.responses;
   const tests = getState().levelTest.tests;
