@@ -64,10 +64,8 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  // checkLevelTestUserSummary: (reponses, test) =>
-  //   dispatch(checkLevelTestUserSummary(reponses, test)),
-  checkLevelTestUserSummary: (reponsesSummaryy, testSummaryy) =>
-  dispatch(checkLevelTestUserSummary(reponsesSummaryy, testSummaryy)),
+  checkLevelTestUserSummary: (reponses, test) =>
+    dispatch(checkLevelTestUserSummary(reponses, test)),
   fetchLevelTestUserSummaries: () => dispatch(fetchLevelTestUserSummaries()),
   handleResponses: (event) => dispatch(handleResponses(event)),
 });
@@ -76,3 +74,43 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(LevelTestUserSummary);
+
+// return (
+//   <div>
+//     <h1>Récapitulatif de votre progression</h1>
+//     <div>
+//       {/* <div className="info-level-test-user-summary"> */}
+//       <h2> Table récapitulatif de votre progression </h2>
+//       <div className="info-level-test-user_summary">
+//         {/* {props.levelTestUserSummary.testUserSummary &&
+//           props.levelTestUserSummary.testUserSummary.length &&
+//           props.levelTestUserSummary.testUserSummary[0].note_user.levelTestUserSummaryByUser.map( */}
+//         {props.levelTestUserSummary.testUserSummary &&
+//           props.levelTestUserSummary.map((valor, ind) => {
+//             return (
+//               <div key={ind}>
+//                 {console.log("valor es  : ", valor)};
+//                 <p>
+//                   {valor.idUser.map((c, ind) => {
+//                     console.log("je suis là");
+//                   })}{" "}
+//                 </p>
+//                 ; return ({valor.idUser});
+//               </div>
+//             );
+//           })}
+//         {/* .map((dataSummary, index) =>{" "} */}
+//         {
+//           // return (
+//           //   <div>
+//           //     <p>{dataSummary.noteUser} </p>
+//           //   </div>
+//           // );
+//         }
+//         {/* )} */}
+//       </div>
+//     </div>
+//     {/* ) */}
+//   </div>
+// );
+// };

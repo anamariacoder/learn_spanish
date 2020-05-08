@@ -1,7 +1,8 @@
 import * as types from "./../constants";
 
 const initialState = {
-  responses: {},
+  // responses: {}, 8 mai 2020
+  responsesSummary: {},
   testUserSummaries: [],
 };
 
@@ -15,7 +16,7 @@ export default function auth(state = initialState, action) {
     case types.HANDLE_RESPONSE:
       return {
         ...state,
-        responses: action.payload,
+        responsesSummary: action.payload,
       };
     // case types.CHECK_LEVEL_TEST:
     //   return {
