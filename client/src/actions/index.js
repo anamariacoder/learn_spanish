@@ -1,7 +1,6 @@
 import * as types from "./../constants";
 
 
-
 export const logginAction = values => {
   return dispatch => {
     return fetch("/api/auth/login", {

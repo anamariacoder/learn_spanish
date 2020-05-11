@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import {
   checkLevelTestUserSummary,
   fetchLevelTestUserSummaries,
-  handleResponses
+  handleResponses,
 } from "../../actions/level-test-user-summary";
 
 const LevelTestUserSummary = (props) => {
@@ -31,12 +31,17 @@ const LevelTestUserSummary = (props) => {
         {/* <div className="info-level-test-user-summary"> */}
         <h2> Table récapitulatif de votre progression </h2>
         <div className="info-level-test-user_summary">
-         {props.levelTestUserSummary.testsUserSummary &&
-            props.levelTestUserSummary.testsUserSummary.length &&
-            props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(
-              (valor, ind) => {
-                return (
-                  <div>
+          {props.levelTestUserSummary.testsUserSummary &&
+            // props.levelTestUserSummary.testsUserSummary.length &&
+            // props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(
+            props.levelTestUserSummary.map((valor) => {
+              return (
+                <div>
+                  <tableSummary>
+                    {/* {props.levelTestUserSummary.testUserSSummary[0].map(valor.idUser)} */}
+                  </tableSummary>
+
+                  {/*                     
                     {console.log(
                       "je suis DANS LEVEL TEST USER SUMMARY COMPONENT et valor est  : ",props.levelTestUserSummary.testsUserSummary
                     )}
@@ -47,12 +52,11 @@ const LevelTestUserSummary = (props) => {
                           "je suis DANS LEVEL TEST USER SUMMARY COMPONENT"
                         );
                       })}
-                    </p>
-                    {/* return ({valor.idUser}); */}
-                  </div>
-                );
-              }
-            )}
+                    </p> */}
+                  {/* return ({valor.idUser}); */}
+                </div>
+              );
+            })}
         </div>
       </div>
     </div>
@@ -67,7 +71,7 @@ const mapDispatchToProps = (dispatch) => ({
   // checkLevelTestUserSummary: (reponses, test) =>
   //   dispatch(checkLevelTestUserSummary(reponses, test)),
   checkLevelTestUserSummary: (reponsesSummaryy, testSummaryy) =>
-  dispatch(checkLevelTestUserSummary(reponsesSummaryy, testSummaryy)),
+    dispatch(checkLevelTestUserSummary(reponsesSummaryy, testSummaryy)),
   fetchLevelTestUserSummaries: () => dispatch(fetchLevelTestUserSummaries()),
   handleResponses: (event) => dispatch(handleResponses(event)),
 });

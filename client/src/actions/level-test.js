@@ -6,7 +6,7 @@ import good from "../components/public/img/like.png"; /*AUJOURD'HUI 22 AVRIL */
 let reponseCorrect = 0;
 let reponseUtilisateur = 0;
 
-export const fetchTests = () => async (dispatch) => {
+export const fetchTests = () => async dispatch => {
   fetch("/api/leveltest")
     .then((response) => {
       console.log("dans fetchLevelTest RETURNING response.json");

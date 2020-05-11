@@ -2,9 +2,10 @@ import React from "react";
 import * as types from "./../constants";
 
 export const fetchLevelTestUserSummaries = () => async (dispatch) => {
-  fetch("/api/leveltestusersummary") // TO VERIFY
+  // fetch("api/leveltestusersummary") // TO VERIFY
+  fetch("api/leveltestusersummary")
     .then((response) => {
-      // console.log("dans fetchLevelTestUserSummaries RETURNING response");
+      console.log("dans fetchLevelTestUserSummaries RETURNING response");
       // console.log(response);
 
       return response.json();
@@ -55,4 +56,3 @@ export const handleResponses = (target) => async (dispatch, getState) => {
   });
   console.log("responsesSummary ", responsesSummary);
 };
-

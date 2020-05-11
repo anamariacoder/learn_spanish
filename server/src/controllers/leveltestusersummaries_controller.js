@@ -22,7 +22,7 @@ const levelTestUserSummaryController = {
   retrieveLevelTestUserSummariesByUser: async () => {
     // const levelTestUserSumariesByUser = await testsUserSummary.findAll(  {
     const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
-      order: ["created_at", "ASC"],
+      // order: ["created_at", "ASC"],
       attributes: [
         "idUser",
         "idLevelTest",
