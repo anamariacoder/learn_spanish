@@ -10,7 +10,7 @@ import {
 
 const LevelTestUserSummary = (props) => {
   useEffect(() => {
-    props.fetchLevelTestUserSummaries(); // ERROR SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+    props.fetchLevelTestUserSummaries();
   }, []);
 
   function handleChange(evt) {
@@ -25,40 +25,36 @@ const LevelTestUserSummary = (props) => {
 
   return (
     <div>
+      {console.log("1 avant le KEY props = ", props)}
+      {/* {console.log("2 avant le KEY props.levelTestUserSummary.testsUserSummary = ", props.levelTestUserSummary.testsUserSummary)}; INDEFINIDO */}
+      {/* {console.log("3 avant le KEY props.testsUserSummary = ", props.testsUserSummary)}; Undefined*/}
+      {/* {console.log("4 avant le KEY props.levelTestUserSummaryByUser = ", props.levelTestUserSummaryByUser)};  INDEFINIDO*/}
+      {/* {console.log("avant le KEY props.levelTestUserSummary.testsUserSummary = ", props.testsUserSummary.map[0])}; ERROR*/}
+
       <h1>Récapitulatif de votre progression</h1>
 
-      <div>
-        {/* <div className="info-level-test-user-summary"> */}
-        <h2> Table récapitulatif de votre progression </h2>
-        <div className="info-level-test-user_summary">
-          {props.levelTestUserSummary.testsUserSummary &&
-            // props.levelTestUserSummary.testsUserSummary.length &&
-            // props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(
-            props.levelTestUserSummary.map((valor) => {
-              return (
-                <div>
-                  <tableSummary>
-                    {/* {props.levelTestUserSummary.testUserSSummary[0].map(valor.idUser)} */}
-                  </tableSummary>
+      <h2> Table récapitulatif de votre progression </h2>
 
-                  {/*                     
-                    {console.log(
-                      "je suis DANS LEVEL TEST USER SUMMARY COMPONENT et valor est  : ",props.levelTestUserSummary.testsUserSummary
-                    )}
-                    ;
-                    <p>
-                      {valor.idUser.map((c, ind) => {
-                        console.log(
-                          "je suis DANS LEVEL TEST USER SUMMARY COMPONENT"
-                        );
-                      })}
-                    </p> */}
-                  {/* return ({valor.idUser}); */}
-                </div>
-              );
-            })}
-        </div>
-      </div>
+      {/* {props.levelTestUserSummary.testsUserSummary && props.levelTestUserSummaryByUser.map((valor, i) => {   */}
+      {/* props.levelTestUserSummaryByUser.map((valor, i) => {  */}
+      {/* {props.levelTestUserSummary.testsUserSummary &&
+          props.levelTestUserSummary.testsUserSummary.length && */}
+      {/* { props.levelTestUserSummary.testsUserSummary.map((v,i) => { */}
+
+      {props.testsUserSummary.map((v, i) => {
+        {
+          console.log("EN PROPS  = v ", v);
+        }
+        
+          return (
+          <div key={i}>
+            {v.idUser}
+            {v}
+            {console.log("EN KEY v.idUser  =  ", v.idUser)}
+          </div>
+          );
+       
+      })}
     </div>
   );
 };

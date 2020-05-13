@@ -36,8 +36,8 @@ const levelTestUserSummaryController = {
       raw: true,
     });
     
-    console.log("dans retrieveLevelTestUserSummariesByUser");
-    console.log(levelTestUserSumariesByUser);
+    console.log("CONTROLLER retrieveLevelTestUserSummariesByUser = levelTestUserSumariesByUser  = ", levelTestUserSumariesByUser);
+
 
     return levelTestUserSumariesByUser;
   },

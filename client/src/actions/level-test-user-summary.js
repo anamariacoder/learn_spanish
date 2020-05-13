@@ -13,7 +13,7 @@ export const fetchLevelTestUserSummaries = () => async (dispatch) => {
 
     .then((testsUserSummary) => {
       console.log(
-        "dans fetchLevelTestUserSummaries RETURNING testsUserSummary"
+        "dans .then testsUserSumary AVANT le dispatch --> fetchLevelTestUserSummaries RETURNING testsUserSummary testsUserSummary  =  ", testsUserSummary
       );
       console.log(testsUserSummary);
       dispatch({
@@ -21,7 +21,7 @@ export const fetchLevelTestUserSummaries = () => async (dispatch) => {
         payload: testsUserSummary,
       });
       console.log(
-        "dans fetchLevelTestUserSummaries RETURNING testsUserSummary"
+        "apres le dispatch dans fetchLevelTestUserSummaries RETURNING testsUserSummary = ", testsUserSummary
       );
 
       // // .then((userSummaries) => {
