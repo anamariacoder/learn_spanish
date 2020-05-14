@@ -10,13 +10,6 @@ import {
 
 const LevelTestUserSummary = (props) => {
   console.log(" DANS LevelTestUserSummary props = ", props);
-  // const { summaries } = props;
-  // const listInformations = summaries.map((summary) => <li> {summary}</li>);
-  // return <ul>{listInformations}</ul>;
-
-  // const responsesSummary = props.responsesSummary;
-  // const listInformations = responsesSummary.map((summary) => <li> {summary}</li>);
-  // return <ul>{listInformations}</ul>;
 
   useEffect(() => {
     props.fetchLevelTestUserSummaries();
@@ -38,13 +31,37 @@ const LevelTestUserSummary = (props) => {
 
       <div>
         {/* <div className="info-level-test-user-summary"> */}
-        <h2> Table récapitulatif de votre progression </h2>
-        <div className="info-level-test-user_summary">
-          {props.testsUserSummary}
-          {props.levelTestUserSummary.testUserSummaries.map((c, ind) => {
-            return <div key={ind}>{c.idUser}</div>;
-          })}
-          
+        {/* <h2> Table récapitulatif de votre progression </h2> */}
+        <div className="info-level-test-user-summary">
+          <table>
+            {/* {props.testsUserSummary} */}
+            <thead>
+              <th>Type de test</th>
+              <th>Code du test</th>     
+              <th>Note obtenue</th>     
+              <th>Nombre de questions répondus</th>  
+              <th>Total réponses correctes</th>   
+              <th>Total réponses incorrectes</th> 
+              <th>Data </th>
+            </thead>
+            <tbody>
+              {props.levelTestUserSummary.testUserSummaries.map((c, ind) => {
+                return (
+                  <tr key={ind}>
+                    {/* <td> {c.idUser} </td> */}
+                    <td> {c.idTypeTest} </td>
+                    <td> {c.idLevelTest} </td>
+                    <td> {c.note_user} </td>
+                    <td> {c.total_questions_answered} </td>
+                    <td> {c.total_correct_answers} </td>
+                    <td> {c.total_wrong_answers} </td>
+                    <td> {c.created_at} </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+
           {/* {props.levelTestUserSummary.testsUserSummary &&
             props.levelTestUserSummary.testsUserSummary.length &&
             props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(

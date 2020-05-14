@@ -14,15 +14,13 @@ const Progress1 = (props) => {
     event.preventDefault();
   };
   
-
-
   return (
     <body className="container-progress-global">
       <div className="info-progress-global">
         <h1>Progrès</h1>
         <p>
-        Dans cette section, vous obtiendrez un rapport détaillé de vos progrès dans l'apprentissage de l'espagnol, en utilisant notre application. <br />
-        <a><Link to="/LevelTestUserSummary">regarder le récapitulatif de ma progression</Link></a>.
+        Dans cette section, vous obtiendrez un rapport détaillé de vos progrès dans l'apprentissage de l'espagnol,<br /> en utilisant notre application. <br /><br />
+        <a><Link to="/LevelTestUserSummary">Je veux regarder le récapitulatif de ma progression</Link></a>.
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
       </div>
