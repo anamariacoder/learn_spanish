@@ -42,6 +42,14 @@ const LevelTest = (props) => {
           {props.levelTest.tests &&
             props.levelTest.tests.length &&
             props.levelTest.tests[0].questions.levelTests.map((q, i) => {
+              console.log("0  props = " , props);
+
+              console.log("1  props.levelTest.tests = " , props.levelTest.tests);
+              console.log("2  props.levelTest.tests.length = " , props.levelTest.tests.length);
+              console.log("3  props.levelTest.tests[0].questions.levelTests.map = " , props.levelTest.tests[0].questions.levelTests.map);
+
+
+              
               return (
                 <div key={i}>
                   {/* <img src={q.image} alt="question" /> */}

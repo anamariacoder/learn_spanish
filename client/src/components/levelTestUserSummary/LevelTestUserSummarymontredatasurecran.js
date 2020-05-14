@@ -44,30 +44,7 @@ const LevelTestUserSummary = (props) => {
           {props.levelTestUserSummary.testUserSummaries.map((c, ind) => {
             return <div key={ind}>{c.idUser}</div>;
           })}
-          
-          {/* {props.levelTestUserSummary.testsUserSummary &&
-            props.levelTestUserSummary.testsUserSummary.length &&
-            props.levelTestUserSummary.testUserSSummary[0].note_user.levelTestUserSummariesByUser.map(
-              (valor, ind) => {
-                return (
-                  <div>
-                    {console.log(
-                      "je suis DANS LEVEL TEST USER SUMMARY COMPONENT et valor est  : ",
-                      props.levelTestUserSummary.testsUserSummary
-                    )}
-                    ;
-                    <p>
-                      {valor.idUser.map((c, ind) => {
-                        console.log(
-                          "je suis DANS LEVEL TEST USER SUMMARY COMPONENT"
-                        );
-                      })}
-                    </p>
-                    {/* return ({valor.idUser}); */}
-          {/* </div>
-                );
-              }
-            )} */}
+          }
         </div>
       </div>
     </div>

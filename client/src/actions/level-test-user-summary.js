@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"; 
 import * as types from "./../constants";
 
 export const fetchLevelTestUserSummaries = () => async (dispatch) => {
   // fetch("api/leveltestusersummary") // TO VERIFY
   fetch("api/leveltestusersummary")
     .then((response) => {
-      console.log("dans fetchLevelTestUserSummaries RETURNING response");
+      console.log("dans fetchLevelTestUserSummaries RETURNING response = ", response);
       // console.log(response);
 
       return response.json();
@@ -35,11 +35,19 @@ export const fetchLevelTestUserSummaries = () => async (dispatch) => {
     });
 };
 
+
 export const checkLevelTestUserSummary = () => async (dispatch, getState) => {
   // const responses = getState().levelTestUserSummary.responses; 06 mai REPLACED responses BY responsesSummary
 
   const responsesSummary = getState().levelTestUserSummaries.responsesSummary;
   const testsUserSummary = getState().levelTestUserSummaries.testsUserSummary;
+  console.log(
+    "dans checkLevelTestUserSummary RETURNING testsUserSummary  =  ", testsUserSummary
+  );
+
+  console.log(
+    "dans checkLevelTestUserSummary RETURNING responsesSummary  =  ", responsesSummary
+  );
 
   //   let keys = Object.keys(responses);
   //  keys.map((v,i) => v=v.replace("noteuser",""));
@@ -54,5 +62,5 @@ export const handleResponses = (target) => async (dispatch, getState) => {
     type: types.HANDLE_RESPONSE,
     payload: responsesSummary,
   });
-  console.log("responsesSummary ", responsesSummary);
+  console.log("Dans handleResponses responsesSummary = ", responsesSummary);
 };
