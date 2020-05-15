@@ -13,39 +13,45 @@ const Progress1 = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  
+
   return (
     <body className="container-progress-global">
       <div className="info-progress-global">
         <h1>Progrès</h1>
         <p>
-        Dans cette section, vous obtiendrez un rapport détaillé de vos progrès dans l'apprentissage de l'espagnol,<br /> en utilisant notre application. <br /><br />
-        <a><Link to="/LevelTestUserSummary">Je veux regarder le récapitulatif de ma progression</Link></a>.
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Dans cette section, vous obtiendrez un rapport détaillé de vos progrès
+          dans l'apprentissage de l'espagnol, en utilisant notre application.{" "}
+          <br />
+          <br />
+         
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Pour regarder votre progression, veuillez appuyer sur le lien  <a> <Link to="/LevelTestUserSummary">
+           regarder le récapitulatif de ma progression
+            </Link>
+          </a>
+          . &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
       </div>
-        
     </body>
   );
 };
 
 export default Progress1;
 
-
 // antes de 29 avril funciona bien
 // const Progress1 = () => {
 //   useEffect(() => {}, []);
- 
+
 //   const handleSubmit = event => {
 //     event.preventDefault();
 //   };
-  
-  // // const UrlLevelTestUserSummaries = `${apiBaseUrl}/api/`; 
-  // // const fetchAllLevelTestUserSummaries = () => 
-  // // async => { const res = await axios.get(UrlLevelTestUserSummaries); 
 
-  // //   console.log(res); 
-  // // };
+// // const UrlLevelTestUserSummaries = `${apiBaseUrl}/api/`;
+// // const fetchAllLevelTestUserSummaries = () =>
+// // async => { const res = await axios.get(UrlLevelTestUserSummaries);
+
+// //   console.log(res);
+// // };
 
 //   return (
 //     <body className="container-progress-global">
