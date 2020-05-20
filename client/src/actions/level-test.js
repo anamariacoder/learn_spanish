@@ -48,37 +48,37 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   keys.map((v, i) => {
     v = v.replace("question", "");
 
-    console.log(" dans checkLevelTest ");
+    console.log("8) dans checkLevelTest ");
 
     let numBonneReponse = tests[0].questions.levelTests[v].answer;
     reponseCorrect = tests[0].questions.levelTests[v].choix[numBonneReponse]; //subindex of the correct answer
     reponseUtilisateur = responses[keys[i]];
     //arrayScreen[0] = 10000;
 
-    console.log("reponseUtilisateur  ", reponseUtilisateur); // 23 AVRIL
-    console.log("reponseCorrect  ", reponseCorrect); // 23 AVRIL
+    console.log("9) reponseUtilisateur  ", reponseUtilisateur); // 23 AVRIL
+    console.log("10) reponseCorrect  ", reponseCorrect); // 23 AVRIL
 
-    console.log(Object.keys(responses), responses, "OBJECT(keys)"); // 23 AVRIL
+    console.log(Object.keys(responses), responses, "11) OBJECT(keys)"); // 23 AVRIL
 
     if (reponseUtilisateur === reponseCorrect) {
       nbCorrect += 1;
       nbAnswered += 1;
-      console.log(" Number of correct answers ", nbCorrect);
+      console.log("12)  Number of correct answers ", nbCorrect);
       console.log(
-        "2 je suis dans actions/level-test"
+        "13) je suis dans actions/level-test"
       ); /* AUJOURD'HUI 22 AVRIL */
-      console.log("je VAIS appeler isCORRECT"); /* AUJOURD'HUI 22 AVRIL */
+      console.log("14) je VAIS appeler isCORRECT"); /* AUJOURD'HUI 22 AVRIL */
 
-      return (
-        /* AUJOURD'HUI 22 AVRIL */
+      // return (
+      //   /* AUJOURD'HUI 22 AVRIL */
 
-        <div className="iconTest">
-          <p4>GOOD ANSWER</p4>
-          {console.log("V questions :   ", v)}
-          {v}
+      //   <div className="iconTest">
+      //     <p>GOOD ANSWER</p>
+      //     {console.log("15)   V questions :   ", v)}
+      //     {v}
 
-        </div>
-      );
+      //   </div>
+      // );
 
       // return Correct() /* AUJOURD'HUI 22 AVRIL */;
     } else {
@@ -89,22 +89,30 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   });
 
   arrayTestResults[0] = nbCorrect * 2;
-  console.log("0 Votre note sur dix points est ", arrayTestResults[0]);
+  console.log("16)  Votre note sur dix points est ", arrayTestResults[0]);
 
   arrayTestResults[1] = nbCorrect;
-  console.log("1 Number correct answers ", arrayTestResults[1]);
+  console.log("17)  Number correct answers ", arrayTestResults[1]);
 
   arrayTestResults[2] = nbWrong;
-  console.log("2 Number false answers ", arrayTestResults[2]); 
+  console.log("18)  Number false answers ", arrayTestResults[2]); 
 
-
-  return (arrayTestResults);
+  dispatch({
+    type: types.CHECK_LEVEL_TEST,
+    payload: arrayTestResults,
+  });
+  
   // showResult = 1;
 };
 
 export const handleResponses = (target) => async (dispatch, getState) => {
   const responses = getState().levelTest.responses;
   responses[target.name] = target.value;
+
+  {
+    console.log("6) handleResponses");
+  }
+
 
   dispatch({
     type: types.HANDLE_RESPONSE,

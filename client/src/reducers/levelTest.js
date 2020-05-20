@@ -2,7 +2,8 @@ import * as types from "./../constants";
 
 const initialState = {
   responses: {},
-  tests: []
+  tests: [],
+  resultats: []
 };
 
 export default function auth(state = initialState, action) {
@@ -19,7 +20,8 @@ export default function auth(state = initialState, action) {
       };
     case types.CHECK_LEVEL_TEST:
       return {
-        ...state
+        ...state,
+        resultats: action.payload
       };
     default:
       return state;

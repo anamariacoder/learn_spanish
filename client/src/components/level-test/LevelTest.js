@@ -20,13 +20,24 @@ import {
 // };
 
 const LevelTest = (props) => {
+  const [hasSubmit, setSubmit] = useState(false);
+  console.log("PROPS ", props);
+  const { resultats } = props.levelTest;
+
+  console.log("resultats", resultats);
+
   useEffect(() => {
+    {
+      console.log("4) fetchTests");
+    }
     props.fetchTests();
   }, []);
 
   function handleChange(evt) {
     {
-      console.log("handleChange de LevelTest");
+      console.log(
+        "5) handleChange de LevelTest. On a commencé à sélectionner les options"
+      );
     }
     const value = evt.target.value;
     props.handleResponses(evt.target);
@@ -34,10 +45,12 @@ const LevelTest = (props) => {
 
   const handleSubmit = (event) => {
     {
-      console.log("handleSubmit de LevelTest");
+      // console.log("7) handleSubmit de LevelTest");
     }
     event.preventDefault();
     props.checkLevelTest();
+    setSubmit(true);
+    console.log("Props dans level test, ", props);
   };
 
   //let answer = null; /* 19 mai */
@@ -64,9 +77,8 @@ const LevelTest = (props) => {
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
-                     
                       console.log(
-                        "JE SUIS DANS COMPONENTS/level-test/LevelTest"
+                        "2) JE SUIS DANS COMPONENTS/level-test/LevelTest. Choissisez votre réponse"
                       );
                       return <option key={i}>{c}</option>;
                     })}
@@ -77,17 +89,28 @@ const LevelTest = (props) => {
             })}
         </div>
       </div>
-      {/* <div> <button onClick={handleSubmit}>Valider</button>"valider le test ici";
-     Total reponses corrects</div> */}
-      <button onClick={(handleSubmit)}>Valider</button>
-      {console.log(
-        "JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
+
+      <button onClick={handleSubmit}>Valider</button>
+      {hasSubmit ? (
+        <p>Vous avez {resultats[0]} bonnes réponses</p>
+      ):(
+        <p>
+          Cliquez sur le bouton Soumettre pour voir une synthèse de vos
+          résultats
+        </p>
       )}
+      
+      {/* {console.log(
+        "3) JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
+      )} */}
     </div>
   );
 };
 
 const mapStateToProps = (state, props) => {
+  {
+    console.log("1)  mapStateToProps");
+  }
   return state;
 };
 
