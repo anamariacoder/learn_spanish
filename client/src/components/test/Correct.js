@@ -1,28 +1,36 @@
 import React, { useState, useEffect } from "react";
-import good from "../public/img/like.png";
+import good from "./../public/img/like.png";
 
 const Correct = (props) => {
-  // useEffect(() => {
-  //   props.fetchTests();
+  //  useEffect(() => {
+  //    props.fetchTests();
   // }, []);
 
-  function handleChange(evt) {
-    const value = evt.target.value;
-    props.handleResponses(evt.target);
-  }
+  // function handleChange(evt) {       18 mai
+  //   const value = evt.target.value;
+  //   props.handleResponses(evt.target);
+  // }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // props.checkLevelTest();
-  };
+  //const handleSubmit = (event) => {  18 mai
+  //  event.preventDefault();
+  //  // props.checkLevelTest();
+  //};
 
   //  aujourd'hui 22 avril
-  console.log("Je suis dans COMPONENTS/test/CORRECT");
+  // return <div className="iconTest">
+  // {console.log("Just DANS LE return de CORRECT")}
+  //  <p>GOOD ANSWER</p></div>;
 
-  return <div className="iconTest"> 
-   <h1>GOOD ANSWER</h1></div>;
+  console.log("Je suis dans COMPONENTS/test/CORRECT.js");
 
-  
+  return (
+    // <div>
+    //   <img className="iconTest" src={good} alt="thumbs up" />
+    // </div>
+    <div>
+      <img className="iconTest" />
+    </div>
+  );
 };
 
 export default Correct;

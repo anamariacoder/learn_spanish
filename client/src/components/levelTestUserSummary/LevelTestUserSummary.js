@@ -30,11 +30,10 @@ const LevelTestUserSummary = (props) => {
       <h1>Récapitulatif de votre progression</h1>
 
       <div>
-        {/* <div className="info-level-test-user-summary"> */}
-        {/* <h2> Table récapitulatif de votre progression </h2> */}
+
         <div className="info-level-test-user-summary">
           <table>
-            {/* {props.testsUserSummary} */}
+
             <thead>
               <th>Type de test</th>
               <th>Code du test</th>     

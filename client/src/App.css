@@ -156,14 +156,14 @@ a {
   width: 120%;
   height: 100%;
   background-color: #f1ed99;
-  position: relative;
+  position: absolute;
   opacity: 0.2;
 }
 
 .info-start-global-test p {
   background-color: wheat;
   opacity: 0.8;
-  width: 110%; /* contrôle le width de la column*/
+  width: 70%; /* contrôle le width de la column*/
   height: 400px;
   max-width: 66%;
   margin-top: 58px;
@@ -228,6 +228,16 @@ a:active {
 }
 
 .iconTest {
+ /* background-image: url(good);*/ 
+  display: block; 
+  background-image: url("./components/public/img/like.png"); 
+  background-repeat: no-repeat;
+  background-image: center; 
+  font-size: 100px;
+  color: green;
+}
+
+.iconTest h1{
   /* background-image: url(good); */
   /* display: block; */
   /* background-image: url("./components/public/img/like.png"); */
@@ -236,7 +246,6 @@ a:active {
   font-size: 20px;
   color: green;
 }
-
 .container-progress-global {
   background-image: url("./components/public/img/womencoffeandlaptop.jpg");
   background-repeat: no-repeat;

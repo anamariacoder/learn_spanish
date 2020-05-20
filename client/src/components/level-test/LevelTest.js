@@ -4,7 +4,7 @@ import bad from "./../public/img/dislike.png";
 import Correct from "../test/Correct";
 import NotCorrect from "../test/NotCorrect";
 import { connect } from "react-redux";
-import { 
+import {
   checkLevelTest,
   fetchTests,
   handleResponses,
@@ -25,14 +25,22 @@ const LevelTest = (props) => {
   }, []);
 
   function handleChange(evt) {
+    {
+      console.log("handleChange de LevelTest");
+    }
     const value = evt.target.value;
     props.handleResponses(evt.target);
   }
 
   const handleSubmit = (event) => {
+    {
+      console.log("handleSubmit de LevelTest");
+    }
     event.preventDefault();
     props.checkLevelTest();
   };
+
+  //let answer = null; /* 19 mai */
 
   return (
     <div>
@@ -42,14 +50,6 @@ const LevelTest = (props) => {
           {props.levelTest.tests &&
             props.levelTest.tests.length &&
             props.levelTest.tests[0].questions.levelTests.map((q, i) => {
-              console.log("0  props = " , props);
-
-              console.log("1  props.levelTest.tests = " , props.levelTest.tests);
-              console.log("2  props.levelTest.tests.length = " , props.levelTest.tests.length);
-              console.log("3  props.levelTest.tests[0].questions.levelTests.map = " , props.levelTest.tests[0].questions.levelTests.map);
-
-
-              
               return (
                 <div key={i}>
                   {/* <img src={q.image} alt="question" /> */}
@@ -60,17 +60,18 @@ const LevelTest = (props) => {
                     alt="question"
                   />
                   {q.question}
+
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
-                      /* console.log(); /* AUJOURD'HUI 22 AVRIL*/
+                     
                       console.log(
                         "JE SUIS DANS COMPONENTS/level-test/LevelTest"
                       );
                       return <option key={i}>{c}</option>;
                     })}
                   </select>
-                  {/* <isCorrect answer={answer} /> */}
+                  {/* <isCorrect answer={answer} />  */}
                 </div>
               );
             })}
@@ -78,7 +79,7 @@ const LevelTest = (props) => {
       </div>
       {/* <div> <button onClick={handleSubmit}>Valider</button>"valider le test ici";
      Total reponses corrects</div> */}
-      <button onClick={handleSubmit}>Valider</button>
+      <button onClick={(handleSubmit)}>Valider</button>
       {console.log(
         "JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
       )}
