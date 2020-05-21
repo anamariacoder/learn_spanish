@@ -86,11 +86,7 @@ const LevelTest = (props) => {
         </div>
       </div>
 
-      <div className="submit-test-button">
-        <button onClick={handleSubmit}>
-          <div className="test-button">Soumettre</div>
-        </button>
-      </div>
+      <button onClick={handleSubmit}>Soumettre</button>
       {hasSubmit ? (
         <div>
           {/* <div>{isCorrect}</div> */}
@@ -117,14 +113,12 @@ const LevelTest = (props) => {
         </div>
       ) : (
         // <p>Vous avez {resultats[0]} bonnes réponses</p>
-        <div className="text-submit-test-button">
-          <p3>
-            <p>
-              Cliquez sur le bouton ci-dessus pour voir une synthèse de vos
-              résultats
-            </p>
-          </p3>
-        </div>
+        <p3>
+          <p>
+            Cliquez sur le bouton <a>Soumettre</a> pour voir une synthèse de vos
+            résultats
+          </p>
+        </p3>
       )}
 
       {/* {console.log(

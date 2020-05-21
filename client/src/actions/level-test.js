@@ -85,11 +85,9 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   });
 
   arrayTestResults[0] = nbCorrect * 2;
-  console.log("16)  Votre note sur dix points est ", arrayTestResults[0]);
-
+ 
   arrayTestResults[1] = nbCorrect;
-  console.log("17)  Number correct answers ", arrayTestResults[1]);
-
+ 
   arrayTestResults[2] = nbWrong;
   console.log("18)  Number false answers ", arrayTestResults[2]);
 
@@ -134,7 +132,7 @@ export const handleResponses = (target) => async (dispatch, getState) => {
 
   dispatch({
     type: types.HANDLE_RESPONSE,
-    payload: responses,
+    payload: responses
   });
 };
 

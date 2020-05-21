@@ -3,7 +3,8 @@ import * as types from "./../constants";
 const initialState = {
   responses: {},
   tests: [],
-  resultats: []
+  resultats: [],
+  validateCorrect: []
 };
 
 export default function auth(state = initialState, action) {

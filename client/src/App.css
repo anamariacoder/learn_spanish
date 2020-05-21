@@ -179,6 +179,40 @@ a {
   border: 12px solid wheat;
 }
 
+.text-submit-test-button {
+  padding-top: 0px;
+  padding-left: 350px;
+  font-size: 25px;
+}
+
+.submit-test-button {
+  padding-left: 675px;
+  padding-top: 90px;
+  font-family: "Oxygen";
+}
+
+.test-button {
+  font-size: 20px;
+}
+
+.test-button:focus {
+  border-bottom: 1px solid;
+  background: rgb(245, 4, 4);
+}
+
+.test-button:hover {
+  border-bottom: 1px solid;
+  color: rgb(254, 241, 170);
+  /* background: #CDFEAA; */
+  background: #f39c12;
+}
+
+.test-button button:active {
+  background: #ffb347;
+  color: rgb(254, 241, 170);
+  border: orangered;
+}
+
 .info-start-global-test p:first-letter {
   font-size: 2rem;
 }
@@ -228,16 +262,16 @@ a:active {
 }
 
 .iconTest {
- /* background-image: url(good);*/ 
-  display: block; 
-  background-image: url("./components/public/img/like.png"); 
+  /* background-image: url(good);*/
+  display: block;
+  background-image: url("./components/public/img/like.png");
   background-repeat: no-repeat;
-  background-image: center; 
+  background-image: center;
   font-size: 100px;
   color: green;
 }
 
-.iconTest h1{
+.iconTest h1 {
   /* background-image: url(good); */
   /* display: block; */
   /* background-image: url("./components/public/img/like.png"); */
@@ -250,11 +284,11 @@ a:active {
   background-image: url("./components/public/img/womencoffeandlaptop.jpg");
   background-repeat: no-repeat;
   background-image: center;
-  margin-top: 1px; 
-  margin-left: 80px; 
+  margin-top: 1px;
+  margin-left: 80px;
   margin-right: 45px;
-  width: auto; 
-  height: auto; 
+  width: auto;
+  height: auto;
   background-size: cover;
   position: relative;
   display: flex;
@@ -278,7 +312,7 @@ a:active {
 .info-progress-global p {
   background-color: wheat;
   opacity: 0.8;
-  width: 110%; 
+  width: 110%;
   height: 400px;
   max-width: 66%;
   margin-top: 58px;
@@ -306,6 +340,28 @@ a:active {
   text-decoration: none;
   padding: 2px 1px 0;
   border-radius: 5px;
+}
+
+h6 {
+  color: orangered;
+  font-size: 40px;
+  padding: 10px 50px 0px 0px;
+  text-align: center;
+  position: relative;
+}
+
+.info-level-test-results {
+  font-size: 20px;
+  display: "flex";
+  justify-content: first baseline;
+  margin-top: -30px;
+  margin-left: 10px;
+  border-top-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  border-style: groove;
+  border-width: 5px;
 }
 
 .info-level-test-user-summary {
@@ -487,6 +543,7 @@ h1 {
   white-space: pre;
   list-style: none;
 }
+
 /* 
 .footer p { 
   flex: 1;
