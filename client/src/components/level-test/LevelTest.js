@@ -90,16 +90,40 @@ const LevelTest = (props) => {
         </div>
       </div>
 
-      <button onClick={handleSubmit}>Valider</button>
+      <button onClick={handleSubmit}>Soumettre</button>
       {hasSubmit ? (
-        <p>Vous avez {resultats[0]} bonnes réponses</p>
-      ):(
-        <p>
-          Cliquez sur le bouton Soumettre pour voir une synthèse de vos
-          résultats
-        </p>
+       <div>
+          <h1>Vos résultats</h1>
+       <div className="info-level-test-user-summary">
+          <table>
+            <thead>
+              <th>Note obtenue sur dix points</th>
+              <th>Total des bonnes réponses</th>
+              <th>Total des mauvaises réponses</th>
+              <th>Total des questions restées sans réponse</th>
+              <th>Observations</th>
+            </thead>
+            <tbody>
+              <td> {resultats[0]} </td>
+              <td> {resultats[1]} </td>
+              <td> {resultats[2]} </td>
+              <td> {resultats[3]} </td>
+              <td> {resultats[4]} </td>
+              {/* <td> Vous avez passe le test</td> */}
+            </tbody>
+          </table>
+        </div>
+</div>
+      ) : (
+        // <p>Vous avez {resultats[0]} bonnes réponses</p>
+        <p3>
+          <p>
+            Cliquez sur le bouton <a>Soumettre</a> pour voir une synthèse de vos
+            résultats
+          </p>
+        </p3>
       )}
-      
+
       {/* {console.log(
         "3) JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
       )} */}

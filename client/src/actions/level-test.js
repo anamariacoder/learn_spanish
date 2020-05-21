@@ -53,7 +53,6 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     let numBonneReponse = tests[0].questions.levelTests[v].answer;
     reponseCorrect = tests[0].questions.levelTests[v].choix[numBonneReponse]; //subindex of the correct answer
     reponseUtilisateur = responses[keys[i]];
-    //arrayScreen[0] = 10000;
 
     console.log("9) reponseUtilisateur  ", reponseUtilisateur); // 23 AVRIL
     console.log("10) reponseCorrect  ", reponseCorrect); // 23 AVRIL
@@ -64,9 +63,7 @@ export const checkLevelTest = () => async (dispatch, getState) => {
       nbCorrect += 1;
       nbAnswered += 1;
       console.log("12)  Number of correct answers ", nbCorrect);
-      console.log(
-        "13) je suis dans actions/level-test"
-      ); /* AUJOURD'HUI 22 AVRIL */
+      console.log("13) je suis dans actions/level-test");
       console.log("14) je VAIS appeler isCORRECT"); /* AUJOURD'HUI 22 AVRIL */
 
       // return (
@@ -85,7 +82,6 @@ export const checkLevelTest = () => async (dispatch, getState) => {
       nbWrong += 1;
       nbAnswered += 1;
     }
-   
   });
 
   arrayTestResults[0] = nbCorrect * 2;
@@ -95,13 +91,36 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   console.log("17)  Number correct answers ", arrayTestResults[1]);
 
   arrayTestResults[2] = nbWrong;
-  console.log("18)  Number false answers ", arrayTestResults[2]); 
+  console.log("18)  Number false answers ", arrayTestResults[2]);
+
+  arrayTestResults[3] = 5 - (nbCorrect + nbWrong);
+
+  arrayTestResults[4] = "Vous avez réussi le test. Félicitations !!!";
+
+  switch (nbCorrect) {
+    case 0:
+    case 1:
+    case 2:
+      arrayTestResults[4] =
+        "Nous vous recommandons de continuer à pratiquer et de reprendre le test.";
+      break;
+    case 3:
+      arrayTestResults[4] = "Vous avez réussi votre test. Félicitations !!";
+      break;
+    case 4:
+    case 5:
+      arrayTestResults[4] =
+        "Vous avez obtenu une excellente note. Félicitations !!";
+      break;
+    default:
+      arrayTestResults[4] = "Une erreur s’est produite avec votre test. Veuillez essayer  de nouveau";
+  }
 
   dispatch({
     type: types.CHECK_LEVEL_TEST,
     payload: arrayTestResults,
   });
-  
+
   // showResult = 1;
 };
 
@@ -112,7 +131,6 @@ export const handleResponses = (target) => async (dispatch, getState) => {
   {
     console.log("6) handleResponses");
   }
-
 
   dispatch({
     type: types.HANDLE_RESPONSE,
