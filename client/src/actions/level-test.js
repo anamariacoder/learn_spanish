@@ -85,9 +85,7 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   });
 
   arrayTestResults[0] = nbCorrect * 2;
- 
   arrayTestResults[1] = nbCorrect;
- 
   arrayTestResults[2] = nbWrong;
   console.log("18)  Number false answers ", arrayTestResults[2]);
 
@@ -111,7 +109,8 @@ export const checkLevelTest = () => async (dispatch, getState) => {
         "Vous avez obtenu une excellente note. Félicitations !!";
       break;
     default:
-      arrayTestResults[4] = "Une erreur s’est produite avec votre test. Veuillez essayer  de nouveau";
+      arrayTestResults[4] =
+        "Une erreur s’est produite avec votre test. Veuillez essayer  de nouveau";
   }
 
   dispatch({
@@ -132,7 +131,7 @@ export const handleResponses = (target) => async (dispatch, getState) => {
 
   dispatch({
     type: types.HANDLE_RESPONSE,
-    payload: responses
+    payload: responses,
   });
 };
 

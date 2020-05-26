@@ -20,7 +20,7 @@ const levelTestUserSummaryController = {
   // retrieveLevelTestUserSummariesByUser: async id => {
   //   const levelTestUserSumariesByUser = await testsUserSummary.findByPk(id, {
   retrieveLevelTestUserSummariesByUser: async () => {
-    // const levelTestUserSumariesByUser = await testsUserSummary.findAll(  {
+    
     const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
       // order: ["created_at", "ASC"],
       attributes: [
@@ -41,6 +41,14 @@ const levelTestUserSummaryController = {
 
     return levelTestUserSumariesByUser;
   },
+
+//Modificacion a aplicar despues de la migracion
+
+
+
+
+
+
 
   // createLevelTestUserSummaries: async (data) => {
   //   const { levelTestUserId } = data;

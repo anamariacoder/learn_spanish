@@ -24,6 +24,24 @@ const LevelTestUserSummary = (props) => {
     event.preventDefault();
     props.checkLevelTestUserSummary();
   };
+  let dateFormated = null;
+  let dateLocal,
+    day = null;
+  let m = null;
+  let y = null;
+  function formateDate(originalDate, n) {
+    var d = new Date(originalDate);
+    day = d.getDate();
+    m = d.getMonth() + 1;
+    y = d.getFullYear();
+    dateLocal = d.toLocaleDateString() + " - " + d.toLocaleTimeString();
+    // fecha2 = d + "-" + m + "-" + y;
+    dateFormated = dateLocal;
+    console.log("d : ", d);
+    console.log("m : ", m);
+    console.log("y : ", y);
+    console.log("day : ", day);
+  }
 
   return (
     <div>
@@ -34,25 +52,29 @@ const LevelTestUserSummary = (props) => {
           <table>
             <thead>
               <th>Type de test</th>
-              <th>Code du test</th>
+              {/* <th>Code du test</th> */}
               <th>Note obtenue</th>
               <th>Nombre de questions répondus</th>
               <th>Total réponses correctes</th>
               <th>Total réponses incorrectes</th>
-              <th>Data </th>
+              <th>Date</th>
             </thead>
             <tbody>
               {props.levelTestUserSummary.testUserSummaries.map((c, ind) => {
                 return (
                   <tr key={ind}>
+                    <script>{formateDate(c.created_at, dateFormated)}</script>
+
                     {/* <td> {c.idUser} </td> */}
-                    <td> {c.idTypeTest} </td>
-                    <td> {c.idLevelTest} </td>
+                    {/* <td> {c.idTypeTest} </td>
+                    <td> {c.idLevelTest} </td> */}
+                    <td> {"Test de Niveau N°1"} </td>
                     <td> {c.note_user} </td>
                     <td> {c.total_questions_answered} </td>
                     <td> {c.total_correct_answers} </td>
                     <td> {c.total_wrong_answers} </td>
-                    <td> {c.created_at} </td>
+                    {/* <div> {dateFormated(c.created_at)} </div> */}
+                    <td>{dateFormated}</td>
                   </tr>
                 );
               })}

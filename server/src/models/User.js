@@ -9,16 +9,16 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.UUIDV4,
         validate: {
           isUUID: 4,
-          notNull: true
-        }
+          notNull: true,
+        },
       },
       account: {
         allowNull: false,
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50]
-        }
+          len: [2, 50],
+        },
       },
 
       first_name: {
@@ -26,8 +26,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50]
-        }
+          len: [2, 50],
+        },
       },
 
       last_name: {
@@ -35,8 +35,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50]
-        }
+          len: [2, 50],
+        },
       },
 
       password: {
@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50]
-        }
+          len: [2, 50],
+        },
       },
 
       email: {
@@ -53,8 +53,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [6, 100]
-        }
+          len: [6, 100],
+        },
       },
 
       createdAt: {
@@ -64,8 +64,8 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.NOW,
         validate: {
           isDate: true,
-          notNull: true
-        }
+          notNull: true,
+        },
       },
       updatedAt: {
         field: "updated_at",
@@ -74,19 +74,20 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.NOW,
         validate: {
           isDate: true,
-          notNull: true
-        }
-      }
+          notNull: true,
+        },
+      },
     },
     {
-      tableName: "user"
+      tableName: "user",
     }
   );
-  User.associate = models => {
+  User.associate = (models) => {
     User.hasMany(models.LevelTestUserSummary);
   };
   return User;
 
+  // AVANT:
   // User.associate = () => {};
   // return User;
 };
