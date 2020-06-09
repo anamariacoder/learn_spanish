@@ -117,8 +117,6 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     type: types.CHECK_LEVEL_TEST,
     payload: arrayTestResults,
   });
-
-  // showResult = 1;
 };
 
 export const handleResponses = (target) => async (dispatch, getState) => {

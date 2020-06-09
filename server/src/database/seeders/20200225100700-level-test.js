@@ -1,4 +1,4 @@
-const catalogLevelTest = require("../seeds/20200225100700-level-test");
+const catalogLevelTest = require("../seeds/20200526000002-level-test");
 
 /* eslint-disable no-unused-vars */
 module.exports = {

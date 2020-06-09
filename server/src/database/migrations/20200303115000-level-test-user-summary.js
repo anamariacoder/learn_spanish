@@ -5,15 +5,15 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
         type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        defaultValue: Sequelize.UUIDV4,
       },
       id_user: {
         allowNull: false,
         type: Sequelize.UUID,
         references: {
           model: "user",
-          key: "id"
-        }
+          key: "id",
+        },
       },
 
       //  id_user: {
@@ -27,32 +27,13 @@ module.exports = {
       //     }
       //   },
 
-      id_level_test: {
-        allowNull: false,
-        type: Sequelize.UUID,
-        references: {
-          model: "level-test",
-          key: "id"
-        }
-      },
-
-      // id_level_test: {
-      //   allowNull: false,
-      //   primaryKey: true,
-      //   type: Sequelize.UUID,
-      //   onDelete: "CASCADE",
-      //   references: {
-      //     model: "level-test",
-      //     key: "id"
-      //   }
-      // },
       id_type_test: {
         allowNull: false,
         type: Sequelize.UUID,
         references: {
           model: "type-test",
-          key: "id"
-        }
+          key: "id",
+        },
       },
 
       // id_type_test: {
@@ -66,41 +47,61 @@ module.exports = {
       //   }
       // },
 
+      id_level_test: {
+        allowNull: false,
+        type: Sequelize.UUID,
+        references: {
+          model: "level-test",
+          key: "id",
+        },
+      },
+
+      // id_level_test: {
+      //   allowNull: false,
+      //   primaryKey: true,
+      //   type: Sequelize.UUID,
+      //   onDelete: "CASCADE",
+      //   references: {
+      //     model: "level-test",
+      //     key: "id"
+      //   }
+      // },
+
       note_user: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
 
       total_questions_answered: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
 
       total_correct_answers: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
 
       total_wrong_answers: {
         allowNull: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
 
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW
+        defaultValue: Sequelize.NOW,
       },
 
       updated_at: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW
-      }
+        defaultValue: Sequelize.NOW,
+      },
     });
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable("level-test-user-summary");
-  }
+  },
 };

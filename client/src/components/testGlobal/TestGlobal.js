@@ -25,7 +25,7 @@ const TestGlobal = (props) => {
           permettra d'identifier votre niveau de connaissance initial et votre
           niveau de progression atteint en suivant nos cours de vocabulaire.<br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Pour paser le test, veuillez appuyer sur le lien  <a><Link to="/test">démarrer le test</Link></a>.
+          Pour passer le test, veuillez appuyer sur le lien  <a><Link to="/test">démarrer le test</Link></a>.
           Lisez attentivement chaque phrase ou question et choisissez parmi les
           options disponibles. <br /><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bonne chance !!! Commençons ...

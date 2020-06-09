@@ -26,7 +26,7 @@ const LevelTestUserSummary = (props) => {
   };
   let dateFormated = null;
   let dateLocal,
-    day = null;
+    day, hours = null;
   let m = null;
   let y = null;
   function formateDate(originalDate, n) {
@@ -34,6 +34,9 @@ const LevelTestUserSummary = (props) => {
     day = d.getDate();
     m = d.getMonth() + 1;
     y = d.getFullYear();
+
+hours = d.getHours();
+
     dateLocal = d.toLocaleDateString() + " - " + d.toLocaleTimeString();
     // fecha2 = d + "-" + m + "-" + y;
     dateFormated = dateLocal;

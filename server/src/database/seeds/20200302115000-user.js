@@ -15,6 +15,16 @@ module.exports = [
     password: "DemoAccount",
     email: "demoaccount@demo.com",
     created_at: now,
-    updated_at: now
-  }
+    updated_at: now,
+  },
+  {
+    id: uuid(),
+    account: "marcelPoutrel",
+    first_name: "MARCELLL",
+    last_name: "Poutrel",
+    password: "MarcelPoutrel",
+    email: "marcelpoutrel@demo.com",
+    created_at: now,
+    updated_at: now,
+  },
 ];
