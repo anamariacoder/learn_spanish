@@ -1,22 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Nanum+Gothic&display=swap");
 
-/****************************
-/* autoprefix + normalize */
-/* @media screen and (max-width:640px) {
-  /* reglas CSS */
-/* } */
-/* @media screen and (max-width:1024px) and (min-width:640px) {
-  reglas CSS */
-/* }
-@media screen and (min-width:1024px) { */
-/* reglas CSS */
-/* } */
-/* valable pour tous les écrans */
-/* body { */
-/* margin-right: 0px; */
-/* margin: 0;
-  padding: 0;
-} */
+img {
+  /* (2°) */
+  max-width: 100%;
+  height: auto;
+}
 
 /* valable pour tous les écrans */
 p {
@@ -30,37 +18,87 @@ p {
 /* valable pour tous les écrans supérieures à 1200px */
 
 @media screen and (min-width: 1024px) {
+  /* Grand écran */
   .navContainer,
+  .container-home,
+  .info-home,
   .home {
     /* > 1200px (1168px;/*1200 - 16*2) */
     width: 100%;
     /* display: block; */
     display: flex;
     justify-content: space-between;
+    font-size: 1.4rem;
+  }
+  .defineFooter > p .info-about-us .contact-us {
+    font-size: 1.2rem;
+  }
+
+  .info-learning-tips p {
+    font-size: 1.3rem;
+  }
+
+  .info-learning-methodology p {
+    font-size: 1.3rem;
   }
 }
-
 /* valable pour tous les écrans supérieures à 640px */
 /* @media screen and (max-width: 640px) { */
 @media screen and (max-width: 1024px) and (min-width: 640px) {
-  p,
+  /* écran moyen  */
+  /* p, */
   .App,
   .navContainer,
-  .home {
-    column-count: 2; /* ! column à utiliser pour des exemples simples */
-    width: 100%;
+  .container-home,
+  .home,
+  .info-home {
+    column-count: 2;
+    width: 90%;
+    font-size: 1.3rem;
+  }
+  body {
+    /* (2°) */
+    font: 1 rem;
+  }
+  .defineFooter p .info-about-us .contact-us {
+    font-size: 1rem;
+  }
+  .info-learning-tips p {
+    font-size: 1rem;
+  }
+
+  .info-learning-methodology p {
+    font-size: 1rem;
   }
 }
 
 /* valable pour tous les écrans supérieures à 960px */
 /* @media screen and (max-width: 960px) { */
 @media screen and (max-width: 640px) {
-  p,
+  /* petit écran */
+  /* p, */
   .App,
   .navContainer,
+  .container-home,
+  .info-home,
   .home {
     column-count: 3;
-    width: 100%;
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  body {
+    /* (2°) */
+    font: 1.5 rem;
+  }
+  .defineFooter p .info-about-us .contact-us {
+    font-size: 0.8rem;
+  }
+  .info-learning-tips p {
+    font-size: 0.9rem;
+  }
+
+  .info-learning-methodology p {
+    font-size: 0.9rem;
   }
 }
 /***************************/
@@ -73,14 +111,44 @@ p {
 
 /***************************/
 
+/* Media Queries : tablet landscape     (2°)*/
+/* @media screen and (max-width: 1060px) {
+  #primary {
+    width: 67%;
+  }
+  #secondary {
+    width: 30%;
+    margin-left: 3%;
+  }
+  body {    
+    font: 1.2 rem;
+  }
+} */
+
+/* Media Queries : tablet portrait     (2°)*/
+/* @media screen and (max-width: 768px) {
+  #primary {
+    width: 100%;
+  }
+  #secondary {
+    width: 100%;
+    margin: 0%;
+    border: none;
+  }
+  body {      
+    font: 1 rem;
+  }
+} */
+
 * {
   font-family: "Lato";
 }
 
 .App {
   text-align: center;
-  font-size: 30px;
+  font-size: 1rem;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -92,7 +160,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.35em;
+  /* font-size: 1.35rem;  responsive */
   letter-spacing: 1px;
   padding: 13px 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -106,13 +174,18 @@ a {
   height: 50vh;
   width: 114%;
   margin: 2px 0.5px 15px -3px;
-  padding: 110px 0px 100px 0;
+  padding: 110px 0px 100px 0px;
   background-size: 90% 120%;
 }
 
+/* .info-home {
+  margin-top: 0px;
+
+  margin-left: 0px;
+  
+} */
 .info-home h {
-  margin: 20px 0px 0px 415px;
-  padding: 0%x 0%;
+  margin-left: 350px;
   font-family: "Anton";
   font-size: 70px;
   letter-spacing: -2pt;
@@ -122,14 +195,14 @@ a {
   color: red;
 }
 
-.info-home p {
-  padding: 40px 0px 0px 480px;
-  columns: 1;
-  line-height: 58px;
-  color: black;
-  text-align: left;
-  font-size: 40px;
-  text-indent: 0px;
+.info-home-paragraph p {
+  margin-top: 140px;
+  margin-left: -2035px;
+  text-align: center;
+  /* columns: 1; */
+  /* line-height: 58px; */
+  font-size: 2.5rem;
+  /* text-indent: 0px;  */
 }
 
 .container-start-global-test {
@@ -446,7 +519,7 @@ td {
   margin-top: 70px;
   margin-left: 245px;
   text-indent: 1cm;
-  font-size: 20px;
+  /* font-size: 20px; */
   padding-top: 15px;
   columns: 1;
   text-indent: 70px;
@@ -482,6 +555,17 @@ h1 {
   align-items: center;
 }
 
+h2 {
+  /* .info-learning-tips h2 { */
+  padding: 30px 0px 0px 0px; 
+  /* top: -130px; */
+  top: 20px;
+  color: orangered;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  /* position: absolute; */
+}
 .container-learning-tips:before {
   content: "";
   width: 100%;
@@ -496,24 +580,16 @@ h1 {
   opacity: 0.7;
   width: 80%; /* contrôle le width de la column*/
   max-width: 100%;
-  margin-top: -130px;
+  margin-top: 120px;
   margin-left: 125px;
-
-  /* padding-top: 2px; */
-  font-size: 20px;
+  /* font-size: 1.2rem; */
+  padding-top: 2px;
   columns: 1;
   text-indent: 65px;
   align-self: stretch;
   position: relative;
   text-align: justify;
   border: 12px solid wheat;
-}
-.info-learning-tips h2 {
-  top: -140px;
-  color: orangered;
-  font-size: 50px;
-  text-align: center;
-  position: relative;
 }
 
 .info-learning-tips p::first-letter {
@@ -536,8 +612,8 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   padding: 18px 30px 8px 30px;
-  font-size: 19px;
-  /* color: gray; */
+  /* font-size: 19px; (responsive) 12 juin*/
+
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: pre;

@@ -8,7 +8,7 @@ const mapStateToProps = (state, props) => ({
   userProps: state.userState
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({   //Modified 15 juin
   checkToken: () => dispatch(checkToken())
 });
 

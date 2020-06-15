@@ -15,7 +15,7 @@ import "./App.css";
 
 import AboutUs from "./components/aboutUs/AboutUs";
 import store from "./store";
-import SignFirebase from "./components/user/SignFirebase";
+// import SignFirebase from "./components/user/SignFirebase";   //Modified 15 juin
 import signFirebaseContainer from "./containers/signFirebaseContainer";
 // import ProgressGlobal from "./components/progressGlobal/Progress1";
 import Progress1 from "./components/progressGlobal/Progress1";
