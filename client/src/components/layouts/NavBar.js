@@ -35,8 +35,14 @@ const NavBar = () => {
       </div>
 
       <div className="connection">
-        <Link to="/sign"> Connexion </Link>
+        <Link to="/logIn"> Connexion </Link>
       </div>
+      {/* <div className="connection"> ** 6 ** 17 juin
+        <Link to="/sign"> Connexion </Link>
+      </div> */}
+
+
+
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import * as types from "./../constants";
 
+export * from './userActions';    //**12** 18 juin */
 
 export const logginAction = values => {
   return dispatch => {
@@ -22,10 +23,12 @@ export const logginAction = values => {
 
 
 
-export const logoutAction = () => {
-  return dispatch => {
-    return fetch("/api/auth/logout").then(response => {
-      dispatch({ type: types.LOGOUT });
-    });
-  };
-};
+
+// export const logoutAction = () => {       //**11** 18 juin */
+//   return dispatch => {
+//     return fetch("/api/auth/logout").then(response => {
+//       dispatch({ type: types.LOGOUT_REQUEST });   //**11** 18 juin */
+//       // dispatch({ type: types.LOGOUT });   //**11** avant 18 juin */
+//     });
+//   };
+// };

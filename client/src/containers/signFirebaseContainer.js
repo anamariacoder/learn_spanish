@@ -1,15 +1,15 @@
+// **4** 17 juin
 
+// import { connect } from "react-redux";
+// import SignFirebase from "../components/user/SignFirebase";
+// import { checkToken } from "../actions/userActions"; // Review the name of this
 
-import { connect } from "react-redux";
-import SignFirebase from "../components/user/SignFirebase";
-import { checkToken } from "../actions/userActions"; // Review the name of this
+// const mapStateToProps = (state, props) => ({
+//   userProps: state.userState
+// });
 
-const mapStateToProps = (state, props) => ({
-  userProps: state.userState
-});
+// const mapDispatchToProps = dispatch => ({   //Modified 15 juin
+//   checkToken: () => dispatch(checkToken())
+// });
 
-const mapDispatchToProps = dispatch => ({   //Modified 15 juin
-  checkToken: () => dispatch(checkToken())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SignFirebase);
+// export default connect(mapStateToProps, mapDispatchToProps)(SignFirebase);

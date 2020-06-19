@@ -1,6 +1,7 @@
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+// **5** 17 juin
+// const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-const firebaseAppAuth = firebaseApp.auth();
-const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider()
-};
+// const firebaseAppAuth = firebaseApp.auth();
+// const providers = {
+//   googleProvider: new firebase.auth.GoogleAuthProvider()
+// };

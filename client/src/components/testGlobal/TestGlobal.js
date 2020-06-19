@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import LevelTest from "../LevelTest";
 import LevelTest from "../../components/level-test/LevelTest";
 
-
 const TestGlobal = (props) => {
   function handleChangeTestGlobal(evt) {
     const value = evt.target.value;
@@ -23,18 +22,19 @@ const TestGlobal = (props) => {
         <p>
           Dans cette section, vous avez accès au test global. Ce test vous
           permettra d'identifier votre niveau de connaissance initial et votre
-          niveau de progression atteint en suivant nos cours de vocabulaire.<br />
+          niveau de progression atteint en suivant nos cours de vocabulaire.
+          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Pour passer le test, veuillez appuyer sur le lien  <a><Link to="/test">démarrer le test</Link></a>.
-          Lisez attentivement chaque phrase ou question et choisissez parmi les
-          options disponibles. <br /><br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bonne chance !!! Commençons ...
+          Pour passer le test, veuillez appuyer sur le lien{" "}
+          <a>
+            <Link to="/test">démarrer le test</Link>
+          </a>
+          . Lisez attentivement chaque phrase ou question et choisissez parmi
+          les options disponibles. <br />
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bonne
+          chance !!! Commençons ...
         </p>
-        {/* <Link to="/test">role="button"démarrer le test</Link> botton-start-global-test */}
-        {/* <div className="button-start-global-test">
-          <a><Link to="/test">démarrer le test</Link></a>
-        </div> */}
-        {/* <button onClick={() => LevelTest}>démarrer le test</button> */}
       </div>
     </body>
   );

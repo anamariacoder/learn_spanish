@@ -7,7 +7,7 @@ import LevelTest from "./components/level-test/LevelTest";
 import Resources from "./components/resources/Resources";
 import LearningMethodology from "./components/learningMethodology/LearningMethodology";
 import LearningTips from "./components/learningTips/LearningTips";
-import SocialMedia from "./components/socialMedia/SocialMedia";
+// import SocialMedia from "./components/socialMedia/SocialMedia";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
@@ -16,12 +16,13 @@ import "./App.css";
 
 import AboutUs from "./components/aboutUs/AboutUs";
 import store from "./store";
-import SignFirebase from "./components/user/SignFirebase";
-import signFirebaseContainer from "./containers/signFirebaseContainer";
+// import SignFirebase from "./components/user/SignFirebase";
+// import signFirebaseContainer from "./containers/signFirebaseContainer";
 // import ProgressGlobal from "./components/progressGlobal/Progress1";
 import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
 import LevelTestUserSummary from "./components/levelTestUserSummary/LevelTestUserSummary";
+import LogIn from "./components/logIn/LogIn"
 // get our fontawesome imports
 
 const App = (props) => {
@@ -47,7 +48,9 @@ const App = (props) => {
               component={LearningMethodology}
             />
             <Route path="/learningTips" component={LearningTips} />
-            <Route path="/sign" component={signFirebaseContainer} />
+            {/* **5** 17 juin  */}
+            {/* <Route path="/sign" component={signFirebaseContainer} /> */}
+            <Route path="/logIn" component={LogIn} />
             <Route path="/aboutUs" component={AboutUs} />
             <Route component={PageNotFound} />
           </Switch>

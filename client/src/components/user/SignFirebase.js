@@ -2,8 +2,10 @@ import axios from "axios";
 import { firebase, fireAuth } from "../../firebase/Firebase";
 import React, { useEffect } from "react";
 import withFirebaseAuth from "react-with-firebase-auth";
-import { connect } from "react-redux";
-import { checkToken } from "../../actions/userActions";
+
+//**3 * 17 juin
+// import { connect } from "react-redux";
+// import { checkToken } from "../../actions/userActions";
 
 const firebaseAppAuth = fireAuth;
 
