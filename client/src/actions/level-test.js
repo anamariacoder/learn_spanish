@@ -1,7 +1,7 @@
 import React from "react";
 import * as types from "./../constants";
 import Correct from "../components/test/Correct";
-import good from "../components/public/img/like.png"; /*AUJOURD'HUI 22 AVRIL */
+// import good from "../components/public/img/like.png"; /*AUJOURD'HUI 22 AVRIL */
 
 let reponseCorrect = 0;
 let reponseUtilisateur = 0;

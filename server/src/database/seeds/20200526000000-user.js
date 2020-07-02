@@ -26,5 +26,5 @@ module.exports = [
     email: "marcelpoutrel@demo.com",
     created_at: now,
     updated_at: now,
-  },
+  }
 ];

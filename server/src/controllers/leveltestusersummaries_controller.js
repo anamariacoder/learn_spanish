@@ -27,7 +27,7 @@ const levelTestUserSummaryController = {
         "total_questions_answered",
         "total_correct_answers",
         "total_wrong_answers",
-        "created_at",
+        "created_at"
       ],
       raw: true,
     });

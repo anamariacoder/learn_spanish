@@ -178,12 +178,6 @@ a {
   background-size: 90% 120%;
 }
 
-/* .info-home {
-  margin-top: 0px;
-
-  margin-left: 0px;
-  
-} */
 .info-home h {
   margin-left: 350px;
   font-family: "Anton";
@@ -204,6 +198,51 @@ a {
   font-size: 2.5rem;
   /* text-indent: 0px;  */
 }
+
+.container-logIn {
+  margin-left: 550px;
+  /* margin-bottom: 20px; */
+
+}
+
+.info-logIn {
+  width: 35%;
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  /* font-size: 1.35rem;  responsive */
+  letter-spacing: 1px;
+  padding: 13px 50px 25px 50px;
+  /* padding-bottom: 25px; */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-login {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.button-login:focus {
+  border-bottom: 1px solid;
+  background: rgb(245, 4, 4);
+}
+
+/* .button-login:hover {
+  border-bottom: 1px solid;
+  color: rgb(254, 241, 170);
+  /* background: #CDFEAA; */
+/* background: #f39c12;
+} */
+
+/* .button-login:active {
+  background: #ffb347;
+  color: rgb(254, 241, 170);
+  border: orangered;
+} */
 
 .container-start-global-test {
   background-image: url("./components/public/img/espagnol3.jpg");
@@ -557,7 +596,7 @@ h1 {
 
 h2 {
   /* .info-learning-tips h2 { */
-  padding: 30px 0px 0px 0px; 
+  padding: 30px 0px 0px 0px;
   /* top: -130px; */
   top: 20px;
   color: orangered;

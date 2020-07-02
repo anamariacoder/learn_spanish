@@ -1,3 +1,5 @@
+const bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
     "User",
@@ -13,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       account: {
-        allowNull: false,
+        allowNull: true,
         type: DataTypes.STRING,
         validate: {
-          notNull: true,
+          notNull: false,
           len: [2, 50],
         },
       },
@@ -26,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50],
+          len: [2, 200],
         },
       },
 
@@ -35,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50],
+          len: [2, 200],
         },
       },
 
@@ -44,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [2, 50],
+          len: [2, 200],
         },
       },
 
@@ -53,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           notNull: true,
-          len: [6, 100],
+          len: [6, 200],
         },
       },
 
@@ -85,6 +87,12 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = (models) => {
     User.hasMany(models.LevelTestUserSummary);
   };
+
+  User.beforeCreate(async (user, options) => {
+    const hashedPassword = await bcrypt.hash(user.password, 10);
+    user.password = hashedPassword;
+  });
+
   return User;
 
   // AVANT:

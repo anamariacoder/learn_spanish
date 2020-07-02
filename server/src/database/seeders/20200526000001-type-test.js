@@ -1,4 +1,4 @@
-const catalogueTypeTest = require("../seeds/20200303100000-type-test");
+const catalogueTypeTest = require("../seeds/20200526000001-type-test");
 
 /* eslint-disable no-unused-vars */
 module.exports = {
@@ -7,5 +7,5 @@ module.exports = {
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete("type-test", null, {});
-  }
+  },
 };

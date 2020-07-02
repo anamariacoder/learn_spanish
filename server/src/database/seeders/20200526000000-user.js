@@ -1,4 +1,4 @@
-const catalogueUser = require("../seeds/20200302115000-user");
+const catalogueUser = require("../seeds/20200526000000-user");
 
 /* eslint-disable no-unused-vars */
 module.exports = {

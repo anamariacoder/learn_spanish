@@ -1,11 +1,11 @@
 const express = require("express"); //Starts the server
 const cors = require("cors");
+const passport = require("passport");
 const bodyParser = require("body-parser");
 const verifyToken = require("./middleware/verify_token");
 const { LevelTest } = require("./models");
-const routes = require("./routes"); 
+const routes = require("./routes");
 const server = express();
-
 
 server.use(bodyParser.json());
 server.use("/api", cors());

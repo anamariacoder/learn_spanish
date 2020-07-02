@@ -9,10 +9,10 @@ import { logIn } from "../../actions/userActions"; //**11** 18 juin */
 const LogIn = (props) => {
   const { logIn } = props;
   const [credentials, setCredentials] = useState({
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
-    first_name: "",
-    last_name: ""
   });
 
   const updateCredentials = (event) => {
@@ -24,28 +24,18 @@ const LogIn = (props) => {
   };
 
   const onSubmit = (async) => {
+    // console.log("email ",logIn.email);
     logIn(credentials);
   };
 
   return (
     <body className="container-logIn">
       <div className="info-logIn">
-        <label>email </label> {/* //**11** 18 juin */}
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={credentials.email}
-          onChange={updateCredentials}
-        ></input>
-        <label>Mot de passe </label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Mot de passe"
-          value={credentials.password}
-          onChange={updateCredentials}
-        ></input>
+        <h2>Connexion</h2>
+        <p>
+          {" "}
+          <br />
+        </p>
         <label>Prénom </label> {/* //**11** 18 juin */}
         <input
           name="first_name"
@@ -54,6 +44,10 @@ const LogIn = (props) => {
           value={credentials.first_name}
           onChange={updateCredentials}
         ></input>
+        <p>
+          {" "}
+          <br />
+        </p>
         <label>Nom </label> {/* //**11** 18 juin */}
         <input
           name="last_name"
@@ -62,10 +56,42 @@ const LogIn = (props) => {
           value={credentials.last_name}
           onChange={updateCredentials}
         ></input>
-        <h1>Connexion</h1>
-        <button type="submit" onClick={() => onSubmit()}>
-          Se connecter
-        </button>
+        <p>
+          {" "}
+          <br />
+        </p>
+        <label>E-mail </label> {/* //**11** 18 juin */}
+        <input
+          name="email"
+          type="email"
+          placeholder="E-mail"
+          required
+          value={credentials.email}
+          onChange={updateCredentials}
+        ></input>
+        <p>
+          {" "}
+          <br />
+        </p>
+        <label>Mot de passe </label>
+        <input
+          name="password"
+          type="password"
+          placeholder="Mot de passe"
+          required
+          value={credentials.password}
+          onChange={updateCredentials}
+        ></input>
+        <p>
+          {" "}
+          <br />
+        </p>
+        <div className="button-login">
+          <button type="submit" onClick={() => onSubmit()}>
+            Se connecter
+          </button>
+        </div>
+        {/* <p> <br /></p> */}
       </div>
     </body>
   );

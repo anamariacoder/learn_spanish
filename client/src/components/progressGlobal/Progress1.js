@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import React from "react";
 
-import axios from "axios";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import axios from "axios";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 //29 avril
-import LevelTestUserSummary from "../../components/levelTestUserSummary/LevelTestUserSummary";
+// import LevelTestUserSummary from "../../components/levelTestUserSummary/LevelTestUserSummary";
 
 const Progress1 = (props) => {
   function handleChangeProgress(evt) {

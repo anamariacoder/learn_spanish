@@ -1,4 +1,4 @@
-
+const passport = require("passport");
 //** 10 * 17 juin/
 // const { authenticate } = require("../models"); // On a besoin de ce la
 const authenticate = (req, res) =>
@@ -13,15 +13,16 @@ const authenticate = (req, res) =>
 
 const authController = {
   login: async req => {
-    const user = await authenticate(req);
-    const userInfo = {
-      id: user.id,
-      firstName: user.first_name,
-      email: user.email
-    };
+    console.log("req dans login ", req)
+    // const user = await authenticate(req);
+    // const userInfo = {
+    //   id: user.id,
+    //   firstName: user.first_name,
+    //   email: user.email
+    // };
 
-    return userInfo;
-  },
+    //return userInfo;
+  }
 };
 
   module.exports = authController;
