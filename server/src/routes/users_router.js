@@ -9,19 +9,19 @@ const usersRouter = express.Router();
 usersRouter.post("/login", async (request, response) => {
   const userInfo = await authController.login(request.body);
   // const token = authenticate.generateAuthToken(userInfo);
-console.log("request ", request.body);
-  // response
-  //   .status(200)
+  console.log("userInfo ", userInfo);
+  response
+    .status(200)
   //   .header("xAuth", token)
-  //   .json({ userInfo, message: "you are now logged in ! " });
+    .json({ userInfo, message: "you are now logged in ! " });
 });
 usersRouter.post("/register", async (request, response) => {
-  const data= request.body;
+  const data = request.body;
   const createdUser = await userController.register(data);
-console.log("data ", data);
+  console.log("data ", data);
   response
-     .status(201)
-     .json({createdUser, message: "account created succesfully! " });
+    .status(201)
+    .json({ createdUser, message: "account created succesfully! " });
 });
 
 module.exports = usersRouter;

@@ -4,13 +4,13 @@ import React, { useState, useEffect, Component } from "react";
 
 
 const Resources = (propos) => {
-  console.log('mensaje');
+  // console.log('mensaje');
   useEffect(() => {
   }, []);
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log('mensaje');
+    // console.log('mensaje');
   };
   return (
     <div>

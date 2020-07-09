@@ -231,6 +231,42 @@ a {
   background: rgb(245, 4, 4);
 }
 
+
+
+.container-register {
+  margin-left: 550px;
+  /* margin-bottom: 20px; */
+
+}
+
+.info-register {
+  width: 41%;
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  /* font-size: 1.35rem;  responsive */
+  letter-spacing: 1px;
+  padding: 13px 50px 25px 50px;
+  /* padding-bottom: 25px; */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-register {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.button-register:focus {
+  border-bottom: 1px solid;
+  background: rgb(245, 4, 4);
+  justify-content: center;
+}
+
+
 /* .button-login:hover {
   border-bottom: 1px solid;
   color: rgb(254, 241, 170);

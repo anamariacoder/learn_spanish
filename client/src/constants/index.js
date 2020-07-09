@@ -1,7 +1,10 @@
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
-// export const LOGOUT_REQUEST = "LOGOUT_REQUEST";   //**11** 18 juin */
+export const REGISTER_REQUEST = "REGISTER_REQUEST"; //???????? juillet
+// export const LOGOUT_REQUEST = "LOGOUT_REQUEST";  
 
 export const LOGIN_SUCESS = "LOGIN_SUCESS";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS"; //????? juillet
+
 export const CHECK_TOKEN = "CHECK_TOKEN";
 
 export const CHECK_LEVEL_TEST = "CHECK_LEVEL_TEST";

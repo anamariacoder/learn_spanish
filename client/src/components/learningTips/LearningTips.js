@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 const LearningTips = () => {
   useEffect(() => {}, []);
 
-  const handleSubmit = event => {
-    event.preventDefault();
-  };
+  // const handleSubmit = event => {
+  //   event.preventDefault();
+  // };
 
   return (
     <body className="container-learning-tips">

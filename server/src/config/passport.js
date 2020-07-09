@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 const LocalStrategy = require("passport-local").Strategy;
 
 const { User } = require("../models");
-
+console.log("passport ");
 passport.use(
   new LocalStrategy(
     {
@@ -20,10 +20,10 @@ passport.use(
               [Op.eq]: username,
             },
           },
-          attributes: ["id", "last_name", "first_name", "email", "password"],
+          attributes: ["id", "first_name", "last_name", "password", "email"],
           raw: true,
         });
-        if (!user) { // We cannot find the user, par exemple case not user with that email
+        if (!user) { // We cannot find the user, par exemple, the case not user with that email
           return done(null, false, { message: "Incorrect username." });
         }
       } catch (e) {
@@ -39,15 +39,17 @@ passport.use(
 );
 
 passport.serializeUser((user, done) => {
+  console.log("serialize ");
   done(null, user.id);
 });
 
-passport.deserializeUser(async (id, done) => {
+passport.deserializeUser(async (id, done) => {   //??????? juillet
   const user = User.findByPk(id, {
-    attributes: ["id", "lastName", "firstName", "email"],
+    attributes: ["id", "firstName", "lastName", "email"],
     raw: true,
   });
   if (!user) {
+    console.log("!user dans deserializeUser  ");
     return done(new Error("User not found"));
   }
   done(null, user);

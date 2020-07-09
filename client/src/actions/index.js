@@ -1,6 +1,6 @@
 import * as types from "./../constants";
 
-export * from './userActions';    //**12** 18 juin */
+export * from './userActions';    
 
 export const logginAction = values => {
   return dispatch => {
@@ -20,6 +20,28 @@ export const logginAction = values => {
       });
   };
 };
+
+
+// ???????????? juillet
+// export const registrerAction = values => {
+//   return dispatch => {
+//     return fetch("/api/auth/registrer", {
+//       method: "POST",
+//       body: JSON.stringify(values),
+//       headers: {
+//         "Content-Type": "application/json"
+//       }
+//     })
+//       .then(res => {
+//         dispatch(getUserAction());
+//       })
+//       .catch(err => {
+//         console.error(err);
+//         alert("Error of registrer in, please try again");
+//       });
+//   };
+// };
+
 
 
 

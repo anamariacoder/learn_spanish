@@ -22,7 +22,9 @@ import store from "./store";
 import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
 import LevelTestUserSummary from "./components/levelTestUserSummary/LevelTestUserSummary";
-import LogIn from "./components/logIn/LogIn"
+import LogIn from "./components/logIn/LogIn";
+import Register from "./components/register/Register"; //???????????? juillet
+
 // get our fontawesome imports
 
 const App = (props) => {
@@ -50,7 +52,8 @@ const App = (props) => {
             <Route path="/learningTips" component={LearningTips} />
             {/* **5** 17 juin  */}
             {/* <Route path="/sign" component={signFirebaseContainer} /> */}
-            <Route path="/logIn" component={LogIn} />
+            <Route path="/login" component={LogIn} />
+            <Route path="/register" component={Register} />
             <Route path="/aboutUs" component={AboutUs} />
             <Route component={PageNotFound} />
           </Switch>
