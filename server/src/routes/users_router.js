@@ -1,20 +1,31 @@
 const express = require("express");
 require("express-async-errors");
+const passport=require("passport");
 
 const userController = require("../controllers/user_controller");
 const authController = require("../controllers/auth_controller");
 
 const usersRouter = express.Router();
 
-usersRouter.post("/login", async (request, response) => {
-  const userInfo = await authController.login(request.body);
-  // const token = authenticate.generateAuthToken(userInfo);
-  console.log("userInfo ", userInfo);
-  response
-    .status(200)
-  //   .header("xAuth", token)
-    .json({ userInfo, message: "you are now logged in ! " });
-});
+usersRouter.post('/login',
+  passport.authenticate('local'),
+  function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    console.log("success login -> user = ", req.user);
+    // res.redirect('/users/' + req.user.username);
+  });
+
+
+// usersRouter.post("/login", async (request, response) => {
+//   const userInfo = await authController.login(request.body);
+//   // const token = authenticate.generateAuthToken(userInfo);
+//   console.log("userInfo ", userInfo);
+//   response
+//     .status(200)
+//   //   .header("xAuth", token)
+//     .json({ userInfo, message: "you are now logged in ! " });
+// });
 usersRouter.post("/register", async (request, response) => {
   const data = request.body;
   const createdUser = await userController.register(data);

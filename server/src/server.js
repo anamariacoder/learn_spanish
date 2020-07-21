@@ -2,16 +2,18 @@ const express = require("express"); //Starts the server
 const cors = require("cors");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-const verifyToken = require("./middleware/verify_token");
+//const verifyToken = require("./middleware/verify_token"); 15-07-2020
 const { LevelTest } = require("./models");
 const routes = require("./routes");
 const server = express();
 
 server.use(bodyParser.json());
 server.use("/api", cors());
+server.use(passport.initialize());
+server.use(passport.session()); //?? 20 juillet
 
 server.use("/api", routes);
-server.use("api/auth", verifyToken);
+// server.use("api/auth", verifyToken);
 server.use("/api/images", express.static("src/public"));
 //server.use("/api", routes);
 
@@ -21,14 +23,14 @@ server.get("/api/ping", (req, res) => {
 });
 
 // Route privée
-server.get("/api/auth", verifyToken, async (req, res) => {
-  const { uid } = req.body;
-  if (uid) {
-    res.json({ message: "OK", uid });
-  } else {
-    res.json({ message: "NOPE" });
-  }
-});
+// server.get("/api/auth", verifyToken, async (req, res) => {
+//   const { uid } = req.body;
+//   if (uid) {
+//     res.json({ message: "OK", uid });
+//   } else {
+//     res.json({ message: "NOPE" });
+//   }
+// });
 
 // server.listen(8080, () => {
 //   console.log("Server Running on port");

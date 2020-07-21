@@ -14,6 +14,7 @@ const LogIn = (props) => {
 
   const updateCredentials = (event) => {
     // comme le handleChange
+
     setCredentials({
       ...credentials,
       [event.target.name]: event.target.value,
@@ -21,7 +22,7 @@ const LogIn = (props) => {
   };
 
   const onSubmit = (async) => {
-    console.log("credentials ", credentials);
+    console.log("onSubmit credentials ", credentials);
     logIn(credentials);
   };
 
@@ -74,7 +75,7 @@ const LogIn = (props) => {
 };
 
 const mapStateToProps = (state, props) => {
-  // console.log("email 2 ");
+  console.log("email mapStateToProps ");
   return state;
 };
 

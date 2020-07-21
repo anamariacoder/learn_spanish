@@ -12,6 +12,7 @@ export const logIn = (user, password) => async (dispatch) => {
     type: types.LOGIN_REQUEST,
   });
   const response = await axios.post(UrlLogin, user);
+  console.log("response login ", response);
   const { userInfo } = response;
   dispatch({
     type: types.LOGIN_SUCESS,
