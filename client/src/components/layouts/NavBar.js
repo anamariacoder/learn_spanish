@@ -22,9 +22,9 @@ const NavBar = () => {
         <Link to="/progressGlobal"> Progrès </Link>
       </div>
 
-      <div className="resources">
+      {/* <div className="resources">
         <Link to="/resources"> Ressources </Link>
-      </div>
+      </div> */}
 
       <div className="learning-methodology">
         <Link to="/learningMethodology"> Méthodologie d'apprentisage </Link>

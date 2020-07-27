@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// eslint-disable-next-line
-//import { Form, Control } from 'react-redux-form';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

@@ -5,14 +5,15 @@ const levelTestUserSummaryController = {
   // retrieveLevelTestUserSummariesByUser: async id => {
   //   const levelTestUserSumariesByUser = await testsUserSummary.findByPk(id, {
   retrieveLevelTestUserSummariesByUser: async (data) => {
-    const { userId }= data;
+    console.log(data);
+    //const { userId }= data;
     const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
     //  order: ["created_at", "DESC"],
 
       where: {
         idUser:{
        
-          [Op.eq]: userId,
+          // [Op.eq]: userId,
         //Ca marche avec l'id du test, mais ne marche pas pour le username. 
         //Je dois d'abord passer l'identifiant utilisateur
         //[Op.eq]: '2675eb63-b899-4aa5-ade1-c106b94156bd'

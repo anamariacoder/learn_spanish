@@ -6,11 +6,12 @@ const bodyParser = require("body-parser");
 const { LevelTest } = require("./models");
 const routes = require("./routes");
 const server = express();
+require("./config/passport");
 
 server.use(bodyParser.json());
 server.use("/api", cors());
 server.use(passport.initialize());
-server.use(passport.session()); //?? 20 juillet
+server.use(passport.session());
 
 server.use("/api", routes);
 // server.use("api/auth", verifyToken);
@@ -21,6 +22,8 @@ server.use("/api/images", express.static("src/public"));
 server.get("/api/ping", (req, res) => {
   res.json({ message: "Route publique" });
 });
+
+module.exports = server;
 
 // Route privée
 // server.get("/api/auth", verifyToken, async (req, res) => {
@@ -62,5 +65,3 @@ server.get("/api/ping", (req, res) => {
 // server.get("/api/quizz", (req, res) => {
 //   res.send("testing");
 // });
-
-module.exports = server;

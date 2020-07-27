@@ -1,41 +1,92 @@
 const passport = require("passport");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { Op } = require("sequelize");
-const LocalStrategy = require('passport-local').Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 
-const { User } = require("../models"); // ???? 20 juillet
+const { User } = require("../models");
+console.log("Avant l'appel à passport");
 
-console.log("passport 1 ");
 passport.use(
-  new LocalStrategy({
-    usernameField: "email",
-    passwordField: "password"
-  },
-  function(username, password, done) {
-    User.findOne({    //get user by email
-        where: {
-          email: {
-            [Op.eq]: username,
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
+    },
+    function(username, password, done) {
+      User.findOne(
+        {
+          where: {
+            email: {
+              [Op.eq]: username,
+            },
           },
+          attributes: ["id", "first_name", "last_name", "password", "email"],
+          raw: true,
         },
-        attributes: ["id", "first_name", "last_name", "password", "email"],
-        raw: true,
-      }), function (err, user) {
-          if (err) { return done(err); }
+        function(err, user) {   //problème à partir d'ici (callback function)
+          if (err) {
+            return done(err);
+          }
           if (!user) {
-          return done(null, false, { message: 'Incorrect username.' });
+            return done(null, false, { message: "Incorrect username." });
           }
-          if (!user.validPassword(password)) {
-          return done(null, false, { message: 'Incorrect password.' });
-          }
+          bcrypt.compare(password, user.password, function(err, res) {
+            if (res) {
+              done(null, user);
+            } else {
+              done(null, false, { message: "Incorrect password." });
+            }
+          });
           return done(null, user);
         }
-  })
+      );
+    }
+  )
 );
 
+// passport.use(
+//   new LocalStrategy(
+//     {
+//     usernameField: "email",
+//     passwordField: "password"
+//   },
+//   function(username, password, done) {
+//     User.findOne({    //get user by email
+//         where: {
+//           email: {
+//             [Op.eq]: username,
+
+//                     },
+//         },
+//             attributes: ["id", "first_name", "last_name", "password", "email"],
+//         raw: true,
+//          username= email
+
+//       }),
+//       function(err, user)   {
+
+//           if (err) { return done(err); }
+//           if (!user) {console.log("req.user " ,req.user);
+//           return done(null, false, { message: 'Incorrect username.' });
+//           }
+//           bcrypt.compare(password, user.password, function(err, res) {
+//             if(res) {
+//               done(null, { id: user.id, username: user.email})
+//              } else {
+//             done(null, false)
+//              }
+//            })
+
+//          if (!user.validPassword(password)) {
+//           return done(null, false, { message: 'Incorrect password.' });
+//           }
+//           return done(null, user);
+//         }
+//   })
+// );
 
 // passport.use(         //
-//   new LocalStrategy( // 
+//   new LocalStrategy( //
 //     {
 //       usernameField: "email", //
 //       passwordField: "password", // ??
@@ -67,14 +118,15 @@ passport.use(
 //   )
 // );
 
-passport.serializeUser((user, done) => { // serialize our user to store inside of the session
+passport.serializeUser((user, done) => {
+  // serialize our user to store inside of the session
   console.log("serialize ");
   done(null, user.id);
 });
 
-passport.deserializeUser(async (id, done) => {   
+passport.deserializeUser(async (id, done) => {
   const user = User.findByPk(id, {
-    attributes: ["id", "first_name", "last_name", "email"],  //??????? 20 juillet. Deserialize our user as a single id
+    attributes: ["id", "first_name", "last_name", "email"], //??????? 20 juillet. Deserialize our user as a single id
     raw: true,
   });
   if (!user) {

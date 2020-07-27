@@ -3,17 +3,14 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LevelTest from "./components/level-test/LevelTest";
-
-import Resources from "./components/resources/Resources";
+//import Resources from "./components/resources/Resources";
 import LearningMethodology from "./components/learningMethodology/LearningMethodology";
 import LearningTips from "./components/learningTips/LearningTips";
-// import SocialMedia from "./components/socialMedia/SocialMedia";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import NavBar from "./components/layouts/NavBar";
 import Footer from "./components/layouts/Footer";
 import Home from "./components/home/Home";
 import "./App.css";
-
 import AboutUs from "./components/aboutUs/AboutUs";
 import store from "./store";
 // import SignFirebase from "./components/user/SignFirebase";
@@ -44,7 +41,7 @@ const App = (props) => {
               path="/levelTestUserSummary"
               component={LevelTestUserSummary}
             />
-            <Route path="/resources" component={Resources} />
+            {/* <Route path="/resources" component={Resources} /> */}
             <Route
               path="/learningMethodology"
               component={LearningMethodology}

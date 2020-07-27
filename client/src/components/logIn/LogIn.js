@@ -1,19 +1,20 @@
 import { connect } from "react-redux";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+//import { Link } from "react-router-dom";
+//import axios from "axios";
+//import { useDispatch, useSelector } from "react-redux";
 import { logIn } from "../../actions/userActions";
 
-const LogIn = (props) => {
+const LogIn = (props) => { 
   const { logIn } = props;
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
+  console.log("dans LogIn");
 
   const updateCredentials = (event) => {
-    // comme le handleChange
+    console.log("updateCredentials");
 
     setCredentials({
       ...credentials,
@@ -22,8 +23,10 @@ const LogIn = (props) => {
   };
 
   const onSubmit = (async) => {
-    console.log("onSubmit credentials ", credentials);
-    logIn(credentials);
+    console.log("onSubmit LOGIN credentials ", credentials);
+    console.log("email = ", credentials.email);
+    console.log("password = ", credentials.password);
+    logIn(credentials); //LAst thing that it executes
   };
 
   return (

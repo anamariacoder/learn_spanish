@@ -16,10 +16,11 @@ import "./App.css";
 import AboutUs from "./components/aboutUs/AboutUs";
 import store from "./store";
 // import SignFirebase from "./components/user/SignFirebase";   //Modified 15 juin
-import signFirebaseContainer from "./containers/signFirebaseContainer";
+//import signFirebaseContainer from "./containers/signFirebaseContainer"; Modify 23 juillet
 // import ProgressGlobal from "./components/progressGlobal/Progress1";
 import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
+import LogIn from "./components/logIn/LogIn";
 
 const App = (props) => {
   console.log(props);
@@ -45,7 +46,8 @@ const App = (props) => {
               component={LearningMethodology}
             />
             <Route path="/learningTips" component={LearningTips} />
-            <Route path="/sign" component={signFirebaseContainer} />
+            {/* <Route path="/sign" component={signFirebaseContainer} /> */}
+            <Route path="/login" component={LogIn} />
             <Route component={PageNotFound} />
           </Switch>
         </Router>

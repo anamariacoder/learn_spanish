@@ -13,7 +13,7 @@ export default function authReducer(state = initialState, action) {
         ...state,
         isAuth: false,
       };
-    case types.LOGIN_SUCESS:
+    case types.LOGIN_SUCCESS:
       return {
         ...state,
         isAuth: action.payload ? true : false,

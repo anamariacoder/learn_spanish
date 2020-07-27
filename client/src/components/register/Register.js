@@ -26,8 +26,9 @@ const Register = (props) => {
 
   const onSubmit = (async) => {
     // console.log("email ",logIn.email);
+
+    console.log("onSubmit Register credentials ", credentials);
     register(credentials);
-    console.log("credentials ", credentials)
   };
 
   return (
