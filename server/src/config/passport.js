@@ -13,36 +13,94 @@ passport.use(
       passwordField: "password",
     },
     function(username, password, done) {
-      User.findOne(
-        {
-          where: {
-            email: {
-              [Op.eq]: username,
-            },
+      User.findOne({
+        where: {
+          email: {
+            [Op.eq]: username,
           },
-          attributes: ["id", "first_name", "last_name", "password", "email"],
-          raw: true,
         },
-        function(err, user) {   //problème à partir d'ici (callback function)
-          if (err) {
-            return done(err);
-          }
-          if (!user) {
-            return done(null, false, { message: "Incorrect username." });
-          }
-          bcrypt.compare(password, user.password, function(err, res) {
-            if (res) {
-              done(null, user);
-            } else {
-              done(null, false, { message: "Incorrect password." });
+        attributes: ["id", "first_name", "last_name", "password", "email"],
+        raw: true,
+      }).then(
+        (user) => {
+ 
+            if (!user) {
+              return done(null, false, { message: "Incorrect username." });
             }
-          });
-          return done(null, user);
-        }
+            bcrypt.compare(password, user.password, function(err, res) {
+              if (res) {
+                console.log("password correct");
+                done(null, user);
+              } else {
+                done(null, false, { message: "Incorrect password." });
+              }
+            });
+            return done(null, user);
+          }
       );
     }
   )
 );
+
+passport.serializeUser((user, done) => {
+  // serialize our user to store inside of the session
+  console.log("serialize ", user);
+  done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+  const user = User.findByPk(id, {
+    attributes: ["id", "first_name", "last_name", "email"], //Deserialize our user as a single id
+    raw: true,
+  });
+  if (!user) {
+    console.log("!user dans deserializeUser  ");
+    return done(new Error("User not found"));
+  }
+  console.log("l'utilisateur est ", user);
+  done(null, user);
+});
+
+
+// passport.use(
+//   new LocalStrategy(
+//     {
+//       usernameField: "email",
+//       passwordField: "password",
+//     },
+//     function(username, password, done) {
+//       User.findOne({
+//         where: {
+//           email: {
+//             [Op.eq]: username,
+//           },
+//         },
+//         attributes: ["id", "first_name", "last_name", "password", "email"],
+//         raw: true,
+//       }).then(
+//         (user) => 
+//           function(err, user) {
+//             if (err) {
+//               console.log("err ", err);
+//               return done(err);
+//             }
+//             if (!user) {
+//               console.log("!user ", user);
+//               return done(null, false, { message: "Incorrect username." });
+//             }
+//             bcrypt.compare(password, user.password, function(err, res) {
+//               if (res) {
+//                 done(null, user);
+//               } else {
+//                 done(null, false, { message: "Incorrect password." });
+//               }
+//             });
+//             return done(null, user);
+//           }
+//       );
+//     }
+//   )
+// );
 
 // passport.use(
 //   new LocalStrategy(
@@ -118,20 +176,3 @@ passport.use(
 //   )
 // );
 
-passport.serializeUser((user, done) => {
-  // serialize our user to store inside of the session
-  console.log("serialize ");
-  done(null, user.id);
-});
-
-passport.deserializeUser(async (id, done) => {
-  const user = User.findByPk(id, {
-    attributes: ["id", "first_name", "last_name", "email"], //??????? 20 juillet. Deserialize our user as a single id
-    raw: true,
-  });
-  if (!user) {
-    console.log("!user dans deserializeUser  ");
-    return done(new Error("User not found"));
-  }
-  done(null, user);
-});

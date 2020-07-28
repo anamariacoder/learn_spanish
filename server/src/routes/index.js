@@ -9,7 +9,7 @@ const usersRouter = require("./users_router");
 
 const mainRouter = express.Router();
 
-mainRouter.use("/leveltestusersummary", levelTestUserSummariesByUser);  //AJOUTER POUR levelTestUSERSUMMARIES // 11 mai
+mainRouter.use("/leveltestusersummary", levelTestUserSummariesByUser); //AJOUTER POUR levelTestUSERSUMMARIES // 11 mai
 mainRouter.use("/leveltest", levelTests);
 mainRouter.use("/users", usersRouter);
 

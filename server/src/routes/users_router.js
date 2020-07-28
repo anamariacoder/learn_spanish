@@ -7,13 +7,11 @@ const usersRouter = express.Router();
 const userInfo = null;
 console.log("je vais faire login 1");
 
-usersRouter.post('/login',
-  passport.authenticate('local'),
-  function(req, res) {
-    // If this function gets called, authentication was successful.
-    // `req.user` contains the authenticated user.
-    console.log('success login : the user is ', req.user)
-  });
+usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
+  // If this function gets called, authentication was successful.
+  // `req.user` contains the authenticated user.
+  console.log("success login : the user is ", req.user);
+});
 
 // usersRouter.post(
 //   "/login",
