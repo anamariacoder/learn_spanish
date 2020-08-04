@@ -9,23 +9,20 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: DataTypes.UUIDV4,
         validate: {
           isUUID: 4,
-          notNull: true
-        }
+          notNull: true,
+        },
       },
       questions: {
         allowNull: false,
-        type: DataTypes.JSONB
-      }
+        type: DataTypes.JSONB,
+      },
     },
     {
-      tableName: "level-test"
+      tableName: "level-test",
     }
   );
-
-  LevelTest.associate = models => {
+  LevelTest.associate = (models) => {
     LevelTest.hasMany(models.LevelTestUserSummary);
   };
-  // LevelTest.associate = () => {};
-
   return LevelTest;
 };

@@ -1,11 +1,9 @@
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
-export const REGISTER_REQUEST = "REGISTER_REQUEST"; //???????? juillet
-// export const LOGOUT_REQUEST = "LOGOUT_REQUEST";  
+export const REGISTER_REQUEST = "REGISTER_REQUEST"; 
+export const LOGOUT_REQUEST = "LOGOUT_REQUEST";  
 
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const REGISTER_SUCCESS = "REGISTER_SUCCESS"; //????? juillet
-
-export const CHECK_TOKEN = "CHECK_TOKEN";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 
 export const CHECK_LEVEL_TEST = "CHECK_LEVEL_TEST";
 export const GET_LEVEL_TESTS = "GET_LEVEL_TESTS";

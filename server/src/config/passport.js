@@ -2,10 +2,8 @@ const passport = require("passport");
 const bcrypt = require("bcryptjs");
 const { Op } = require("sequelize");
 const LocalStrategy = require("passport-local").Strategy;
-
 const { User } = require("../models");
 console.log("Avant l'appel à passport");
-
 passport.use(
   new LocalStrategy(
     {
@@ -21,23 +19,20 @@ passport.use(
         },
         attributes: ["id", "first_name", "last_name", "password", "email"],
         raw: true,
-      }).then(
-        (user) => {
- 
-            if (!user) {
-              return done(null, false, { message: "Incorrect username." });
-            }
-            bcrypt.compare(password, user.password, function(err, res) {
-              if (res) {
-                console.log("password correct");
-                done(null, user);
-              } else {
-                done(null, false, { message: "Incorrect password." });
-              }
-            });
-            return done(null, user);
+      }).then((user) => {
+        if (!user) {
+          return done(null, false, { message: "Incorrect username." });
+        }
+        bcrypt.compare(password, user.password, function(err, res) {
+          if (res) {
+            console.log("password correct");
+            done(null, user);
+          } else {
+            done(null, false, { message: "Incorrect password." });
           }
-      );
+        });
+        return done(null, user);
+      });
     }
   )
 );
@@ -53,14 +48,18 @@ passport.deserializeUser(async (id, done) => {
     attributes: ["id", "first_name", "last_name", "email"], //Deserialize our user as a single id
     raw: true,
   });
+  console.log("l'utilisateur est ", user);
   if (!user) {
     console.log("!user dans deserializeUser  ");
     return done(new Error("User not found"));
   }
   console.log("l'utilisateur est ", user);
+  // New
+  userInfo = res.user;
+  console.log("userInfo ", userInfo);
+  // New
   done(null, user);
 });
-
 
 // passport.use(
 //   new LocalStrategy(
@@ -78,7 +77,7 @@ passport.deserializeUser(async (id, done) => {
 //         attributes: ["id", "first_name", "last_name", "password", "email"],
 //         raw: true,
 //       }).then(
-//         (user) => 
+//         (user) =>
 //           function(err, user) {
 //             if (err) {
 //               console.log("err ", err);
@@ -175,4 +174,3 @@ passport.deserializeUser(async (id, done) => {
 //     }
 //   )
 // );
-

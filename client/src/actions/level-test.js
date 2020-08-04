@@ -15,14 +15,11 @@ export const fetchTests = () => async (dispatch) => {
     .then((tests) => {
       dispatch({ type: types.GET_LEVEL_TESTS, payload: tests });
     });
+    // gèrer l'erreur avec .catch(error => console.log("recurso no encontrado"));
 };
 
 export const isCorrect = (props) => {
   if (reponseUtilisateur === reponseCorrect) return <Correct />;
-  // if (reponseUtilisateur === reponseCorrect) return Correct();
-  // } else {
-  //   return <NotCorrect />;
-  // }
 };
 
 export const checkLevelTest = () => async (dispatch, getState) => {
@@ -98,7 +95,7 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     case 1:
     case 2:
       arrayTestResults[4] =
-        "Nous vous recommandons de continuer à pratiquer et de reprendre le test.";
+        "Nous vous encourageons à continuer à pratiquer et de reprendre le test de reprendre le test.";
       break;
     case 3:
       arrayTestResults[4] = "Vous avez réussi votre test. Félicitations !!";
@@ -106,11 +103,11 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     case 4:
     case 5:
       arrayTestResults[4] =
-        "Vous avez obtenu une excellente note. Félicitations !!";
+        "Félicitations. Vous avez obtenu une excellente note. Bravo !!";
       break;
     default:
       arrayTestResults[4] =
-        "Une erreur s’est produite avec votre test. Veuillez essayer  de nouveau";
+        "Une erreur s’est produite avec votre test. Veuillez essayer de nouveau";
   }
 
   dispatch({

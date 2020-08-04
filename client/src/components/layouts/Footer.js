@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import {
   faGithubAlt,
   faLinkedin,
@@ -9,7 +8,6 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 import AboutUs from "../aboutUs/AboutUs";
@@ -17,17 +15,13 @@ const Footer = () => {
   return (
     <div className="defineFooter">
       <p>&copy; 2020 Codé</p>
-
       <div className="about-us">
       <p><Link to="/AboutUs">Qui sommes-nous ?</Link></p>
       </div>
-
       <div className="contact-us">
-        {/* <a>Contact :&nbsp;&nbsp;&nbsp;</a> */}
         Contact :&nbsp;&nbsp;&nbsp;
-        {/* <li> */}
         <a
-          href="mailto:anamadealmeida@gmail.com?Subject=Je%20suis%20intéressé%20par%20plus%20d'informations"
+          href="mailto:japprendslpagnol@gmail.com?Subject=Je%20suis%20intéressé%20par%20plus%20d'informations"
           target="_blank"
           rel="noopener"
         >
@@ -35,15 +29,11 @@ const Footer = () => {
             <FontAwesomeIcon icon={faEnvelope} />
             &nbsp;&nbsp;
           </a>
-          anamadealmeida@gmail.com
+          japprendslpagnol@gmail.com
         </a>
-        {/* </li> */}
       </div>
-
       <div className="social-media">
-        {/* <li> */}
-        {/* <a>Nos réseaux :</a> */}
-        Nos réseaux :{/* </li> */}
+        Nos réseaux :
         <a href="http://linkedIn.com">
           {" "}
           <a className="linkedin">
@@ -96,7 +86,6 @@ const Footer = () => {
           </a>
         </a>
       </div>
-
       <li>
         <a href="https://cnnespanol.cnn.com">CNN Nouvelles en espagnol</a>
       </li>

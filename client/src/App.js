@@ -20,9 +20,7 @@ import Progress1 from "./components/progressGlobal/Progress1";
 import TestGlobal from "./components/testGlobal/TestGlobal";
 import LevelTestUserSummary from "./components/levelTestUserSummary/LevelTestUserSummary";
 import LogIn from "./components/logIn/LogIn";
-import Register from "./components/register/Register"; //???????????? juillet
-
-// get our fontawesome imports
+import Register from "./components/register/Register";
 
 const App = (props) => {
   console.log(props);
@@ -47,7 +45,6 @@ const App = (props) => {
               component={LearningMethodology}
             />
             <Route path="/learningTips" component={LearningTips} />
-            {/* **5** 17 juin  */}
             {/* <Route path="/sign" component={signFirebaseContainer} /> */}
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />

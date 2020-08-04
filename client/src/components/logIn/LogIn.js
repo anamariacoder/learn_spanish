@@ -26,7 +26,7 @@ const LogIn = (props) => {
     console.log("onSubmit LOGIN credentials ", credentials);
     console.log("email = ", credentials.email);
     console.log("password = ", credentials.password);
-    logIn(credentials); //LAst thing that it executes
+    logIn(credentials); 
   };
 
   return (

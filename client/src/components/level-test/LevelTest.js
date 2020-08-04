@@ -21,36 +21,18 @@ import {
 
 const LevelTest = (props) => {
   const [hasSubmit, setSubmit] = useState(false);
-  console.log("PROPS ", props);
   const { resultats } = props.levelTest;
-
-  console.log("resultats", resultats);
-
   useEffect(() => {
-    {
-      console.log("4) fetchTests");
-    }
     props.fetchTests();
   }, []);
-
   function handleChange(evt) {
-    {
-      console.log(
-        "5) handleChange de LevelTest. On a commencé à sélectionner les options"
-      );
-    }
     const value = evt.target.value;
     props.handleResponses(evt.target);
   }
-
   const handleSubmit = (event) => {
-    {
-      // console.log("7) handleSubmit de LevelTest");
-    }
     event.preventDefault();
     props.checkLevelTest();
     setSubmit(true);
-    console.log("Props dans level test, ", props);
   };
 
   return (
@@ -69,17 +51,12 @@ const LevelTest = (props) => {
                     alt="question"
                   />
                   {q.question}
-
                   <select name={`question${i}`} onChange={handleChange}>
                     <option>Choissisez votre réponse</option>
                     {q.choix.map((c, i) => {
-                      console.log(
-                        "2) JE SUIS DANS COMPONENTS/level-test/LevelTest. Choissisez votre réponse"
-                      );
                       return <option key={i}>{c}</option>;
                     })}
                   </select>
-                  {/* <isCorrect answer={answer} />  */}
                 </div>
               );
             })}
@@ -93,7 +70,6 @@ const LevelTest = (props) => {
       </div>
       {hasSubmit ? (
         <div>
-          {/* <div>{isCorrect}</div> */}
           <h6>Vos résultats</h6>
           <div className="info-level-test-results">
             <table>
@@ -110,13 +86,11 @@ const LevelTest = (props) => {
                 <td> {resultats[2]} </td>
                 <td> {resultats[3]} </td>
                 <td> {resultats[4]} </td>
-                {/* <td> Vous avez passe le test</td> */}
               </tbody>
             </table>
           </div>
         </div>
       ) : (
-        // <p>Vous avez {resultats[0]} bonnes réponses</p>
         <div className="text-submit-test-button">
           <p3>
             <p>
@@ -126,21 +100,12 @@ const LevelTest = (props) => {
           </p3>
         </div>
       )}
-
-      {/* {console.log(
-        "3) JE SUIS DANS COMPONENTS/level-test/ LevelTest et JE VAIS VALIDER"
-      )} */}
     </div>
   );
 };
-
 const mapStateToProps = (state, props) => {
-  {
-    console.log("1)  mapStateToProps");
-  }
   return state;
 };
-
 const mapDispatchToProps = (dispatch) => ({
   checkLevelTest: (reponses, test) => dispatch(checkLevelTest(reponses, test)),
   fetchTests: () => dispatch(fetchTests()),

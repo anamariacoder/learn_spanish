@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import authReducer from "./auth";
+import authReducer from "./authReducer";
 import levelTest from "./levelTest";
 import levelTestUserSummary from "./levelTestUserSummary";
 

@@ -4,14 +4,30 @@ const passport = require("passport");
 const userController = require("../controllers/user_controller");
 //const authController = require("../controllers/auth_controller");
 const usersRouter = express.Router();
-const userInfo = null;
-console.log("je vais faire login 1");
+// const userInfo = null;
 
 usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
   // If this function gets called, authentication was successful.
   // `req.user` contains the authenticated user.
   console.log("success login : the user is ", req.user);
+  userInfo = {
+    firstName: req.user.first_name,
+    email: req.user.email,
+  };
+  console.log("userInfo ", userInfo);
+  res
+    .status(200)
+    //   .header("xAuth", token)
+    .json({ userInfo, message: "you are now logged in ! " });
 });
+
+//***This version is the one that works OK (begin)
+
+// usersRouter.post("/login", passport.authenticate("local"), function(req, res) {//   // If this function gets called, authentication was successful.
+//   // `req.user` contains the authenticated user.
+//   console.log("success login : the user is ", req.user);
+// });
+//***This version is the one that functions (end)
 
 // usersRouter.post(
 //   "/login",

@@ -59,9 +59,9 @@ hours = d.getHours();
               <th>Type de test</th>
               {/* <th>Code du test</th> */}
               <th>Note obtenue</th>
-              <th>Nombre de questions répondus</th>
-              <th>Total réponses correctes</th>
-              <th>Total réponses incorrectes</th>
+              <th>Nombre de questions répondues</th>
+              <th>Nombre de réponses correctes</th>
+              <th>Nombre de réponses incorrectes</th>
               <th>Date</th>
             </thead>
             <tbody>
