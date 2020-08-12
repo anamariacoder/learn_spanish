@@ -35,9 +35,9 @@ const NavBar = (props) => {
           <Link to="/logIn"> Connexion </Link>
         </div>
       ) : (
-        <div>
+        <div className="login-greeting">
           <p>Bonjour {user.firstName}</p>
-          <div>
+          <div className="disconnection-button">
             <TransButton onClick={()=>logOut()}>Déconnexion</TransButton>
           </div>
         </div>

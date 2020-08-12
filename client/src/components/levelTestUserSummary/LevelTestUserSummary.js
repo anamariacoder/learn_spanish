@@ -18,7 +18,7 @@ const LevelTestUserSummary = (props) => {
   }, []);
 
   function handleChange(evt) {
-    const value = evt.target.value;
+   // const value = evt.target.value;
     props.handleResponses(evt.target);
   }
 

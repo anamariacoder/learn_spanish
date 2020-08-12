@@ -30,7 +30,7 @@ const TestGlobal = (props) => {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           Pour passer le test, veuillez appuyer sur le lien{" "}
           <a>
-            <Link to="/test">démarrer le test</Link>
+            <Link to="/level-test">démarrer le test</Link>
           </a>
           . Lisez attentivement chaque phrase ou question et choisissez parmi
           les options disponibles. <br />

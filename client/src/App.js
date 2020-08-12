@@ -33,7 +33,7 @@ const App = (props) => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/testGlobal" component={TestGlobal} />
-            <Route path="/test" component={LevelTest} />
+            <Route path="/level-test" component={LevelTest} />
             <Route path="/progressGlobal" component={Progress1} />
             <Route
               path="/levelTestUserSummary"

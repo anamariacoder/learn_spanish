@@ -1,10 +1,8 @@
-//??????????????????? juillet
-
 import { connect } from "react-redux";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
+// import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../actions/userActions";
 
 const Register = (props) => {
@@ -17,7 +15,6 @@ const Register = (props) => {
   });
 
   const updateCredentials = (event) => {
-    // comme le handleChange
     setCredentials({
       ...credentials,
       [event.target.name]: event.target.value,
@@ -27,7 +24,7 @@ const Register = (props) => {
   const onSubmit = (async) => {
     // console.log("email ",logIn.email);
 
-    console.log("onSubmit Register credentials ", credentials);
+    // console.log("onSubmit Register credentials ", credentials);
     register(credentials);
   };
 

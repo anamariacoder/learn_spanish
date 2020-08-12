@@ -30,6 +30,33 @@ p {
     justify-content: space-between;
     font-size: 1.4rem;
   }
+
+  .container-logIn {
+    margin-left: 550px;
+    width: 70%;
+    font-size: 1.2rem;
+    /* margin-bottom: 20px; */
+  }
+  .container-register {
+    margin-left: 550px;
+    width: 70%;
+    font-size: 1.2rem;
+    /* margin-bottom: 20px; */
+  }
+
+  .info-logIn h2 {
+    font-size: 2.5rem;
+  }
+  .info-register h2 {
+    font-size: 2.5rem;
+  }
+
+  /* .login-greeting {
+    font-size: 1.5rem;
+    display: flex; */
+  /* justify-content: space-between; */
+  /* } */
+
   .defineFooter > p .info-about-us .contact-us {
     font-size: 1.2rem;
   }
@@ -51,13 +78,33 @@ p {
   .navContainer,
   .container-home,
   .home,
-  .info-home {
+  .info-home,
+  .disconnection-button {
     column-count: 2;
-    width: 90%;
-    font-size: 1.3rem;
+    width: 80%;
+    font-size: 1.2rem;
   }
+
+  .container-logIn {
+    margin-left: 350px;
+    width: 70%;
+    font-size: 1.1rem;
+  }
+
+  .container-register {
+    margin-left: 350px;
+    width: 70%;
+    font-size: 1.1rem;
+  }
+
+  .info-logIn h2 {
+    font-size: 2rem;
+  }
+  .info-register h2 {
+    font-size: 2rem;
+  }
+
   body {
-    /* (2°) */
     font: 1 rem;
   }
   .defineFooter p .info-about-us .contact-us {
@@ -81,15 +128,37 @@ p {
   .navContainer,
   .container-home,
   .info-home,
-  .home {
+  .home,
+  .disconnection-button,
+  .connection,
+  .transButton {
     column-count: 3;
     width: 70%;
     font-size: 0.9rem;
   }
   body {
-    /* (2°) */
     font: 1.5 rem;
   }
+  .container-logIn {
+    margin-left: 140px;
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .container-register {
+    margin-left: 140px;
+    width: 70%;
+    font-size: 1rem;
+  }
+  .info-logIn h2 {
+    font-size: 1.3rem;
+  }
+
+  .info-register h2 {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
   .defineFooter p .info-about-us .contact-us {
     font-size: 0.8rem;
   }
@@ -162,7 +231,8 @@ a {
   justify-content: space-between;
   /* font-size: 1.35rem;  responsive */
   letter-spacing: 1px;
-  padding: 13px 20px;
+  /* padding: 13px 20px; */
+  padding: 20px 20px 20px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -199,11 +269,10 @@ a {
   /* text-indent: 0px;  */
 }
 
-.container-logIn {
-  margin-left: 550px;
-  /* margin-bottom: 20px; */
-
-}
+/* .container-logIn {
+  margin-left: 550px; */
+/* margin-bottom: 20px; */
+/* } */
 
 .info-logIn {
   width: 35%;
@@ -231,13 +300,10 @@ a {
   background: rgb(245, 4, 4);
 }
 
-
-
-.container-register {
+/* .container-register {
   margin-left: 550px;
   /* margin-bottom: 20px; */
-
-}
+/* } */
 
 .info-register {
   width: 41%;
@@ -266,7 +332,6 @@ a {
   justify-content: center;
 }
 
-
 /* .button-login:hover {
   border-bottom: 1px solid;
   color: rgb(254, 241, 170);
@@ -279,6 +344,24 @@ a {
   color: rgb(254, 241, 170);
   border: orangered;
 } */
+
+.disconnection-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  margin-right: 50px;
+}
+.login-greeting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -5px;
+  /* color: blue; */
+}
+.login-greeting p {
+  color: blue;
+}
 
 .container-start-global-test {
   background-image: url("./components/public/img/espagnol3.jpg");

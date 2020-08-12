@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+//import { BrowserRouter as Router, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubAlt,
@@ -10,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
-import AboutUs from "../aboutUs/AboutUs";
+//import AboutUs from "../aboutUs/AboutUs";
 const Footer = () => {
   return (
     <div className="defineFooter">
