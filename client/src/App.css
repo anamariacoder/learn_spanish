@@ -19,17 +19,50 @@ p {
 
 @media screen and (min-width: 1024px) {
   /* Grand écran */
-  .navContainer,
-  .container-home,
-  .info-home,
-  .home {
+  .navContainer
+ /*{ */
+
     /* > 1200px (1168px;/*1200 - 16*2) */
-    width: 100%;
+    {
+      width: 100%;
     /* display: block; */
     display: flex;
     justify-content: space-between;
     font-size: 1.4rem;
   }
+
+
+  .info-home h1 {
+    margin-left: -12%;
+    font-family: "Anton";
+    margin-top: -1%;
+    font-size: 70px;
+    /* letter-spacing: -2pt; */
+    /* line-height: 1em; */
+    text-align: center;
+    font-weight: bold;
+    color: red;
+  }
+
+  .info-home-paragraph p {
+    /* margin-top: -25%; */
+    padding-left: 5%;
+    text-align: left;
+     columns: 1; 
+     /* line-height: 58px;  */
+      font-size: 3rem;
+    /* text-indent: 0px;  */
+  }
+
+  /* .info-home-paragraph p { */
+  /* margin-top: 70%; */
+  /* padding-left: 0%; */
+  /* text-align: left; */
+  /* columns: 1; */
+  /* line-height: 58px; */
+  /* font-size: 70px; */
+  /* text-indent: 0px;  */
+  /* } */
 
   .container-logIn {
     margin-left: 550px;
@@ -39,7 +72,7 @@ p {
   }
   .container-register {
     margin-left: 550px;
-    width: 70%;
+    width: 60%;
     font-size: 1.2rem;
     /* margin-bottom: 20px; */
   }
@@ -51,22 +84,23 @@ p {
     font-size: 2.5rem;
   }
 
-  /* .login-greeting {
-    font-size: 1.5rem;
-    display: flex; */
-  /* justify-content: space-between; */
-  /* } */
-
   .defineFooter > p .info-about-us .contact-us {
     font-size: 1.2rem;
   }
 
+  .info-learning-tips h2 {
+    font-size: 3rem;
+    margin-top: -5%;
+  }
   .info-learning-tips p {
-    font-size: 1.3rem;
+    margin-top: 3%;
+    font-size: 1.2rem;
+    columns: 1;
   }
 
   .info-learning-methodology p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    columns: 1;
   }
 }
 /* valable pour tous les écrans supérieures à 640px */
@@ -77,12 +111,33 @@ p {
   .App,
   .navContainer,
   .container-home,
-  .home,
-  .info-home,
+  /* .home, */
+  /* .info-home, */
   .disconnection-button {
     column-count: 2;
     width: 80%;
     font-size: 1.2rem;
+  }
+  .info-home h1 {
+    margin-left: 350px;
+    font-family: "Anton";
+    margin-top: 1%;
+    font-size: 60px;
+    /* letter-spacing: -2pt; */
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+  }
+
+  .info-home-paragraph p {
+    margin-top: 50%;
+    margin-left: 10%;
+    text-align: center;
+    /* columns: 1; */
+    /* line-height: 58px; */
+    font-size: 2rem;
+    /* text-indent: 0px;  */
   }
 
   .container-logIn {
@@ -93,7 +148,7 @@ p {
 
   .container-register {
     margin-left: 350px;
-    width: 70%;
+    width: 50%;
     font-size: 1.1rem;
   }
 
@@ -110,12 +165,20 @@ p {
   .defineFooter p .info-about-us .contact-us {
     font-size: 1rem;
   }
+
+  .info-learning-tips h2 {
+    font-size: 2rem;
+    margin-top: -2%;
+  }
   .info-learning-tips p {
     font-size: 1rem;
+    margin-top: 3%;
+    columns: 2;
   }
 
   .info-learning-methodology p {
     font-size: 1rem;
+    columns: 2;
   }
 }
 
@@ -126,9 +189,9 @@ p {
   /* p, */
   .App,
   .navContainer,
-  .container-home,
-  .info-home,
-  .home,
+  /* .container-home, */
+  /* .info-home, */
+  /* .home, */
   .disconnection-button,
   .connection,
   .transButton {
@@ -143,6 +206,28 @@ p {
     margin-left: 140px;
     width: 60%;
     font-size: 1rem;
+  }
+
+  .info-home h1 {
+    margin-left: 1%;
+    font-family: "Anton";
+    margin-top: 1%;
+    font-size: 50px;
+    /* letter-spacing: -2pt;  */
+    /* line-height: 5rem; */
+    text-align: center;
+    font-weight: bold;
+    color: red;
+  }
+
+  .info-home-paragraph p {
+    margin-top: 50%;
+    margin-left: 10%;
+    text-align: center;
+    /* columns: 1; */
+    /* line-height: 58px; */
+    font-size: 2rem;
+    /* text-indent: 0px;  */
   }
 
   .container-register {
@@ -162,12 +247,18 @@ p {
   .defineFooter p .info-about-us .contact-us {
     font-size: 0.8rem;
   }
+
+  .info-learning-tips h2 {
+    font-size: 1.9rem;
+    margin-top: 10%;
+  }
   .info-learning-tips p {
     font-size: 0.9rem;
+    columns: 3;
   }
 
   .info-learning-methodology p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 /***************************/
@@ -248,7 +339,7 @@ a {
   background-size: 90% 120%;
 }
 
-.info-home h {
+/* .info-home h {
   margin-left: 350px;
   font-family: "Anton";
   font-size: 70px;
@@ -257,15 +348,15 @@ a {
   text-align: center;
   font-weight: bold;
   color: red;
-}
+} */
 
 .info-home-paragraph p {
-  margin-top: 140px;
-  margin-left: -2035px;
+  margin-top: 20%;
+  margin-left: -10%;
   text-align: center;
   /* columns: 1; */
   /* line-height: 58px; */
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   /* text-indent: 0px;  */
 }
 
@@ -650,7 +741,7 @@ td {
   background-repeat: no-repeat;
   background-image: center;
   height: 90vh;
-  width: 100%;
+  width: 103%;
   background-size: cover;
   position: relative;
   display: flex;
@@ -671,16 +762,18 @@ td {
 .info-learning-methodology p {
   background-color: wheat;
   opacity: 0.7;
-  width: 70%; /* contrôle le width de la column*/
-  height: 400px;
+  width: 100%; /* contrôle le width de la column*/
+  /* height: 450px; */
   max-width: 66%;
   margin-top: 70px;
-  margin-left: 245px;
-  text-indent: 1cm;
+  margin-left: 15%;
+  /* margin-left: 40px; */
+  /* margin-right: 30%; */
+  /* text-indent: 0.5cm; */
   /* font-size: 20px; */
-  padding-top: 15px;
-  columns: 1;
-  text-indent: 70px;
+  padding-top: 10px;
+  /* columns: 1; */
+  text-indent: 5%;
   align-self: stretch;
   position: relative;
   text-align: justify;
@@ -704,7 +797,7 @@ h1 {
   background-repeat: no-repeat;
   background-image: center;
   height: 150vh;
-  width: 100%;
+  width: 103%;
   background-size: cover;
   position: relative;
   display: flex;
@@ -713,17 +806,6 @@ h1 {
   align-items: center;
 }
 
-h2 {
-  /* .info-learning-tips h2 { */
-  padding: 30px 0px 0px 0px;
-  /* top: -130px; */
-  top: 20px;
-  color: orangered;
-  font-size: 50px;
-  text-align: center;
-  position: relative;
-  /* position: absolute; */
-}
 .container-learning-tips:before {
   content: "";
   width: 100%;
@@ -732,18 +814,33 @@ h2 {
   position: absolute;
   opacity: 0.2;
 }
-
+h2 {
+  /* .info-learning-tips h2 { */
+  /* padding: 30px 0px 0px 0px; */
+  /* top: -130px; */
+  /* top: 20px; */
+  /* top: 5%; */
+  color: orangered;
+  /* font-size: 50px; */
+  text-align: center;
+  position: relative;
+  /* position: absolute; */
+}
 .info-learning-tips p {
   background-color: wheat;
   opacity: 0.7;
-  width: 80%; /* contrôle le width de la column*/
-  max-width: 100%;
-  margin-top: 120px;
-  margin-left: 125px;
+  width: 100%; /* contrôle le width de la column*/
+  max-width: 66%;
+  /* margin-top: 70px; */
+  /* margin-top: 10%; */
+  margin-left: 15%;
+  /* margin-left: 125px; */
   /* font-size: 1.2rem; */
-  padding-top: 2px;
-  columns: 1;
-  text-indent: 65px;
+  /* padding-top: 2px; */
+  /* padding-top: 10px; */
+  /* columns: 1; */
+  /* text-indent: 65px; */
+  text-indent: 3%;
   align-self: stretch;
   position: relative;
   text-align: justify;

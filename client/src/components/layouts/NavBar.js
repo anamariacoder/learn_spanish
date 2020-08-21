@@ -7,15 +7,15 @@ import TransButton from "../cors/TransButton";
 import { logOut } from "../../actions/userActions";
 
 const NavBar = (props) => {
-  const { isAuth, user } = props.userProps;
+  const { isAuth, user } = props.userProps; // retrieve the user info like user.firstName
 
   return (
     <div className="navContainer">
       <div className="home-nav">
-        <a>
+        <href>
           <FontAwesomeIcon icon={faHome} />
           <Link to="/">Accueil </Link>
-        </a>
+        </href>
       </div>
       <div className="test-global">
         <Link to="/testGlobal"> Test global</Link>
@@ -35,10 +35,19 @@ const NavBar = (props) => {
           <Link to="/logIn"> Connexion </Link>
         </div>
       ) : (
+        
         <div className="login-greeting">
           <p>Bonjour {user.firstName}</p>
+
           <div className="disconnection-button">
-            <TransButton onClick={()=>logOut()}>Déconnexion</TransButton>
+            <TransButton onClick={() => logOut()}>Déconnexion</TransButton>
+          </div>
+
+          <div>
+            {/*rediréctionner l'user*/}
+            <href>
+              <Link to="/"> ????? </Link>
+            </href>
           </div>
         </div>
       )}

@@ -8,7 +8,8 @@ const {
 const levelTestUserSummariesRouter = express.Router();
 
 levelTestUserSummariesRouter.get("/", async (request, response) => {
-  const levelTestUserSummariesByUser = await retrieveLevelTestUserSummariesByUser();
+  // {idUtilisateur = user.idUser};
+  const levelTestUserSummariesByUser = await retrieveLevelTestUserSummariesByUser(); //ICI
   // response.status(OK).json(levelTestUserSummaries);
   response.status(200);
   response.json(levelTestUserSummariesByUser);
@@ -16,7 +17,7 @@ levelTestUserSummariesRouter.get("/", async (request, response) => {
 
 levelTestUserSummariesRouter.post("/", async (request, response) => {
 const data = request.body;
-console.log("data : " , data);
+console.log("router data : " , data);
   const levelTestUserSummariesByUser = await retrieveLevelTestUserSummariesByUser(data);
   // response.status(OK).json(levelTestUserSummaries);
   response.status(200);

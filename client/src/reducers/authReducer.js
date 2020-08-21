@@ -5,7 +5,7 @@ const initialState = {
   isAuth: false,
   user: {},
 };
-
+console.log("authReducer");
 export default function authReducer(state = initialState, action) {
   switch (action.type) {
     case types.LOGIN_REQUEST:

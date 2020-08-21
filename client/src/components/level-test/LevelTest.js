@@ -18,12 +18,13 @@ import {
 //   // } else {
 //   //   return <NotCorrect />;
 //   // }
-
+console.log("LevelTest.js component ");
 const LevelTest = (props) => {
   const [hasSubmit, setSubmit] = useState(false);
   const { resultats } = props.levelTest;
   useEffect(() => {
     props.fetchTests();
+    console.log("component LevelTest + useEffect appel le fetchTests avant aller au router");
   }, []);
   function handleChange(evt) {
     const value = evt.target.value;
@@ -103,7 +104,7 @@ const LevelTest = (props) => {
     </div>
   );
 };
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state, props) => { /*status of the aplication*/
   return state;
 };
 const mapDispatchToProps = (dispatch) => ({

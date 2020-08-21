@@ -11,10 +11,10 @@ const LogIn = (props) => {
     email: "",
     password: "",
   });
-  console.log("dans LogIn");
+  // console.log("dans LogIn");
 
   const updateCredentials = (event) => {
-    console.log("updateCredentials");
+    // console.log("updateCredentials");
 
     setCredentials({
       ...credentials,
@@ -23,9 +23,9 @@ const LogIn = (props) => {
   };
 
   const onSubmit = (async) => {
-    console.log("onSubmit LOGIN credentials ", credentials);
-    console.log("email = ", credentials.email);
-    console.log("password = ", credentials.password);
+    // console.log("onSubmit LOGIN credentials ", credentials);
+    // console.log("email = ", credentials.email);
+    // console.log("password = ", credentials.password);
     logIn(credentials); 
   };
 

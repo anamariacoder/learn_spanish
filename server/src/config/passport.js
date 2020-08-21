@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const { Op } = require("sequelize");
 const LocalStrategy = require("passport-local").Strategy;
 const { User } = require("../models");
-console.log("Avant l'appel à passport");
+
 passport.use(
   new LocalStrategy(
     {
@@ -25,7 +25,6 @@ passport.use(
         }
         bcrypt.compare(password, user.password, function(err, res) {
           if (res) {
-            console.log("password correct");
             done(null, user);
           } else {
             done(null, false, { message: "Incorrect password." });
@@ -39,7 +38,6 @@ passport.use(
 
 passport.serializeUser((user, done) => {
   // serialize our user to store inside of the session
-  console.log("serialize ", user);
   done(null, user.id);
 });
 
@@ -50,13 +48,12 @@ passport.deserializeUser(async (id, done) => {
   });
   console.log("l'utilisateur est ", user);
   if (!user) {
-    console.log("!user dans deserializeUser  ");
     return done(new Error("User not found"));
   }
-  console.log("l'utilisateur est ", user);
+  // console.log("l'utilisateur est ", user);
   // New
   userInfo = res.user;
-  console.log("userInfo ", userInfo);
+  // console.log("userInfo ", userInfo);
   // New
   done(null, user);
 });

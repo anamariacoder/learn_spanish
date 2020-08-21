@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <body className="container-home">
       <div className="info-home">
-        <h> J'apprends l'espagnol</h>{" "}
+        <h1> J'apprends l'espagnol</h1>
       </div>
       <div className="info-home-paragraph">
         <p>

@@ -21,9 +21,9 @@ export const logIn = (user) => async (dispatch) => {
   });
 };
 
-export const logOut = () => async dispatch => {
+export const logOut = () => async (dispatch) => {
 
-console.log("fire logout")
+console.log("logout")
   dispatch({
     type: types.LOGOUT_REQUEST
   });

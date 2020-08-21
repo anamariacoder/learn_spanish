@@ -1,5 +1,5 @@
-const uuid = require("uuid"); /*old*/
-const { User } = require("../models"); /*old*/
+const uuid = require("uuid"); 
+const { User } = require("../models"); 
 
 const userController = {
   register: async (newUser) => {

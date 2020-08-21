@@ -7,6 +7,8 @@ let reponseCorrect = 0;
 let reponseUtilisateur = 0;
 //let arrayScreen = [];
 
+console.log("actions de levelTest avant le fetchTest");
+
 export const fetchTests = () => async (dispatch) => {
   fetch("/api/leveltest")
     .then((response) => {
@@ -17,7 +19,7 @@ export const fetchTests = () => async (dispatch) => {
     });
     // gèrer l'erreur avec .catch(error => console.log("recurso no encontrado"));
 };
-
+console.log("actions de levelTest après le fetchTest");
 export const isCorrect = (props) => {
   if (reponseUtilisateur === reponseCorrect) return <Correct />;
 };
@@ -95,7 +97,7 @@ export const checkLevelTest = () => async (dispatch, getState) => {
     case 1:
     case 2:
       arrayTestResults[4] =
-        "Nous vous encourageons à continuer à pratiquer et de reprendre le test de reprendre le test.";
+        "Nous vous encourageons à continuer à pratiquer et de reprendre le test.";
       break;
     case 3:
       arrayTestResults[4] = "Vous avez réussi votre test. Félicitations !!";

@@ -6,7 +6,7 @@ const levelTestController = {
       attributes: ["id", "questions"],
       raw: true,
     });
-    console.log("dans retrieveLevelTest avec findAll");
+    console.log("dans CONTROLEUR retrieveLevelTest avec findAll 1");
     console.log(levelTests);
     return levelTests;
   },
@@ -15,7 +15,7 @@ const levelTestController = {
       attributes: ["questions"],
       raw: true,
     });
-    console.log("dans retrieveATest");
+    console.log("dans retrieveATest findByPk 2");
     return levelTest;
   },
 };

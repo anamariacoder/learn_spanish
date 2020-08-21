@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 //import PropTypes from "prop-types";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LevelTest from "./components/level-test/LevelTest";
 //import Resources from "./components/resources/Resources";
 import LearningMethodology from "./components/learningMethodology/LearningMethodology";
@@ -24,6 +25,7 @@ import Register from "./components/register/Register";
 
 const App = (props) => {
   console.log(props);
+  console.log("App.js");
   useEffect(() => {}, []);
   return (
     <div>
@@ -46,7 +48,8 @@ const App = (props) => {
             />
             <Route path="/learningTips" component={LearningTips} />
             {/* <Route path="/sign" component={signFirebaseContainer} /> */}
-            <Route path="/login" component={LogIn} />
+            <Route path="/login" component={LogIn
+            } />
             <Route path="/register" component={Register} />
             <Route path="/aboutUs" component={AboutUs} />
             <Route component={PageNotFound} />

@@ -2,22 +2,33 @@ const { LevelTestUserSummary } = require("../models");
 const { Op } = require("sequelize");
 
 const levelTestUserSummaryController = {
-  // retrieveLevelTestUserSummariesByUser: async id => {
-  //   const levelTestUserSumariesByUser = await testsUserSummary.findByPk(id, {
-  retrieveLevelTestUserSummariesByUser: async (data) => {
-    console.log(data);
-    //const { userId }= data;
+  //retrieveLevelTestUserSummariesByUser: async id => {
+  // id = 'a2936a50-1a27-4d10-8d50-0e7ee30c7a4c';//User PAOLA
+  // const levelTestUserSumariesByUser = await LevelTestUserSummary.findByPk(id, { //OUI
+  retrieveLevelTestUserSummariesByUser: async (id) => {
+    //NON
+    console.log(
+      "retrieveLevelTestUserSummariesByUser id  del usuario ???: ",
+      id
+    );
+    //id = "a2936a50-1a27-4d10-8d50-0e7ee30c7a4c";
+    //const { userId }= data;  //
+    //const { idUser }= data;  //remplace userId de ligne dessus
     const levelTestUserSumariesByUser = await LevelTestUserSummary.findAll({
-    //  order: ["created_at", "DESC"],
+      //NON
+      //  order: ["created_at", "DESC"], //NON
 
       where: {
-        idUser:{
-       
-          // [Op.eq]: userId,
-        //Ca marche avec l'id du test, mais ne marche pas pour le username. 
-        //Je dois d'abord passer l'identifiant utilisateur
-        //[Op.eq]: '2675eb63-b899-4aa5-ade1-c106b94156bd'
-        // 1675eb54-a540-4aa5-ade2-c106b94187af'
+        //   //OUI
+        idUser: {
+          //     //OUI
+          //     //   //   // [Op.eq]: userId,  //OUI
+          //
+          //     //   // //Je dois d'abord passer l'identifiant utilisateur
+          //  [Op.eq]: '904c68ee-b385-464f-bdc9-dda2281e518f'  //OUI MARCELLL
+
+          [Op.eq]: "b86077a2-314a-44b7-8db3-95eb318c9402", //CARLOS est un user qui est dans la BdD
+          //
         },
       },
       attributes: [
@@ -28,7 +39,7 @@ const levelTestUserSummaryController = {
         "total_questions_answered",
         "total_correct_answers",
         "total_wrong_answers",
-        "created_at"
+        "created_at",
       ],
       raw: true,
     });
@@ -39,7 +50,14 @@ const levelTestUserSummaryController = {
     );
 
     return levelTestUserSumariesByUser;
-  },
+
+    // if (!LevelTestUserSumaries)
+    //   // 13 août
+    //   throw new NotFoundError( // 13 août
+    //     "Ressource introuvable.", // 13 août
+    //     "Désolé, nous n'avons pas trouvé la ressource demandée. Vérifiez l'URI et réessayez." // 13 août
+    //   ); // 13 août
+  }, // 13 août
 
   //Modification a apliquer apres la migration
   // createLevelTestUserSummaries: async (data) => {

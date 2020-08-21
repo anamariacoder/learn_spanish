@@ -9,6 +9,7 @@ const initialState = {
 
 export default function auth(state = initialState, action) {
   switch (action.type) {
+    
     case types.GET_LEVEL_TESTS:
       return {
         ...state,

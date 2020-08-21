@@ -11,6 +11,7 @@ usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
   // `req.user` contains the authenticated user.
   console.log("success login : the user is ", req.user);
   userInfo = {
+    idUser: req.user.id, // Here the idUser ready for level-test-user-summary
     firstName: req.user.first_name,
     email: req.user.email,
   };
@@ -58,7 +59,7 @@ usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
 usersRouter.post("/register", async (request, response) => {
   const data = request.body;
   const createdUser = await userController.register(data);
-  console.log("data ", data);
+  console.log("user data ", data);
   response
     .status(201)
     .json({ createdUser, message: "account created succesfully! " });
