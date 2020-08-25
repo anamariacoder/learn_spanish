@@ -2,9 +2,10 @@ const express = require("express");
 require("express-async-errors");
 const passport = require("passport");
 const userController = require("../controllers/user_controller");
-//const authController = require("../controllers/auth_controller");
+
 const usersRouter = express.Router();
-// const userInfo = null;
+
+const authenticate = require("../middleware/authenticate");
 
 usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
   // If this function gets called, authentication was successful.
@@ -16,45 +17,13 @@ usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
     email: req.user.email,
   };
   console.log("userInfo ", userInfo);
+  const token = authenticate.generateAuthToken(userInfo);
   res
     .status(200)
-    //   .header("xAuth", token)
+    .header("xAuth", token)
     .json({ userInfo, message: "you are now logged in ! " });
 });
 
-//***This version is the one that works OK (begin)
-
-// usersRouter.post("/login", passport.authenticate("local"), function(req, res) {//   // If this function gets called, authentication was successful.
-//   // `req.user` contains the authenticated user.
-//   console.log("success login : the user is ", req.user);
-// });
-//***This version is the one that functions (end)
-
-// usersRouter.post(
-//   "/login",
-
-//   (request, response) => {
-//     //const userInfo = await authController.login(request.body);     // delete
-//     console.log("appel à passport");
-
-//     passport.authenticate("local"),
-//       function(req, res) {
-//         // If this function gets called, authentication was successful.
-//         // `req.user` contains the authenticated user.
-//         console.log("success login");
-
-//         userInfo = req.user.username;
-//         console.log("success userInfooooo ", userInfo);
-//         return userInfo;
-//       };
-//     // const token = authenticate.generateAuthToken(userInfo);
-//     // console.log("userInfo ", userInfo);
-//     response
-//       .status(200)
-//       //   .header("xAuth", token)
-//       .json({ userInfo, message: "you are now logged in ! " });
-//   }
-// );
 
 usersRouter.post("/register", async (request, response) => {
   const data = request.body;
@@ -63,6 +32,12 @@ usersRouter.post("/register", async (request, response) => {
   response
     .status(201)
     .json({ createdUser, message: "account created succesfully! " });
+});
+
+usersRouter.delete('/delete/:id', async (request, response) => {
+  const idToDelete = request.params.id;
+  const numOfRowsDeleted = await userController.deleteUser(idToDelete);
+  response.status(OK).json({ numOfRowsDeleted, message: 'This user has been deleted from the database !' });
 });
 
 module.exports = usersRouter;

@@ -18,7 +18,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon",
+    "client": "cd ../client && npm start",
+    "server": "nodemon src/index.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "test": "npm run test:unit",
     "test:unit": "nyc mocha ./src/**/*.spec.js",
     "lint": "eslint .",

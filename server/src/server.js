@@ -2,14 +2,21 @@ const express = require("express"); //Starts the server
 const cors = require("cors");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-//const verifyToken = require("./middleware/verify_token"); 15-07-2020
+
 const { LevelTest } = require("./models");
 const routes = require("./routes");
 const server = express();
 require("./config/passport");
 
 server.use(bodyParser.json());
-server.use("/api", cors());
+
+server.use(
+  "/api",
+  cors({
+    exposedHeaders: ["Content-Length", "xAuth"],
+  })
+);
+
 server.use(passport.initialize());
 server.use(passport.session());
 

@@ -50,13 +50,12 @@ passport.deserializeUser(async (id, done) => {
   if (!user) {
     return done(new Error("User not found"));
   }
-  // console.log("l'utilisateur est ", user);
-  // New
   userInfo = res.user;
-  // console.log("userInfo ", userInfo);
-  // New
   done(null, user);
 });
+
+
+
 
 // passport.use(
 //   new LocalStrategy(

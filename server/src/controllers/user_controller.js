@@ -6,6 +6,14 @@ const userController = {
     const createdUser = User.create(newUser);
     return createdUser;
   },
+  deleteUser: async (idToDelete) => {
+    const numOfRowsAffected = await User.destroy({
+      where: {
+        id: idToDelete
+      }
+    });
+    return numOfRowsAffected;
+  }
 };
 
 module.exports = userController;

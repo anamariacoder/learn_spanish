@@ -1,5 +1,5 @@
 const { LevelTest } = require("../models");
-//2
+
 const levelTestController = {
   retrieveLevelTest: async () => {
     const levelTests = await LevelTest.findAll({

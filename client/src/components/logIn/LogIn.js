@@ -1,8 +1,5 @@
 import { connect } from "react-redux";
 import React, { useState, useEffect } from "react";
-//import { Link } from "react-router-dom";
-//import axios from "axios";
-//import { useDispatch, useSelector } from "react-redux";
 import { logIn } from "../../actions/userActions";
 
 const LogIn = (props) => { 
@@ -11,11 +8,9 @@ const LogIn = (props) => {
     email: "",
     password: "",
   });
-  // console.log("dans LogIn");
-
+  
   const updateCredentials = (event) => {
-    // console.log("updateCredentials");
-
+  
     setCredentials({
       ...credentials,
       [event.target.name]: event.target.value,
@@ -23,9 +18,6 @@ const LogIn = (props) => {
   };
 
   const onSubmit = (async) => {
-    // console.log("onSubmit LOGIN credentials ", credentials);
-    // console.log("email = ", credentials.email);
-    // console.log("password = ", credentials.password);
     logIn(credentials); 
   };
 

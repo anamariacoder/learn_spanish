@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TransButton from "../cors/TransButton";
 import { logOut } from "../../actions/userActions";
 
 const NavBar = (props) => {
-  const { isAuth, user } = props.userProps; // retrieve the user info like user.firstName
+  const { isAuth, user, idUser } = props.userProps; // retrieve the user info like user.firstName
+
+  useEffect(() => {
+    const existingToken = sessionStorage.getItem("xAuth");
+
+    console.log("token in useeffect ", existingToken);
+    if (existingToken)
+      console.log("token is in sessionStorage sdkqjnjskqnkjdnqjdnqkdnsqnd");
+    props.userProps.isAuth = true;
+    console.log("isAuth useEffect ", isAuth);
+  }, []);
 
   return (
     <div className="navContainer">
@@ -29,13 +39,11 @@ const NavBar = (props) => {
       <div className="learning-tips">
         <Link to="/learningTips"> Astuces pour apprendre l'espagnol </Link>
       </div>
-
       {!isAuth ? (
         <div className="connection">
           <Link to="/logIn"> Connexion </Link>
         </div>
       ) : (
-        
         <div className="login-greeting">
           <p>Bonjour {user.firstName}</p>
 
@@ -43,12 +51,7 @@ const NavBar = (props) => {
             <TransButton onClick={() => logOut()}>Déconnexion</TransButton>
           </div>
 
-          <div>
-            {/*rediréctionner l'user*/}
-            <href>
-              <Link to="/"> ????? </Link>
-            </href>
-          </div>
+          <Redirect to="/" />
         </div>
       )}
     </div>

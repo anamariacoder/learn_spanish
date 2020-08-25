@@ -1,8 +1,6 @@
 import { connect } from "react-redux";
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import axios from "axios";
-// import { useDispatch, useSelector } from "react-redux";
+
 import { register } from "../../actions/userActions";
 
 const Register = (props) => {
@@ -22,9 +20,6 @@ const Register = (props) => {
   };
 
   const onSubmit = (async) => {
-    // console.log("email ",logIn.email);
-
-    // console.log("onSubmit Register credentials ", credentials);
     register(credentials);
   };
 
@@ -48,7 +43,7 @@ const Register = (props) => {
           {" "}
           <br />
         </p>
-        <label>Nom </label> {/* //**11** 18 juin */}
+        <label>Nom </label> 
         <input
           name="last_name"
           type="last_name"
@@ -60,7 +55,7 @@ const Register = (props) => {
           {" "}
           <br />
         </p>
-        <label>E-mail </label> {/* //**11** 18 juin */}
+        <label>E-mail </label> 
         <input
           name="email"
           type="email"

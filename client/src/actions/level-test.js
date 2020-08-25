@@ -5,7 +5,6 @@ import Correct from "../components/test/Correct";
 
 let reponseCorrect = 0;
 let reponseUtilisateur = 0;
-//let arrayScreen = [];
 
 console.log("actions de levelTest avant le fetchTest");
 
@@ -17,7 +16,7 @@ export const fetchTests = () => async (dispatch) => {
     .then((tests) => {
       dispatch({ type: types.GET_LEVEL_TESTS, payload: tests });
     });
-    // gèrer l'erreur avec .catch(error => console.log("recurso no encontrado"));
+  // gèrer l'erreur avec .catch(error => console.log("recurso no encontrado"));
 };
 console.log("actions de levelTest après le fetchTest");
 export const isCorrect = (props) => {
@@ -34,49 +33,17 @@ export const checkLevelTest = () => async (dispatch, getState) => {
   const responses = getState().levelTest.responses;
   const tests = getState().levelTest.tests;
 
-  // const isCorrect = (props) => {
-  // if (reponseUtilisateur === reponseCorrect) return <Correct />
-  // if (reponseUtilisateur === reponseCorrect) return (console.log("Je suis dans <CorRRRRrect />"));
-  // if (reponseUtilisateur === reponseCorrect) return Correct();
-  // } else {
-  //   return <NotCorrect />;
-  // }
-  // };
-
   let keys = Object.keys(responses);
   keys.map((v, i) => {
     v = v.replace("question", "");
-
-    console.log("8) dans checkLevelTest ");
 
     let numBonneReponse = tests[0].questions.levelTests[v].answer;
     reponseCorrect = tests[0].questions.levelTests[v].choix[numBonneReponse]; //subindex of the correct answer
     reponseUtilisateur = responses[keys[i]];
 
-    console.log("9) reponseUtilisateur  ", reponseUtilisateur); // 23 AVRIL
-    console.log("10) reponseCorrect  ", reponseCorrect); // 23 AVRIL
-
-    console.log(Object.keys(responses), responses, "11) OBJECT(keys)"); // 23 AVRIL
-
     if (reponseUtilisateur === reponseCorrect) {
       nbCorrect += 1;
       nbAnswered += 1;
-      console.log("12)  Number of correct answers ", nbCorrect);
-      console.log("13) je suis dans actions/level-test");
-      console.log("14) je VAIS appeler isCORRECT"); /* AUJOURD'HUI 22 AVRIL */
-
-      // return (
-      //   /* AUJOURD'HUI 22 AVRIL */
-
-      //   <div className="iconTest">
-      //     <p>GOOD ANSWER</p>
-      //     {console.log("15)   V questions :   ", v)}
-      //     {v}
-
-      //   </div>
-      // );
-
-      // return Correct() /* AUJOURD'HUI 22 AVRIL */;
     } else {
       nbWrong += 1;
       nbAnswered += 1;
@@ -122,14 +89,8 @@ export const handleResponses = (target) => async (dispatch, getState) => {
   const responses = getState().levelTest.responses;
   responses[target.name] = target.value;
 
-  {
-    console.log("6) handleResponses");
-  }
-
   dispatch({
     type: types.HANDLE_RESPONSE,
     payload: responses,
   });
 };
-
-// export default isCorrect;
