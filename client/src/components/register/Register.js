@@ -90,6 +90,7 @@ const Register = (props) => {
           <br />
         </p>
         <a href="/login">Se connecter</a>
+        {/* <a href="/userAccount">Gèrer mon compte</a> */}
       </div>
     </body>
   );

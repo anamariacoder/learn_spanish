@@ -7,16 +7,18 @@ import TransButton from "../cors/TransButton";
 import { logOut } from "../../actions/userActions";
 
 const NavBar = (props) => {
-  const { isAuth, user, idUser } = props.userProps; // retrieve the user info like user.firstName
+  const { isAuth, user } = props.userProps; // retrieve the user info like user.firstName
 
   useEffect(() => {
-    const existingToken = sessionStorage.getItem("xAuth");
+    console.log("NavBar   sessionStorage ", sessionStorage)
 
-    console.log("token in useeffect ", existingToken);
-    if (existingToken)
-      console.log("token is in sessionStorage sdkqjnjskqnkjdnqjdnqkdnsqnd");
+    const existingToken = sessionStorage.getItem("xAuth");
+    const authUser = sessionStorage.getItem("userId");
+    
+    if (authUser)
     props.userProps.isAuth = true;
-    console.log("isAuth useEffect ", isAuth);
+    props.userProps.user.id = authUser;
+    console.log(" NavBar   props.userProps ", props.userProps);
   }, []);
 
   return (

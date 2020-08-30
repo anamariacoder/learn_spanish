@@ -36,6 +36,16 @@ export default function authReducer(state = initialState, action) {
         isAuth: action.payload ? true : false,
         user: action.payload,
       };
+      case types.DELETE_REQUEST:
+        return {
+          ...state
+        };
+      case types.DELETE_SUCCESS:
+        return {
+          ...state,
+          isAuth: false,
+          user: action.payload,
+        };
     default:
       return state;
   }

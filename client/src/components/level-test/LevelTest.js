@@ -4,6 +4,7 @@ import bad from "./../public/img/dislike.png";
 import Correct from "../test/Correct";
 import NotCorrect from "../test/NotCorrect";
 import { connect } from "react-redux";
+
 import {
   checkLevelTest,
   fetchTests,
@@ -41,13 +42,21 @@ const LevelTest = (props) => {
                     src={q.image}
                     alt="question"
                   />
-                  {q.question}
-                  <select name={`question${i}`} onChange={handleChange}>
-                    <option>Choissisez votre réponse</option>
-                    {q.choix.map((c, i) => {
-                      return <option key={i}>{c}</option>;
-                    })}
-                  </select>
+                  <div className="fit-question">
+                    <p>
+                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                      {q.question}
+                      <select name={`question${i}`} onChange={handleChange}>
+                        <option>Choissisez votre réponse</option>
+                        {q.choix.map((c, i) => {
+                          return <option key={i}>{c}</option>;
+                        })}
+                      </select>
+                    </p>
+                  </div>
                 </div>
               );
             })}

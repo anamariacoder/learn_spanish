@@ -2,28 +2,20 @@ const express = require("express"); //Starts the server
 const cors = require("cors");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-
-const { LevelTest } = require("./models");
 const routes = require("./routes");
 const server = express();
 require("./config/passport");
-
 server.use(bodyParser.json());
-
 server.use(
   "/api",
   cors({
     exposedHeaders: ["Content-Length", "xAuth"],
   })
 );
-
 server.use(passport.initialize());
 server.use(passport.session());
-
 server.use("/api", routes);
-// server.use("api/auth", verifyToken);
 server.use("/api/images", express.static("src/public"));
-//server.use("/api", routes);
 
 // Route publique
 server.get("/api/ping", (req, res) => {
@@ -31,6 +23,8 @@ server.get("/api/ping", (req, res) => {
 });
 
 module.exports = server;
+
+
 
 // Route privée
 // server.get("/api/auth", verifyToken, async (req, res) => {

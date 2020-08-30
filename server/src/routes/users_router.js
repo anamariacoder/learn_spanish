@@ -24,7 +24,6 @@ usersRouter.post("/login", passport.authenticate("local"), function(req, res) {
     .json({ userInfo, message: "you are now logged in ! " });
 });
 
-
 usersRouter.post("/register", async (request, response) => {
   const data = request.body;
   const createdUser = await userController.register(data);
@@ -34,10 +33,17 @@ usersRouter.post("/register", async (request, response) => {
     .json({ createdUser, message: "account created succesfully! " });
 });
 
-usersRouter.delete('/delete/:id', async (request, response) => {
+usersRouter.delete("/delete/:id", async (request, response) => {
   const idToDelete = request.params.id;
+  console.log("id To delte ", idToDelete);
   const numOfRowsDeleted = await userController.deleteUser(idToDelete);
-  response.status(OK).json({ numOfRowsDeleted, message: 'This user has been deleted from the database !' });
+  console.log("nbr de lignes effacées ", numOfRowsDeleted);
+  response
+    .status(OK)
+    .json({
+      numOfRowsDeleted,
+      message: "This user has been deleted from the database !",
+    });
 });
 
 module.exports = usersRouter;

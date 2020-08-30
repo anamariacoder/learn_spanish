@@ -1,19 +1,3 @@
-
-// import thunkMiddleware from "redux-thunk";
-
-// import { createLogger } from "redux-logger";
-
-
-// const loggerMiddleware = createLogger();
-
-
-// const store = createStore(
-//   rootReducer,
-//   composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
-// );
-
-
-
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "../reducers";
@@ -28,3 +12,20 @@ const store = createStore(
 );
 
 export default store;
+
+
+
+
+// import thunkMiddleware from "redux-thunk";
+
+// import { createLogger } from "redux-logger";
+
+
+// const loggerMiddleware = createLogger();
+
+
+// const store = createStore(
+//   rootReducer,
+//   composeWithDevTools(applyMiddleware(thunkMiddleware, loggerMiddleware))
+// );
+
